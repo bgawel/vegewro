@@ -1,8 +1,6 @@
 'use strict';
 
 angular.module('vegewroApp', [
-  'ngCookies',
-  'ngResource',
   'ngSanitize',
   'ngRoute',
   'ui.bootstrap',
