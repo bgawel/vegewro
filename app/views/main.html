@@ -1,0 +1,97 @@
+<div class="navbar navbar-default navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand action" href="#"><img src="images/logo.png" width="57" height="50"/>
+        <span class="brand-name">rocław vege map</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li>
+          <a class="action" href ng-click="scrollTo('addresses')">
+            <span class="glyphicon glyphicon-folder-open"></span><span class="action-addresses">{{i18n.addresses}}</span>
+          </a>
+        </li>
+        <li>
+          <a class="action" href data-toggle="collapse" data-target="#contactUs">
+            <span class="glyphicon glyphicon-bullhorn"></span> {{i18n.newPlace}}
+          </a>
+        </li>
+        <li class="dropdown">
+          <a class="action dropdown-toggle" data-toggle="dropdown">| {{lang}} <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a class="action" href ng-click="changeLang('en')">en</a></li>
+            <li><a class="action" href ng-click="changeLang('pl')">pl</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.nav-collapse -->
+    <div id="contactUs" class="row well well-lg contactUs collapse">
+      <div class="left col-md-9">
+        {{i18n.newPlaceText}}:
+        <a href="mailto:vegewro@gmail.com">vegewro@gmail.com</a>
+      </div>
+      <div class="right col-md-3">
+        <button class="btn btn-success pull-right" data-toggle="collapse" data-target="#contactUs">{{i18n.close}}</button>
+      </div>
+    </div>
+  </div><!-- /.container -->
+</div><!-- /.navbar -->
+
+<div class="container">   
+  <div class="row">
+    <div id="map" class="col-md-9">
+      <progressbar class="progress-striped active" value="'80'" type="success">
+        {{i18n.loadingMap}}
+      </progressbar>
+    </div>
+    <div class="col-md-3 filters">
+      <p>
+        <span class="caption">{{i18n.filters}} (</span><a href ng-click="enableAllFilters(false)" class="action filter-helper">{{i18n.clearAll}}</a>, 
+          <a href ng-click="enableAllFilters(true)" class="action filter-helper">{{i18n.setAll}}</a><span class="caption">):</span>
+      </p>
+      <p class="sub-filter"><a href ng-click="enableVeganFilters(true)" class="action filter-helper">{{i18n.veganOnly}}:</a></p>
+      <p ng-repeat="filter in filters | filter:{type: 'vegan'} | orderBy:'order'">
+        <a href class="legend-item action" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+          <img ng-src="{{filter.iconUrl}}"/>
+          {{filter.title}}
+        </a>
+      </p>
+      <p class="sub-filter"><a href ng-click="enableVeganFilters(false)" class="action filter-helper">{{i18n.vege}}:</a></p>
+      <p ng-repeat="filter in filters | filter:{type: 'vege'} | orderBy:'order'">
+        <a href class="legend-item action" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+          <img ng-src="{{filter.iconUrl}}"/>
+          {{filter.title}}
+        </a>
+      </p>      
+    </div>
+  </div>
+  <div class="row">
+    <h4 class="addresses caption" id="addresses">{{i18n.bAddresses}}</h4>
+    <accordion close-others="'true'">
+      <accordion-group ng-repeat="filter in filters | orderBy:'order'" is-open="filter.open">
+        <accordion-heading>
+            {{filter.title}} <span class="pull-right glyphicon" 
+              ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}"></span>
+        </accordion-heading>
+        <div class="row">
+          <div ng-repeat="address in addresses[filter.id] | orderBy:'title'">
+            <div class="col-md-6 address-box" ng-bind-html="address.boxText"></div>
+            <div ng-if="$odd" class="clearfix"></div>
+          </div>
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
+  <div class="row">
+    <div class="footer">
+      <p>♥ {{i18n.from}} Dada Soft Lab &copy; | {{i18n.contact}}: <a href="vegewro@gmail.com">vegewro@gmail.com</a></p>
+    </div>
+  </div>
+</div>

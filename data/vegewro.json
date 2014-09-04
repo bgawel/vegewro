@@ -1,0 +1,333 @@
+{
+  "config" : {
+    "filters" : {
+      "veganBar" : {
+        "icon" : {
+          "anchor" : {
+            "x" : 24,
+            "y" : 32
+          },
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/carrot.png"
+        },
+        "title" : {
+          "en" : "Vegan bars, restaurants, coffee houses",
+          "pl" : "Wegańskie bary, restauracje, kawiarnie"
+        },
+        "zIndex" : 150,
+        "type": "vegan"
+      },
+      "veganDelivery" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/leek.png"
+        },
+        "title" : {
+          "en" : "Vegan food delivery",
+          "pl" : "Wegańskie dowozy"
+        },
+        "zIndex" : 140,
+        "type": "vegan"
+      },      
+      "veganCatering" : {
+        "icon" : {
+          "anchor" : {
+            "x" : 6,
+            "y" : 32
+          },
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/courgette.png"
+        },
+        "title" : {
+          "en" : "Vegan catering",
+          "pl" : "Wegański katering"
+        },
+        "zIndex" : 130,
+        "type": "vegan"
+      },
+      "veganFood" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/shop.png"
+        },
+        "title" : {
+          "en" : "Vegan grocery stores",
+          "pl" : "Sklepy z wegańską żywnością"
+        },
+        "zIndex" : 120,
+        "type": "vegan"
+      },
+      "veganShoes" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/shoes.png"
+        },
+        "title" : {
+          "en" : "Vegan shoes stores",
+          "pl" : "Sklepy z wegańskimi butami"
+        },
+        "zIndex" : 110,
+        "type": "vegan"
+      },
+      "veganCosmetics" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/cosmetics.png"
+        },
+        "title" : {
+          "en" : "Vegan cosmetics stores",
+          "pl" : "Sklepy z wegańskimi kosmetykami"
+        },
+        "zIndex" : 100,
+        "type": "vegan"
+      },      
+      "vegeBar" : {
+        "icon" : {
+          "anchor" : {
+            "x" : 24,
+            "y" : 32
+          },
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/milkycarrot.png"
+        },
+        "title" : {
+          "en" : "Vegan-vegetarian bars, restaurants, coffee houses",
+          "pl" : "Wegańsko-wegetariańskie bary, restauracje, kawiarnie"
+        },
+        "zIndex" : 90,
+        "type": "vege"
+      },
+      "vegeDelivery" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/milkyleek.png"
+        },
+        "title" : {
+          "en" : "Vegan-vegetarian food delivery",
+          "pl" : "Wegańsko-wegetariańskie dowozy"
+        },
+        "zIndex" : 80,
+        "type": "vege"
+      },
+      "vegeCatering" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/milkycourgette.png"
+        },
+        "title" : {
+          "en" : "Vegan-vegetarian catering",
+          "pl" : "Wegańsko-wegetariański katering"
+        },
+        "zIndex" : 70,
+        "type": "vege"
+      },
+      "vegeFood" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/milkyshop.png"
+        },
+        "title" : {
+          "en" : "Vegan-vegetarian grocery stores",
+          "pl" : "Sklepy z wegańsko-wegetariańską żywnością"
+        },
+        "zIndex" : 60,
+        "type": "vege"
+      }
+    },
+    "infoboxOptions" : {
+      "boxStyle" : {
+        "background" : "url('images/pop_up_box_top_arrow.png') no-repeat",
+        "opacity" : 1,
+        "width" : "430px"
+      },
+      "closeBoxMargin" : "10px 2px 2px 2px",
+      "closeBoxURL" : "images/close.png",
+      "disableAutoPan" : false,
+      "enableEventPropagation" : false,
+      "infoBoxClearance" : {
+        "height" : 1,
+        "width" : 1
+      },
+      "isHidden" : false,
+      "maxWidth" : 0,
+      "pane" : "floatPane",
+      "pixelOffset" : {
+        "height" : 0,
+        "width" : -241
+      },
+      "zIndex" : 200
+    },
+    "mapOptions" : {
+      "center" : {
+        "lat" : 51.10789,
+        "lng" : 17.03854
+      },
+      "mapTypeControl" : true,
+      "mapTypeId" : "roadmap",
+      "minZoom" : 11,
+      "panControl" : true,
+      "zoom" : 13
+    },
+    "zoomWhenDirections" : 16,
+    "zoomWhenMarkerClicked" : 14
+  },
+  "places" : [ {
+    "address" : "Nożownicza 40, Wrocław",
+    "email" : "catering@najadacze.pl",
+    "filters" : [ "veganBar", "veganDelivery", "veganCatering" ],
+    "id" : 1,
+    "image" : {
+      "size" : {
+        "height" : 31,
+        "width" : 152
+      },
+      "src" : "http://najadacze.pl/wp-content/themes/twentythirteen/images/headers/logo-restaurant.png"
+    },
+    "open" : {
+      "en" : "Mon-Thu: 11-20, Fri: 11-21, Sat: 12-21, Sun: 13-20",
+      "pl" : "Pon-Czw: 11-20, Pt: 11-21, Sob: 12-21, Niedz: 13-20"
+    },
+    "phone" : "71 344 55 11",
+    "position" : {
+      "lat" : 51.112043,
+      "lng" : 17.036157
+    },
+    "title" : {
+      "en" : "Najadacze.pl – vegan restaurant and catering",
+      "pl" : "Najadacze.pl – restauracja i katering wegański"
+    },
+    "web" : "http://najadacze.pl"
+  }, {
+    "address" : "Igielna 14, Wrocław",
+    "desc" : {
+      "pl" : ""
+    },
+    "email" : "kontakt@latajacakuchnia.pl",
+    "filters" : [ "veganDelivery", "veganCatering" ],
+    "id" : 2,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "http://latajacakuchnia.pl/wp-content/uploads/2014/05/logo_grey_home-e1400597867854.png"
+    },
+    "phone" : "509 409 928",
+    "position" : {
+      "lat" : 51.111474,
+      "lng" : 17.0318039
+    },
+    "title" : {
+      "en" : "Latająca Kuchnia – creative vegan cooking",
+      "pl" : "Latająca Kuchnia – kreatywna kuchnia roślinna"
+    },
+    "web" : "http://latajacakuchnia.pl"
+  }, {
+    "address" : "Jedności Narodowej 93A, Wrocław",
+    "email" : "ewa.rudakita@gmail.com",
+    "filters" : [ "veganFood", "veganBar" ],
+    "id" : 3,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/t1.0-1/c1.0.200.200/p200x200/970038_556962674356107_47648516_n.jpg"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 10:00-19:00, Sat: 10:00-15:00",
+      "pl" : "pon.-piąt.: 10:00-19:00, sob.: 10:00-15:00"
+    },
+    "phone" : "605 470 937",
+    "position" : {
+      "lat" : 51.1220129,
+      "lng" : 17.044137
+    },
+    "title" : {
+      "en" : "Ruda Kita – coffee house, health food store, toy store",
+      "pl" : "Ruda Kita – kawiarnia, sklep ze zdrową żywnością, sklep z zabawkami"
+    },
+    "web" : "https://facebook.com/rudakitawroclaw"
+  }, {
+    "address" : "Ruska 19, Wrocław",
+    "email" : "machina.info@gmail.com",
+    "filters" : [ "veganBar", "veganCatering" ],
+    "id" : 4,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://scontent-b-ams.xx.fbcdn.net/hprofile-xpa1/l/t1.0-1/p160x160/1465291_579250645488880_25128854_n.jpg"
+    },
+    "open" : {
+      "en" : "Mon-Thu: 10:00-22:00, Fri: 10:00-23:00, Sat: 12:00-23:00, Sun: 13:00-21:00",
+      "pl" : "pon.-czw.: 10:00-22:00, piąt.: 10:00-23:00, sob.: 12:00-23:00, niedz.: 13:00-21:00"
+    },
+    "phone" : "733-537-210",
+    "position" : {
+      "lat" : 51.110532,
+      "lng" : 17.026004
+    },
+    "title" : {
+      "en" : "Machina Organica – restaurant-coffee house-bar",
+      "pl" : "Machina Organica – restauracja-cafe-bar"
+    },
+    "web" : "https://facebook.com/Machina.Organika"
+  }, {
+    "address" : "Rynek 27a, Wrocław",
+    "filters" : [ "veganBar" ],
+    "id" : 5,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c45.45.559.559/s200x200/1013001_494408287298216_54237566_n.jpg?oh=d00e62d8ade7df071943992a9a56a00f&oe=546E07D6&__gda__=1417625669_ccc610c2c849b57ecf5bddbd8c7a94e7"
+    },
+    "open" : {
+      "en" : "Mon-Thu: 08:00-19:00, Fri: 08:00-21:00, Sat: 09:00-21:00, Sun: 09:00-19:00",
+      "pl" : "pon.-czw.: 08:00-19:00, piąt.: 08:00-21:00, sob.: 09:00-21:00, niedz.: 09:00-19:00"
+    },
+    "phone" : "71 344 39 34",
+    "position" : {
+      "lat" : 51.109834,
+      "lng" : 17.032724
+    },
+    "title" : {
+      "en" : "VEGA – vegan restaurant, bar",
+      "pl" : "VEGA – wegańska restauracja, bar"
+    },
+    "web" : "http://vega-wroclaw.com.pl"
+  } ]
+}
