@@ -45,7 +45,12 @@ body {
   border-radius: 0;
   margin-bottom: 0;
   
+  .green-action {
+    color: rgb(0,127,14);
+  }
+  
   .action-addresses {
+    @extend .green-action;
     padding-left: 5px;
   }
   
@@ -130,6 +135,9 @@ body {
     vertical-align: top;
     width: 230px;
     z-index: 1;
+    border-right-color: #999999;
+    border-right-style: dotted;
+    border-right-width: 1px;
   } 
   
   .right {
@@ -137,9 +145,6 @@ body {
     display: inline-block;
     vertical-align: top;
     width: 170px;
-    border-left-color: #999999;
-    border-left-style: dotted;
-    border-left-width: 1px;
     
     img {
       float: left;
@@ -177,9 +182,18 @@ body {
   text-align: center;
 }
 
+.action-link {
+  color: #444;
+    
+  &:hover, &:active, &:focus {
+    color: #000;
+  }
+}
+
 .filters {
   margin-top: 20px;
   display: inline-block;
+  font-size: 0.9em;
   
   .sub-filter {
     border-bottom-color: #999999;
@@ -187,13 +201,7 @@ body {
     border-bottom-width: 2px;
   }
   
-  a {
-    color: #444;
-    
-    &:hover, &:active {
-      color: #000;
-    }
-      
+  a {      
     &.legend-item {
       &:not(.active) {
         text-decoration: line-through;
@@ -203,18 +211,14 @@ body {
   }
   
   .filter-helper {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 }
 
 .accordion-toggle {
-  color: #444;
+  @extend .action-link;
   text-decoration: none;
   cursor: pointer;
-    
-  &:hover, &:active {
-    color: #000;
-  }
 }
 
 .addresses {
@@ -223,9 +227,16 @@ body {
 }
 
 .address-box {
+  padding-left: 0;
   padding-bottom: 20px;
   
-  .pop_up_box_text .right {
-    width: auto;
+  .pop_up_box_text { 
+    .right {
+      width: auto;
+    }
   }
+}
+
+.show-on-map {
+  width: 18px;
 }

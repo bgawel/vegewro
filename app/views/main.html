@@ -15,7 +15,7 @@
       <ul class="nav navbar-nav pull-right">
         <li>
           <a class="action" href ng-click="scrollTo('addresses')">
-            <span class="glyphicon glyphicon-folder-open"></span><span class="action-addresses">{{i18n.addresses}}</span>
+            <span class="glyphicon glyphicon-folder-open green-action"></span><span class="action-addresses">{{i18n.addresses}}</span>
           </a>
         </li>
         <li>
@@ -53,23 +53,30 @@
     </div>
     <div class="col-md-3 filters">
       <p>
-        <span class="caption">{{i18n.filters}} (</span><a href ng-click="enableAllFilters(false)" class="action filter-helper">{{i18n.clearAll}}</a>, 
-          <a href ng-click="enableAllFilters(true)" class="action filter-helper">{{i18n.setAll}}</a><span class="caption">):</span>
+        <span class="caption">{{i18n.filters}} (</span><a href ng-click="enableAllFilters(false)" class="action filter-helper action-link">{{i18n.clearAll}}</a>, 
+          <a href ng-click="enableAllFilters(true)" class="action filter-helper action-link">{{i18n.setAll}}</a><span class="caption">):</span>
       </p>
-      <p class="sub-filter"><a href ng-click="enableVeganFilters(true)" class="action filter-helper">{{i18n.veganOnly}}:</a></p>
+      <p class="sub-filter"><a href ng-click="enableFilters('vegan')" class="action action-link filter-helper">{{i18n.veganOnly}}:</a></p>
       <p ng-repeat="filter in filters | filter:{type: 'vegan'} | orderBy:'order'">
-        <a href class="legend-item action" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
           <img ng-src="{{filter.iconUrl}}"/>
           {{filter.title}}
         </a>
       </p>
-      <p class="sub-filter"><a href ng-click="enableVeganFilters(false)" class="action filter-helper">{{i18n.vege}}:</a></p>
+      <p class="sub-filter"><a href ng-click="enableFilters('vege')" class="action action-link filter-helper">{{i18n.vege}}:</a></p>
       <p ng-repeat="filter in filters | filter:{type: 'vege'} | orderBy:'order'">
-        <a href class="legend-item action" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
           <img ng-src="{{filter.iconUrl}}"/>
           {{filter.title}}
         </a>
-      </p>      
+      </p> 
+      <p class="sub-filter"><a href ng-click="enableFilters('products')" class="action action-link filter-helper">{{i18n.products}} (<span tooltip-placement="bottom" tooltip="{{i18n.storesWarning}}">*</span>):</a></p>
+      <p ng-repeat="filter in filters | filter:{type: 'products'} | orderBy:'order'">
+        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+          <img ng-src="{{filter.iconUrl}}"/>
+          {{filter.title}}
+        </a>
+      </p>            
     </div>
   </div>
   <div class="row">
@@ -77,12 +84,17 @@
     <accordion close-others="'true'">
       <accordion-group ng-repeat="filter in filters | orderBy:'order'" is-open="filter.open">
         <accordion-heading>
-            {{filter.title}} <span class="pull-right glyphicon" 
-              ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}"></span>
+          {{filter.title}} <span class="badge">{{addresses[filter.id].length}}</span>
+          <span class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}"></span>
         </accordion-heading>
         <div class="row">
           <div ng-repeat="address in addresses[filter.id] | orderBy:'title'">
-            <div class="col-md-6 address-box" ng-bind-html="address.boxText"></div>
+            <div class="{{$last && $even ? 'col-sm-12' : 'col-sm-6'}}">
+              <a href ng-click="address.showOnMap()" class="action action-link" tooltip-placement="right" tooltip="{{i18n.showOnMap}}">
+                <span class="glyphicon glyphicon-hand-up"></span>
+              </a>
+              <div class="address-box" ng-bind-html="address.boxText"></div>
+            </div>
             <div ng-if="$odd" class="clearfix"></div>
           </div>
         </div>

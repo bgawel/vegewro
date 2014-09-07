@@ -25,13 +25,12 @@ angular.module('vegewroApp')
   };
   
   function createMap() {
-    backend.config().then(function(mapConfig) {
-      config = mapConfig;
+    backend.data().then(function(data) {
+      Firebase.goOffline(); // release connection
+      config = data.config;
       map = new google.maps.Map(document.getElementById('map'), config.mapOptions);
       createMapLegend(map);
-      createMapMarkers(function() {
-        Firebase.goOffline(); // release connection
-      });
+      createMapMarkers(data.places);
     });
   }
   
@@ -148,10 +147,10 @@ angular.module('vegewroApp')
     $scope.addresses[filterName].push({title: title, boxText: boxText.innerHTML, showOnMap: showOnMap});
   }
   
-  function createMapMarkers(done) {
-    $q.all([backend.places(), script.infoBox()]).then(function(results) {
+  function createMapMarkers(places) {
+    script.infoBox().then(function(results) {
       geocoder = new google.maps.Geocoder();
-      angular.forEach(results[0], function(place) {
+      angular.forEach(places, function(place) {
         if (place !== null && place.id) {
           angular.forEach(place.filters, function(filterName) {
             try {
@@ -166,7 +165,6 @@ angular.module('vegewroApp')
           });
         }
       });
-      done();
     });
   }
   
@@ -185,13 +183,13 @@ angular.module('vegewroApp')
         });
       }
       $scope.filters.push({id: filterName, title: locale.valueFor(filter.title, lang), iconUrl: filter.icon.url,
-        enabled: true, toggle: toggle, order: -filter.zIndex, type: filter.type});
+        enabled: true, toggle: toggle, order: -filter.order, type: filter.type});
     });
   }
   
-  $scope.enableVeganFilters = function(enable) {
+  $scope.enableFilters = function(type) {
     angular.forEach($scope.filters, function(filter) {
-      filter.enabled = (filter.type === 'vegan' ? enable : !enable);
+      filter.enabled = (filter.type === type);
       filter.toggle();
     });
   };

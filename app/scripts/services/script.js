@@ -21,7 +21,7 @@ angular.module('vegewroApp')
     
     return {
       infoBox : function() {
-        return getScript('ext_components/infobox/infobox.js');
+        return getScript('ext_components/infobox/infobox_packed.js');
       },
       
       googleMaps: function(lang) {
