@@ -54,6 +54,10 @@ body {
     padding-left: 5px;
   }
   
+  .action-contactUs {
+    padding-left: 3px;
+  }
+  
   .action-map {
     padding-left: 2px;
   }
@@ -144,9 +148,6 @@ body {
     vertical-align: top;
     width: 230px;
     z-index: 1;
-    border-right-color: #999999;
-    border-right-style: dotted;
-    border-right-width: 1px;
   } 
   
   .right {
@@ -154,11 +155,6 @@ body {
     display: inline-block;
     vertical-align: top;
     width: 170px;
-    
-    img {
-      float: left;
-      padding-right: 5px;
-    }
   }
   
   p:last-child {
@@ -166,12 +162,12 @@ body {
   }
   
   .title {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
   }
   
   .address {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18px;
     margin-bottom: 0;
     font-weight: 300;
@@ -179,6 +175,10 @@ body {
   
   .directions, .open {
     font-weight: 300;
+  }
+  
+  .web {
+    padding-top: 2px;
   }
 }
 
@@ -281,10 +281,26 @@ a.anchor {
     .nav.navbar-nav li {
       padding-top: 0;
     }
+    
+    .action-map, .action-filters, .action-addresses, .action-contactUs {
+      padding-left: 5px;
+    }
   }
   
   a.anchor {
     top: -60px; 
+  }
+  
+  .infoBox {
+    & > img {
+      width: 4%;
+    }
+  }
+  
+  .pop_up_box_text {
+    .left {
+      padding-bottom: 8px;
+    }
   }
   
   @media (min-width: 768px) {

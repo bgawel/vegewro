@@ -106,9 +106,7 @@ angular.module('vegewroApp')
     }
     var web = '';
     if (place.web !== undefined) {
-      web = '<p class="web clearfix"><a href="' + place.web + '" target="_blank">' + formatter.web(place.web) + '</a></p>';
-    } else {
-      web = '<p class="web clearfix"/>';
+      web = '<p class="web"><a href="' + place.web + '" target="_blank">' + formatter.web(place.web) + '</a></p>';
     }
     var email = '';
     if (place.email) {
@@ -119,7 +117,7 @@ angular.module('vegewroApp')
       phone = '<p class="phone">' + place.phone + '</p>';
     }
     boxText.innerHTML = '<div class="pop_up_box_text pre"><div class="left">' + title + desc + address + directions +
-      open + '</div><div class="right">' + image + web + email + phone + '</div></div>';
+      open + '</div><div class="right">' + web + email + phone + image + '</div></div>';
     return boxText;
   }
    
