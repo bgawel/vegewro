@@ -21,7 +21,9 @@ angular.module('vegewroApp')
         vege: 'Wegetariańskie jedzenie w mieście',
         products: 'Vege sklepy',
         showOnMap: 'Wyświetl na mapie',
-        storesWarning: 'Uwaga: niektóre sklepy oferują także produkty niewegetariańskie'
+        storesWarning: 'Uwaga: niektóre sklepy oferują także produkty niewegetariańskie',
+        map: 'mapa',
+        mapFilters: 'filtry mapy'
       },
       
       en : {
@@ -41,7 +43,9 @@ angular.module('vegewroApp')
         vege: 'Vegetarian places to eat',
         products: 'Vege stores',
         showOnMap: 'Display on map',
-        storesWarning: 'Be careful: some shops offer also non-vegetarian products'
+        storesWarning: 'Be careful: some shops offer also non-vegetarian products',
+        map: 'map',
+        mapFilters: 'map\'s filters'
       }
     };
   }]);

@@ -1,5 +1,6 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
+$grid-float-breakpoint: 991px;
 @import 'sass-bootstrap/lib/bootstrap';
 
 @font-face {
@@ -45,23 +46,31 @@ body {
   border-radius: 0;
   margin-bottom: 0;
   
-  .green-action {
-    color: rgb(0,127,14);
+  .action-mobile {
+    display: none;
   }
   
   .action-addresses {
-    @extend .green-action;
     padding-left: 5px;
+  }
+  
+  .action-map {
+    padding-left: 2px;
   }
   
   .dropdown-menu {
     min-width: inherit;
+  }
+  
+  .nav.navbar-nav li {
+    padding-top: 3px;
   }
 }
 
 .navbar-brand {
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-right: 0;
   
   .brand-name {
     margin-left: -15px;
@@ -221,22 +230,66 @@ body {
   cursor: pointer;
 }
 
-.addresses {
-  padding-top: 15px;
-  padding-left: 15px;
-}
+.addresses-section {
+  .panel-title {
+    font-size: 1.0em;
+  }
 
-.address-box {
-  padding-left: 0;
-  padding-bottom: 20px;
+  .addresses {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
   
-  .pop_up_box_text { 
-    .right {
-      width: auto;
+  .address-box {
+    padding-left: 0;
+    padding-bottom: 20px;
+    
+    .pop_up_box_text { 
+      .right {
+        width: auto;
+      }
     }
   }
 }
 
-.show-on-map {
-  width: 18px;
+a.anchor {
+  display: block;
+  position: relative; 
+  visibility: hidden;
+  top: 0; 
+}
+ 
+@media screen and (max-width: 991px) {
+  body {
+    padding-top: 60px;
+  }
+  
+  .navbar { 
+    .action-mobile {
+      display: initial;
+    }
+    
+    &.navbar-specific {  // .navbar-fixed-top
+      position: fixed;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      top: 0;
+      border-width: 0 0 1px;
+    }
+    
+    .nav.navbar-nav li {
+      padding-top: 0;
+    }
+  }
+  
+  a.anchor {
+    top: -60px; 
+  }
+  
+  @media (min-width: 768px) {
+    .navbar.navbar-specific {
+      border-radius: 0;
+    }
+  }
 }

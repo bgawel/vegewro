@@ -133,7 +133,7 @@ angular.module('vegewroApp')
       marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
       setZoomWhenMarkerClicked();
       // Sets the marker to be the center of the map. 
-      map.setCenter(marker.getPosition());
+      //map.setCenter(marker.getPosition());
     };
     marker.infoBoxClicked = infoBoxClicked;
     google.maps.event.addListener(marker, 'click', infoBoxClicked);
@@ -204,9 +204,14 @@ angular.module('vegewroApp')
   $scope.scrollTo = function(hash) {
     $timeout(function() {
       var old = $location.hash();
+      console.log(hash);
       $location.hash(hash);
       $anchorScroll();
       $location.hash(old);  //reset to old to keep any additional routing logic from kicking in
     }, 50);
+  };
+  
+  $scope.reload = function() {
+    $timeout(function() { $window.location.reload(); }, 0);
   };
 }]);
