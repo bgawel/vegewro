@@ -112,6 +112,9 @@ body {
   }
   
   & > img {
+    z-index: 500;
+    position: absolute !important;
+    right: 0;
     opacity: 0.4;
     filter: alpha(opacity=40); /* For IE8 and earlier */
     
@@ -318,7 +321,7 @@ a.anchor {
   .infoBox {
     width: 260px !important;
     & > img {
-      width: 5%;
+      width: 7%;
     }
   }
   
