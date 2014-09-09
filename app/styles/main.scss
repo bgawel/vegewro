@@ -103,7 +103,7 @@ body {
   & > div {
     border: 0px solid black; 
     background-color: #ffffff; 
-    padding: 15px; 
+    padding: 10px; 
     margin-top: 8px; 
     border-radius: 10px; 
     -moz-border-radius: 10px; 
@@ -121,17 +121,6 @@ body {
     }
   }
 }
-
-.pre {
-  white-space: pre;           /* CSS 2.0 */
-  white-space: pre-wrap;      /* CSS 2.1 */
-  white-space: pre-line;      /* CSS 3.0 */
-  white-space: -pre-wrap;     /* Opera 4-6 */
-  white-space: -o-pre-wrap;   /* Opera 7 */
-  white-space: -moz-pre-wrap; /* Mozilla */
-  white-space: -hp-pre-wrap;  /* HP Printers */
-  word-wrap: break-word;      /* IE 5+ */
- }
 
 .pop_up_box_text {
   font-family: 'Roboto',Arial,sans-serif;
@@ -181,6 +170,17 @@ body {
     padding-top: 2px;
   }
 }
+
+.pre {
+  white-space: pre;           /* CSS 2.0 */
+  white-space: pre-wrap;      /* CSS 2.1 */
+  white-space: pre-line;      /* CSS 3.0 */
+  white-space: -pre-wrap;     /* Opera 4-6 */
+  white-space: -o-pre-wrap;   /* Opera 7 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap;  /* HP Printers */
+  word-wrap: break-word;      /* IE 5+ */
+ }
 
 /* Custom page footer */
 .footer {
@@ -248,6 +248,9 @@ body {
       .right {
         width: auto;
       }
+      .left {
+        padding-bottom: 8px;
+      }
     }
   }
 }
@@ -297,9 +300,9 @@ a.anchor {
     }
   }
   
-  .pop_up_box_text {
-    .left {
-      padding-bottom: 8px;
+  .addresses-section {
+    .show-on-map {
+      font-size: 20px;
     }
   }
   
@@ -309,3 +312,48 @@ a.anchor {
     }
   }
 }
+
+@media screen and (max-width: 430px) {
+
+  .infoBox {
+    width: 260px !important;
+    & > img {
+      width: 5%;
+    }
+  }
+  
+  .addresses-section {
+    .pop_up_box_text {
+      border-bottom-color: #999999;
+      border-bottom-style: dotted;
+      border-bottom-width: 1px;
+      
+      .logo {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  
+  .infoBox {
+    .pop_up_box_text {
+      .title, .address {
+        font-size: 12px;
+      }
+      
+      .logo, .email, .phone {
+        display: none;
+      }
+      
+      .web {
+        padding-top: 5px;
+        margin-bottom: 0;
+      }
+      
+      .desc {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+

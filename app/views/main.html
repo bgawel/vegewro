@@ -97,14 +97,16 @@
     <accordion close-others="'true'">
       <accordion-group ng-repeat="filter in filters | orderBy:'order'" is-open="filter.open">
         <accordion-heading>
-          {{filter.title}} <span class="badge">{{addresses[filter.id].length}}</span>
-          <span class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}"></span>
+          <div>
+            {{filter.title}} <span class="badge">{{addresses[filter.id].length}}</span>
+            <span class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}"></span>
+          </div>
         </accordion-heading>
         <div class="row">
           <div ng-repeat="address in addresses[filter.id] | orderBy:'title'">
-            <div class="{{$last && $even ? 'col-sm-12' : 'col-sm-6'}}">
+            <div class="{{$last && $even ? 'col-md-12' : 'col-md-6'}}">
               <a href ng-click="address.showOnMap()" class="action action-link" tooltip-placement="right" tooltip="{{i18n.showOnMap}}">
-                <span class="glyphicon glyphicon-hand-up"></span>
+                <span class="glyphicon glyphicon-hand-up show-on-map"></span>
               </a>
               <div class="address-box" ng-bind-html="address.boxText"></div>
             </div>

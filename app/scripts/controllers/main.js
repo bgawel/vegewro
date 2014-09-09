@@ -89,7 +89,7 @@ angular.module('vegewroApp')
     var boxText = document.createElement('div');
     var image = '';
     if (place.image !== undefined) {
-      image = '<img src="' + place.image.src + '" width="' + place.image.size.width +'" height="' +
+      image = '<img class="logo" src="' + place.image.src + '" width="' + place.image.size.width +'" height="' +
         place.image.size.height + '" border="0" />';
     }
     var title = '<p class="title">' + locale.valueFor(place.title, lang) + '</p>';

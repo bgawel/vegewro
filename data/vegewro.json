@@ -625,5 +625,30 @@
       },
       "src" : "http://static.tumblr.com/098e86e879691dd7643f2a9f74f3eaf3/adgnh04/wr1n5tv9r/tumblr_static_4xp3b7llytwckog4kgkwcw0c8.png"
     }
+  }, {
+    "address" : "Kraińskiego 14, Wrocław",
+    "filters" : [ "vegeBar" ],
+    "id" : 17,
+    "position" : {
+      "lat" : 51.1119313,
+      "lng" : 17.040233
+    },
+    "title" : {
+      "pl" : "Baszta – jedzenie i gastronomia",
+      "en" : "Baszta – food and gastronomy"
+    },
+    "phone": "668 043 255",
+    "web" : "https://facebook.com/basztaniedzwiadka",
+        "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/c5.0.200.200/p200x200/10403402_1453398348250768_6602896798332134849_n.jpg?oh=4982a7d986248aac39bb7b1217dcc6ab&oe=54A4D8AD&__gda__=1417917112_5ebf46b37901a427323ba9812ae8276e"
+    },
+    "open" : {
+      "en" : "Tue-Thu: 12:00-21:00, Fri: 12:00-23:00, Sat-Sun: 14:00-21:00",
+      "pl" : "wt.-czw.: 12:00-21:00, piąt.: 12:00-23:00, sob.-niedz.: 14:00-21:00"
+    }
   } ]
 }
