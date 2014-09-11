@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand action" href ng-click="reload()"><img src="images/logo.png" width="57" height="50"/>
-        <span class="brand-name">rocław vege map</span>
+        <span class="brand-name">rocław <span class="green">vege</span> map</span>
       </a>
     </div>
     <div class="collapse navbar-collapse">
@@ -132,8 +132,7 @@
           <a ng-href="{{post.fbHref}}" target="_blank">
             <img class="fb-icon" width="12" height="12" src="images/facebook.png"> {{post.by}}</a>
           <a href ng-click="places[post.placeId].showOnMap()" class="action action-link" tooltip-placement="right" tooltip="{{i18n.showOnMap}}">
-            <span class="glyphicon glyphicon-hand-up show-on-map"></span>
-          </a>]:
+            <span class="glyphicon glyphicon-hand-up show-on-map"></span></a>]:
           <span class="clearfix" ng-repeat="message in post.messages" 
             ng-bind-html="(post.messages.length > 1 ? ' - ' + message.message : message.message) | characters:500 | linky:'_blank'"></span>
         </span>

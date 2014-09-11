@@ -6,7 +6,7 @@ angular.module('vegewroApp')
                            function ($scope, $window, $timeout, $location, $anchorScroll, backend, locale, formatter,
                                $q, script, $routeParams, i18n, fb) {
 
-  var geocoder, map, config, markers = [];
+  var geocoder, map, config, markers = [], lastInfoBoxClicked;
   var fbPosts = {check:[], fetched:[]};
   $scope.filters = [];
   $scope.addresses = {};
@@ -138,12 +138,16 @@ angular.module('vegewroApp')
     infoBoxOptions.content = boxText;
     var infoBox = new InfoBox(infoBoxOptions);
     var infoBoxClicked = function() {
+      if (lastInfoBoxClicked) {
+        lastInfoBoxClicked.close();
+      }
       infoBox.open(map, marker);
       // Changes the z-index property of the marker to make the marker appear on top of other markers.
       marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
       setZoomWhenMarkerClicked();
       // Do not set the marker to be the center of the map; does not work well if the map is not fully visible 
       //map.setCenter(marker.getPosition());
+      lastInfoBoxClicked = infoBox;
     };
     marker.infoBoxClicked = infoBoxClicked;
     google.maps.event.addListener(marker, 'click', infoBoxClicked);
