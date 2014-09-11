@@ -20,7 +20,8 @@ angular.module('vegewroApp', [
         redirectTo: '/'
       });
   })
-  .run(['$route', '$rootScope', '$location', function ($route, $rootScope, $location) {
+  .run(['$route', '$rootScope', '$location', '$timeout', '$anchorScroll', '$window',
+        function ($route, $rootScope, $location, $timeout, $anchorScroll, $window) {
     // see http://joelsaupe.com/programming/angularjs-change-path-without-reloading/
     function enhanceLocationPath() {
       var original = $location.path;
@@ -35,12 +36,24 @@ angular.module('vegewroApp', [
         return original.apply($location, [path]);
       };
     }
-    
     enhanceLocationPath();
+    
+    $rootScope.scrollTo = function(hash) {
+      $timeout(function() {
+        var old = $location.hash();
+        $location.hash(hash);
+        $anchorScroll();
+        $location.hash(old);  //reset to old to keep any additional routing logic from kicking in
+      }, 50);
+    };
+    
+    $rootScope.reload = function() {
+      $timeout(function() { $window.location.reload(); }, 0);
+    };
   }]);
 
 // https://github.com/twbs/bootstrap/issues/12852
-$(document).on('click','.navbar-collapse.in',function(e) {
+$(document).on('click', '.navbar-collapse.in', function(e) {
   if ($(e.target).is('a') || $(e.target).is('span')) {
     $(this).collapse('hide');
   }

@@ -1,6 +1,9 @@
 {
   "config" : {
     "fbToken" : "",
+    "googleMapsVersion" : "3",
+    "googleMapsToken" : "",
+    "fbPostsNoOlderThan" : 2592000000,
     "filters" : {
       "veganBar" : {
         "icon" : {

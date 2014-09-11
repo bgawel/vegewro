@@ -70,26 +70,39 @@
     <a class="anchor" id="filtersAnchor"></a>
     <div class="col-md-3 filters">
       <p>
-        <span class="caption anchor" id="filters">{{i18n.filters}} (</span><a href ng-click="enableAllFilters(false)" class="action filter-helper action-link">{{i18n.clearAll}}</a>, 
-          <a href ng-click="enableAllFilters(true)" class="action filter-helper action-link">{{i18n.setAll}}</a><span class="caption">):</span>
+        <span class="caption anchor" id="filters">{{i18n.filters}} (</span><!--
+     --><a href ng-click="enableAllFilters(false)" class="action filter-helper action-link">{{i18n.clearAll}}</a>, 
+        <a href ng-click="enableAllFilters(true)" class="action filter-helper action-link">{{i18n.setAll}}</a><!--
+     --><span class="caption">):</span>
       </p>
-      <p class="sub-filter"><a href ng-click="enableFilters('vegan')" class="action action-link filter-helper">{{i18n.veganOnly}}:</a></p>
+      <p class="sub-filter">
+        <a href ng-click="enableFilters('vegan')" class="action action-link filter-helper">{{i18n.veganOnly}}:</a>
+      </p>
       <p ng-repeat="filter in filters | filter:{type: 'vegan'} | orderBy:'order'">
-        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
+            ng-click="filter.enabled = !filter.enabled; filter.toggle()">
           <img ng-src="{{filter.iconUrl}}"/>
           {{filter.title}}
         </a>
       </p>
-      <p class="sub-filter"><a href ng-click="enableFilters('vege')" class="action action-link filter-helper">{{i18n.vege}}:</a></p>
+      <p class="sub-filter">
+        <a href ng-click="enableFilters('vege')" class="action action-link filter-helper">{{i18n.vege}}:</a>
+      </p>
       <p ng-repeat="filter in filters | filter:{type: 'vege'} | orderBy:'order'">
-        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
+            ng-click="filter.enabled = !filter.enabled; filter.toggle()">
           <img ng-src="{{filter.iconUrl}}"/>
           {{filter.title}}
         </a>
       </p> 
-      <p class="sub-filter"><a href ng-click="enableFilters('products')" class="action action-link filter-helper">{{i18n.products}} (<span tooltip-placement="bottom" tooltip="{{i18n.storesWarning}}">*</span>):</a></p>
+      <p class="sub-filter">
+        <a href ng-click="enableFilters('products')" class="action action-link filter-helper">{{i18n.products}}
+          (<span tooltip-placement="bottom" tooltip="{{i18n.storesWarning}}">*</span>):
+        </a>
+      </p>
       <p ng-repeat="filter in filters | filter:{type: 'products'} | orderBy:'order'">
-        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
+            ng-click="filter.enabled = !filter.enabled; filter.toggle()">
           <img ng-src="{{filter.iconUrl}}"/>
           {{filter.title}}
         </a>
@@ -104,13 +117,16 @@
         <accordion-heading>
           <div>
             {{filter.title}} <span class="badge">{{addresses[filter.id].length}}</span>
-            <span class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}"></span>
+            <span class="pull-right glyphicon" 
+              ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}">
+            </span>
           </div>
         </accordion-heading>
         <div class="row">
           <div ng-repeat="address in addresses[filter.id] | orderBy:'title'">
             <div class="{{$last && $even ? 'col-md-12' : 'col-md-6'}}">
-              <a href ng-click="address.showOnMap()" class="action action-link" tooltip-placement="right" tooltip="{{i18n.showOnMap}}">
+              <a href ng-click="address.showOnMap()" class="action action-link" tooltip-placement="right" 
+                  tooltip="{{i18n.showOnMap}}">
                 <span class="glyphicon glyphicon-hand-up show-on-map"></span>
               </a>
               <div class="address-box" ng-bind-html="address.boxText"></div>
@@ -124,22 +140,27 @@
   <div class="row news-section">
     <a class="anchor" id="newsAnchor"></a>
     <h4 class="section-title caption anchor" id="news">{{i18n.bNews}}</h4>
-    <span class="loading" ng-show="postsLoading">{{i18n.loading}}</span>
-    <div class="row col-xs-12 news" ng-repeat="post in posts | orderBy:'time':true">
+    <span class="loading" ng-show="feedsLoading">{{i18n.loading}}</span>
+    <div class="row col-xs-12 news" ng-repeat="feed in feeds | orderBy:'time':true">
       <p class="content">
-        <b>[{{post.time | date: 'dd/MM'}}</b>,
-        <span ng-if="post.fbHref">
-          <a ng-href="{{post.fbHref}}" target="_blank">
-            <img class="fb-icon" width="12" height="12" src="images/facebook.png"> {{post.by}}</a>
-          <a href ng-click="places[post.placeId].showOnMap()" class="action action-link" tooltip-placement="right" tooltip="{{i18n.showOnMap}}">
-            <span class="glyphicon glyphicon-hand-up show-on-map"></span></a>]:
-          <span class="clearfix" ng-repeat="message in post.messages" 
-            ng-bind-html="(post.messages.length > 1 ? ' - ' + message.message : message.message) | characters:500 | linky:'_blank'"></span>
+        <b>[{{feed.time | date: 'dd/MM'}}</b>,
+        <span ng-if="feed.fbHref">
+          <a ng-href="{{feed.fbHref}}" target="_blank">
+            <img class="fb-icon" width="12" height="12" src="images/facebook.png"> {{feed.by}}
+          </a>
+          <a href ng-click="places[feed.placeId].showOnMap()" class="action action-link" tooltip-placement="right" 
+              tooltip="{{i18n.showOnMap}}">
+            <span class="glyphicon glyphicon-hand-up show-on-map"></span><!--
+       --></a>]:
+          <span class="clearfix" ng-repeat="message in feed.messages" 
+            ng-bind-html="(feed.messages.length > 1 ? ' - ' + message.message : message.message) | characters:500 | linky:'_blank'">
+          </span>
         </span>
-        <span ng-if="!post.fbHref">
-          {{post.by}}]:
-          <span class="clearfix" ng-repeat="message in post.messages" 
-            ng-bind-html="(post.messages.length > 1 ? ' - ' + message : message) | characters:500 | linky:'_blank'"></span>
+        <span ng-if="feed.fixed">
+          {{feed.by}}]:
+          <span class="clearfix" ng-repeat="message in feed.messages" 
+            ng-bind-html="(feed.messages.length > 1 ? ' - ' + message : message) | characters:500 | linky:'_blank'">
+          </span>
         </span>
       </p>
     </div>

@@ -1,12 +1,13 @@
 'use strict';
 
 angular.module('vegewroApp')
-  .factory('locale', [function() {
-    
+  .factory('locale', ['$rootScope', '$window', '$timeout', '$location', '$routeParams', 'i18n',
+                      function($rootScope, $window, $timeout, $location, $routeParams, i18n) {
+
     var supportedLangs = ['en', 'pl'];
     var defaultLang = supportedLangs[0];
     var fallbackLang = supportedLangs[1];
-    
+
     function isSupportedLang(lang) {
       return supportedLangs.indexOf(lang) >= 0;
     }
@@ -25,7 +26,6 @@ angular.module('vegewroApp')
       if (locale) {
         return locale.split('-')[0];
       }
-      return undefined;
     }
     
     function determineUserLang() {
@@ -33,13 +33,26 @@ angular.module('vegewroApp')
       return isSupportedLang(lang) ? lang : defaultLang;
     }
     
+    function getLang(urlLang) {
+      return isSupportedLang(urlLang) ? urlLang : determineUserLang();
+    }
+    
+    function changePathForLang(lang) {
+      $rootScope.i18n = i18n[lang];
+      $location.path('/' + lang, false);
+    }
+    
+    $rootScope.changeLang = function(lang) {
+      changePathForLang(lang);
+      $timeout(function() { $window.location.reload(); }, 0);
+    };
+    
+    $rootScope.lang = getLang($routeParams.lang);
+    changePathForLang($rootScope.lang);
+    
     return {
-      getLang : function(urlLang) {
-        return isSupportedLang(urlLang) ? urlLang : determineUserLang();
-      },
-      
-      valueFor : function(fromObject, lang) {
-        var value = fromObject[lang];
+      valueFor : function(fromObject) {
+        var value = fromObject[$rootScope.lang];
         if (isBlank(value)) {
           value = fromObject[defaultLang];
           if (isBlank(value)) {

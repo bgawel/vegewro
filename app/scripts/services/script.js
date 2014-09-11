@@ -23,15 +23,5 @@ angular.module('vegewroApp')
       infoBox : function() {
         return getScript('ext_components/infobox/infobox_packed.js');
       },
-      
-      googleMaps: function(lang) {
-        var deferred = $q.defer();
-        google.load('maps', '3', {
-          'other_params' :
-          'key=AIzaSyAq5XL42ERicqHYXKKmzPU7D6dVBAutA0U&sensor=false&language=' + lang,
-          'callback' : deferred.resolve
-        });
-        return deferred.promise;
-      }
     };
   }]);

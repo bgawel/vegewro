@@ -1,5 +1,9 @@
 {
   "config" : {
+    "fbToken" : "",
+    "googleMapsVersion" : "3",
+    "googleMapsToken" : "",
+    "fbPostsNoOlderThan" : 2592000000,
     "filters" : {
       "veganBar" : {
         "icon" : {
@@ -224,11 +228,13 @@
       "lat" : 51.112043,
       "lng" : 17.036157
     },
-    "title" : {
-      "en" : "Najadacze.pl – vegan restaurant and catering",
-      "pl" : "Najadacze.pl – restauracja i katering wegański"
+    "name" : "Najadacze.pl",
+    "profile" : {
+      "en" : "vegan restaurant and catering",
+      "pl" : "restauracja i katering wegański"
     },
-    "web" : "http://najadacze.pl"
+    "web" : "http://najadacze.pl",
+    "fb": "najadacze"
   }, {
     "address" : "Igielna 14, Wrocław",
     "desc" : {
@@ -249,11 +255,13 @@
       "lat" : 51.111474,
       "lng" : 17.0318039
     },
-    "title" : {
-      "en" : "Latająca Kuchnia – creative vegan cooking",
-      "pl" : "Latająca Kuchnia – kreatywna kuchnia roślinna"
+    "name" : "Latająca Kuchnia",
+    "profile" : {
+      "en" : "creative vegan cooking",
+      "pl" : "kreatywna kuchnia roślinna"
     },
-    "web" : "http://latajacakuchnia.pl"
+    "web" : "http://latajacakuchnia.pl",
+    "fb" : "LatajacaKuchniaWroclaw"
   }, {
     "address" : "Jedności Narodowej 93A, Wrocław",
     "email" : "ewa.rudakita@gmail.com",
@@ -275,11 +283,13 @@
       "lat" : 51.1220129,
       "lng" : 17.044137
     },
-    "title" : {
-      "en" : "Ruda Kita – coffee house, health food store, toy store",
-      "pl" : "Ruda Kita – kawiarnia, sklep ze zdrową żywnością, sklep z zabawkami"
+    "name" : "Ruda Kita",
+    "profile" : {
+      "en" : "coffee house, health food store, toy store",
+      "pl" : "kawiarnia, sklep ze zdrową żywnością, sklep z zabawkami"
     },
     "web" : "https://facebook.com/rudakitawroclaw",
+    "fb" : "rudakitawroclaw",
     "desc" : {
       "en" : "Only stationery shopping",
       "pl" : "Tylko sklep stacjonarny"
@@ -305,11 +315,13 @@
       "lat" : 51.110532,
       "lng" : 17.026004
     },
-    "title" : {
-      "en" : "Machina Organica – restaurant-coffee house-bar",
-      "pl" : "Machina Organica – restauracja-cafe-bar"
+    "name" : "Machina Organica",
+    "profile" : {
+      "en" : "restaurant-coffee house-bar",
+      "pl" : "restauracja-cafe-bar"
     },
-    "web" : "https://facebook.com/Machina.Organika"
+    "web" : "https://facebook.com/Machina.Organika",
+    "fb" : "Machina.Organika"
   }, {
     "address" : "Rynek 27a, Wrocław",
     "filters" : [ "veganBar" ],
@@ -330,11 +342,13 @@
       "lat" : 51.109834,
       "lng" : 17.032724
     },
-    "title" : {
-      "en" : "VEGA – vegan restaurant, bar",
-      "pl" : "VEGA – wegańska restauracja, bar"
+    "name" : "VEGA",
+    "profile" : {
+      "en" : "vegan restaurant, bar",
+      "pl" : "wegańska restauracja, bar"
     },
-    "web" : "http://vega-wroclaw.com.pl"
+    "web" : "http://vega-wroclaw.com.pl",
+    "fb" : "Vega.Bar.Weganski.Wroclaw"
   }, {
     "address" : "Ofiar Oświęcimskich 18, Wrocław",
     "filters" : [ "vegeBar", "vegeCatering" ],
@@ -354,12 +368,14 @@
       "lat" : 51.108466,
       "lng" : 17.031747
     },
-    "title" : {
-      "en" : "Złe mięso – vegetarian and vegan restaurant",
-      "pl" : "Złe mięso – wegetariańska i wegańska restauracja"
+    "name" : "Złe mięso",
+    "profile" : {
+      "en" : "vegetarian and vegan restaurant",
+      "pl" : "wegetariańska i wegańska restauracja"
     },
     "email": "klubojadalnia.zlemieso@gmail.com",
-    "web" : "http://www.zlemieso.pl"
+    "web" : "http://www.zlemieso.pl",
+    "fb" : "klubojadalniazlemieso"
   }, {
     "address" : "Kuźnicza 11/13, Wrocław",
     "filters" : [ "vegeBar" ],
@@ -379,12 +395,11 @@
       "lat" : 51.1110645,
       "lng" : 17.0339005
     },
-    "title" : {
-      "pl" : "Green Way Food for Life"
-    },
+    "name" : "Green Way Food for Life",
     "phone": "71 341 90 98",
     "email": "wroclaw.kuznicza@greenway.pl",
-    "web" : "http://www.greenway.pl"
+    "web" : "http://www.greenway.pl",
+    "fb" : "green.way.wroclaw"
   }, {
     "address" : "Plac Kościuszki 12, Wrocław",
     "filters" : [ "vegeBar", "vegeCatering" ],
@@ -404,13 +419,15 @@
       "lat" : 51.102361,
       "lng" : 17.029168
     },
-    "title" : {
-      "en" : "Nalanda – book store, restaurant, coffe house",
-      "pl" : "Nalanda – księgarnia, bufer, kawiarnia"
+    "name" : "Nalanda",    
+    "profile" : {
+      "en" : "book store, restaurant, coffe house",
+      "pl" : "księgarnia, bufer, kawiarnia"
     },
     "phone": "508 330 079",
     "email": "wydarzenia@nalanda.com.pl",
-    "web" : "http://www.nalanda.pl"
+    "web" : "http://www.nalanda.pl",
+    "fb" : "Nalandia"
   }, {
     "address" : "Kamieńskiego 205 lok. 16, Wrocław",
     "filters" : [ "vegeCosmetics" ],
@@ -423,13 +440,15 @@
       "lat" : 51.1565965,
       "lng" : 17.0442764
     },
-    "title" : {
-      "pl" : "Geen Line – kosmetyki naturalne i ekologiczne środki czystości",
-      "en" : "Geen Line – natural cosmetics and ecological detergents"
+    "name": "Geen Line",
+    "profile" : {
+      "pl" : "kosmetyki naturalne i ekologiczne środki czystości",
+      "en" : "natural cosmetics and ecological detergents"
     },
     "phone": "512 144 140",
     "email": "info@greenline-sklep.pl",
-    "web" : "http://greenline-sklep.pl"
+    "web" : "http://greenline-sklep.pl",
+    "fb": "192700764111581"
   }, {
     "address" : "Paprotna 8, Wrocław",
     "filters" : [ "vegeFood" ],
@@ -442,9 +461,10 @@
       "lat" : 51.1531055,
       "lng" : 17.0256488
     },
-    "title" : {
-      "pl" : "Kamila – hurtownia spożywcza",
-      "en" : "Kamila – wholesale grocery"
+    "name" : "Kamila",
+    "profile" : {
+      "pl" : "hurtownia spożywcza",
+      "en" : "wholesale grocery"
     },
     "phone": "783 295 188",
     "email": "kamila@pnet.pl",
@@ -461,13 +481,15 @@
       "lat" : 51.099564,
       "lng" : 17.050745
     },
-    "title" : {
-      "pl" : "BioManiac – produkty ekologiczne",
-      "en" : "BioManiac – ecological food"
+    "name" : "BioManiac",
+    "profile" : {
+      "pl" : "produkty ekologiczne",
+      "en" : "ecological food"
     },
     "phone": "71 797 50 10",
     "email": "sklep@biomaniac.pl",
     "web" : "http://biomaniac.pl",
+    "fb" : "246013798839047",
     "image" : {
       "size" : {
         "height" : 30,
@@ -491,13 +513,15 @@
       "lat" : 51.1277819,
       "lng" : 16.900986
     },
-    "title" : {
-      "pl" : "MarketBio.pl – ekologiczna zdrowa żywność, eco bio produkty",
-      "en" : "MarketBio.pl – ecological food, eco bio products"
+    "name" : "MarketBio",
+    "profile" : {
+      "pl" : "ekologiczna zdrowa żywność, eco bio produkty",
+      "en" : "ecological food, eco bio products"
     },
     "phone": "71 349 84 71, 795 40 21 21",
     "email": "sklep@marketbio.pl",
     "web" : "http://www.marketbio.pl",
+    "fb" : "420526034635393",
     "image" : {
       "size" : {
         "height" : 38,
@@ -521,13 +545,15 @@
       "lat" : 51.103699,
       "lng" : 17.030952
     },
-    "title" : {
-      "pl" : "Organic Farma Zdrowia – produkty ekologiczne i naturalne",
-      "en" : "Organic Farma Zdrowia – ecological and natural products"
+    "name" : "Organic Farma Zdrowia",
+    "profile" : {
+      "pl" : "produkty ekologiczne i naturalne",
+      "en" : "ecological and natural products"
     },
     "phone": "71 782 32 58",
     "email": "sklep@organic24.pl",
     "web" : "http://www.organicmarket.pl",
+    "fb" : "ORGANICFARMAZDROWIA",
     "image" : {
       "size" : {
         "height" : 32,
@@ -551,13 +577,15 @@
       "lat" : 51.106186,
       "lng" : 17.043548
     },
-    "title" : {
-      "pl" : "Świnki Trzy – kawiarnia, sklep ze zdrową żywnością",
-      "en" : "Świnki Trzy – coffee house, healthy food store"
+    "name" : "Świnki Trzy",
+    "profile" : {
+      "pl" : "kawiarnia, sklep ze zdrową żywnością",
+      "en" : "coffee house, healthy food store"
     },
     "phone": "71 714 22 35",
     "email": "kontakt@swinkitrzy.net",
     "web" : "http://swinkitrzy.net",
+    "fb" : "swinki.trzy3",
     "image" : {
       "size" : {
         "height" : 40,
@@ -581,13 +609,15 @@
       "lat" : 51.099671,
       "lng" : 17.023655
     },
-    "title" : {
-      "pl" : "zdrowegary.pl – artykuły zdrowe i niezwykłe",
-      "en" : "zdrowegary.pl – healthy food store"
+    "name" : "zdrowegary.pl",
+    "profile" : {
+      "pl" : "artykuły zdrowe i niezwykłe",
+      "en" : "healthy food store"
     },
     "phone": "537 660 513",
     "email": "sklep@zdrowegary.pl",
     "web" : "http://sklepzdrowegary.pl",
+    "fb" : "ZdroweGary",
     "image" : {
       "size" : {
         "height" : 33,
@@ -611,13 +641,15 @@
       "lat" : 51.103286,
       "lng" : 17.033344
     },
-    "title" : {
-      "pl" : "Pan Pablo – autorski sklep z butami",
-      "en" : "Pan Pablo – shoes store "
+    "name" : "Pan Pablo",
+    "profile" : {
+      "pl" : "autorski sklep z butami",
+      "en" : "shoes store "
     },
     "phone": "518 424 921",
     "email": "sklep@panpablo.pl",
     "web" : "http://www.panpablo.pl/kategoria/buty-weganskie",
+    "fb" : "panpablo.sklep",
         "image" : {
       "size" : {
         "height" : 34,
@@ -633,12 +665,14 @@
       "lat" : 51.1119313,
       "lng" : 17.040233
     },
-    "title" : {
-      "pl" : "Baszta – jedzenie i gastronomia",
-      "en" : "Baszta – food and gastronomy"
+    "name" : "Baszta",
+    "profile" : {
+      "pl" : "jedzenie i gastronomia",
+      "en" : "food and gastronomy"
     },
     "phone": "668 043 255",
     "web" : "https://facebook.com/basztaniedzwiadka",
+    "fb" : "basztaniedzwiadka",
         "image" : {
       "size" : {
         "height" : 40,

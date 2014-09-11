@@ -46,7 +46,7 @@ angular.module('vegewroApp')
         vege: 'Vegetarian places to eat',
         products: 'Vege stores',
         showOnMap: 'Show place on map',
-        storesWarning: 'Be careful: some shops offer also non-vegetarian products',
+        storesWarning: 'Be careful, some shops offer also non-vegetarian products',
         map: 'map',
         mapFilters: 'map\'s filters',
         news: 'news',
