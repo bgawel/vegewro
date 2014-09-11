@@ -1,0 +1,697 @@
+{
+  "config" : {
+    "fbToken" : "1469482329978136|1d13ba907cf0c772f65986f08775718e#2861767027582063244",
+    "filters" : {
+      "veganBar" : {
+        "icon" : {
+          "anchor" : {
+            "x" : 24,
+            "y" : 32
+          },
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/carrot.png"
+        },
+        "title" : {
+          "en" : "Vegan bars, restaurants, coffee houses",
+          "pl" : "Wegańskie bary, restauracje, kawiarnie"
+        },
+        "zIndex" : 150,
+        "order" : 200,
+        "type": "vegan"
+      },
+      "veganDelivery" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/leek.png"
+        },
+        "title" : {
+          "en" : "Vegan food delivery",
+          "pl" : "Wegańskie dowozy"
+        },
+        "zIndex" : 140,
+        "order" : 180,
+        "type": "vegan"
+      },      
+      "veganCatering" : {
+        "icon" : {
+          "anchor" : {
+            "x" : 6,
+            "y" : 32
+          },
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/courgette.png"
+        },
+        "title" : {
+          "en" : "Vegan catering",
+          "pl" : "Wegański katering"
+        },
+        "zIndex" : 130,
+        "order" : 160,
+        "type": "vegan"
+      },      
+      "vegeBar" : {
+        "icon" : {
+          "anchor" : {
+            "x" : 24,
+            "y" : 32
+          },
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/milkycarrot.png"
+        },
+        "title" : {
+          "en" : "Vegan-vegetarian bars, restaurants, coffee houses",
+          "pl" : "Wegańsko-wegetariańskie bary, restauracje, kawiarnie"
+        },
+        "zIndex" : 90,
+        "order" : 140,
+        "type": "vege"
+      },
+      "vegeDelivery" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/milkyleek.png"
+        },
+        "title" : {
+          "en" : "Vegan-vegetarian food delivery",
+          "pl" : "Wegańsko-wegetariańskie dowozy"
+        },
+        "zIndex" : 80,
+        "order" : 120,
+        "type": "vege"
+      },
+      "vegeCatering" : {
+        "icon" : {
+          "anchor" : {
+            "x" : 6,
+            "y" : 32
+          },
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/milkycourgette.png"
+        },
+        "title" : {
+          "en" : "Vegan-vegetarian catering",
+          "pl" : "Wegańsko-wegetariański katering"
+        },
+        "zIndex" : 70,
+        "order" : 100,
+        "type": "vege"
+      },
+      "vegeFood" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/shop.png"
+        },
+        "title" : {
+          "en" : "Stores with vege food",
+          "pl" : "Sklepy z vege żywnością"
+        },
+        "zIndex" : 40,
+        "order" : 80,
+        "type": "products"
+      },
+      "vegeShoes" : {
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/shoes2.png"
+        },
+        "title" : {
+          "en" : "Stores with vege shoes",
+          "pl" : "Sklepy z vege butami"
+        },
+        "zIndex" : 60,
+        "order" : 60,
+        "type": "products"
+      },
+      "vegeCosmetics" : {
+        "icon" : {
+          "anchor" : {
+            "x" : 8,
+            "y" : 32
+          },
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/cosmetics4.png"
+        },
+        "title" : {
+          "en" : "Stores with vege cosmetics and detergents",
+          "pl" : "Sklepy z vege kosmetykami i detergentami"
+        },
+        "zIndex" : 50,
+        "order" : 40,
+        "type": "products"
+      }
+    },
+    "infoboxOptions" : {
+      "boxStyle" : {
+        "background" : "url('images/pop_up_box_top_arrow.png') no-repeat",
+        "opacity" : 1,
+        "width" : "430px"
+      },
+      "closeBoxMargin" : "10px 2px 2px 2px",
+      "closeBoxURL" : "images/close.png",
+      "disableAutoPan" : false,
+      "enableEventPropagation" : false,
+      "infoBoxClearance" : {
+        "height" : 1,
+        "width" : 1
+      },
+      "isHidden" : false,
+      "maxWidth" : 0,
+      "pane" : "floatPane",
+      "pixelOffset" : {
+        "height" : 0,
+        "width" : -241
+      },
+      "zIndex" : 200
+    },
+    "mapOptions" : {
+      "center" : {
+        "lat" : 51.10789,
+        "lng" : 17.03854
+      },
+      "mapTypeControl" : true,
+      "mapTypeId" : "roadmap",
+      "minZoom" : 11,
+      "panControl" : true,
+      "zoom" : 12
+    },
+    "zoomWhenDirections" : 16,
+    "zoomWhenMarkerClicked" : 14
+  },
+  "places" : [ {
+    "address" : "Nożownicza 40, Wrocław",
+    "email" : "catering@najadacze.pl",
+    "filters" : [ "veganBar", "veganDelivery", "veganCatering" ],
+    "id" : 1,
+    "image" : {
+      "size" : {
+        "height" : 31,
+        "width" : 152
+      },
+      "src" : "http://najadacze.pl/wp-content/themes/twentythirteen/images/headers/logo-restaurant.png"
+    },
+    "open" : {
+      "en" : "Mon-Thu: 11-20, Fri: 11-21, Sat: 12-21, Sun: 13-20",
+      "pl" : "Pon-Czw: 11-20, Pt: 11-21, Sob: 12-21, Niedz: 13-20"
+    },
+    "phone" : "71 344 55 11",
+    "position" : {
+      "lat" : 51.112043,
+      "lng" : 17.036157
+    },
+    "name" : "Najadacze.pl",
+    "profile" : {
+      "en" : "vegan restaurant and catering",
+      "pl" : "restauracja i katering wegański"
+    },
+    "web" : "http://najadacze.pl",
+    "fb": "najadacze"
+  }, {
+    "address" : "Igielna 14, Wrocław",
+    "desc" : {
+      "pl" : ""
+    },
+    "email" : "kontakt@latajacakuchnia.pl",
+    "filters" : [ "veganDelivery", "veganCatering" ],
+    "id" : 2,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "http://latajacakuchnia.pl/wp-content/uploads/2014/05/logo_grey_home-e1400597867854.png"
+    },
+    "phone" : "509 409 928",
+    "position" : {
+      "lat" : 51.111474,
+      "lng" : 17.0318039
+    },
+    "name" : "Latająca Kuchnia",
+    "profile" : {
+      "en" : "creative vegan cooking",
+      "pl" : "kreatywna kuchnia roślinna"
+    },
+    "web" : "http://latajacakuchnia.pl",
+    "fb" : "LatajacaKuchniaWroclaw"
+  }, {
+    "address" : "Jedności Narodowej 93A, Wrocław",
+    "email" : "ewa.rudakita@gmail.com",
+    "filters" : [ "vegeFood", "veganBar" ],
+    "id" : 3,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/t1.0-1/c1.0.200.200/p200x200/970038_556962674356107_47648516_n.jpg"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 10:00-19:00, Sat: 10:00-15:00",
+      "pl" : "pon.-piąt.: 10:00-19:00, sob.: 10:00-15:00"
+    },
+    "phone" : "605 470 937",
+    "position" : {
+      "lat" : 51.1220129,
+      "lng" : 17.044137
+    },
+    "name" : "Ruda Kita",
+    "profile" : {
+      "en" : "coffee house, health food store, toy store",
+      "pl" : "kawiarnia, sklep ze zdrową żywnością, sklep z zabawkami"
+    },
+    "web" : "https://facebook.com/rudakitawroclaw",
+    "fb" : "rudakitawroclaw",
+    "desc" : {
+      "en" : "Only stationery shopping",
+      "pl" : "Tylko sklep stacjonarny"
+    }
+  }, {
+    "address" : "Ruska 19, Wrocław",
+    "email" : "machina.info@gmail.com",
+    "filters" : [ "veganBar", "veganCatering" ],
+    "id" : 4,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://scontent-b-ams.xx.fbcdn.net/hprofile-xpa1/l/t1.0-1/p160x160/1465291_579250645488880_25128854_n.jpg"
+    },
+    "open" : {
+      "en" : "Mon-Thu: 10:00-22:00, Fri: 10:00-23:00, Sat: 12:00-23:00, Sun: 13:00-21:00",
+      "pl" : "pon.-czw.: 10:00-22:00, piąt.: 10:00-23:00, sob.: 12:00-23:00, niedz.: 13:00-21:00"
+    },
+    "phone" : "733-537-210",
+    "position" : {
+      "lat" : 51.110532,
+      "lng" : 17.026004
+    },
+    "name" : "Machina Organica",
+    "profile" : {
+      "en" : "restaurant-coffee house-bar",
+      "pl" : "restauracja-cafe-bar"
+    },
+    "web" : "https://facebook.com/Machina.Organika",
+    "fb" : "Machina.Organika"
+  }, {
+    "address" : "Rynek 27a, Wrocław",
+    "filters" : [ "veganBar" ],
+    "id" : 5,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c45.45.559.559/s200x200/1013001_494408287298216_54237566_n.jpg?oh=d00e62d8ade7df071943992a9a56a00f&oe=546E07D6&__gda__=1417625669_ccc610c2c849b57ecf5bddbd8c7a94e7"
+    },
+    "open" : {
+      "en" : "Mon-Thu: 08:00-19:00, Fri: 08:00-21:00, Sat: 09:00-21:00, Sun: 09:00-19:00",
+      "pl" : "pon.-czw.: 08:00-19:00, piąt.: 08:00-21:00, sob.: 09:00-21:00, niedz.: 09:00-19:00"
+    },
+    "phone" : "71 344 39 34",
+    "position" : {
+      "lat" : 51.109834,
+      "lng" : 17.032724
+    },
+    "name" : "VEGA",
+    "profile" : {
+      "en" : "vegan restaurant, bar",
+      "pl" : "wegańska restauracja, bar"
+    },
+    "web" : "http://vega-wroclaw.com.pl",
+    "fb" : "Vega.Bar.Weganski.Wroclaw"
+  }, {
+    "address" : "Ofiar Oświęcimskich 18, Wrocław",
+    "filters" : [ "vegeBar", "vegeCatering" ],
+    "id" : 6,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn2/v/t1.0-9/64312_582440741834934_1025223798_n.jpg?oh=94b177a478fb8d9bf38a8f020dcf6260&oe=5478B32B&__gda__=1415312741_2c6e527fb3d7a2585a34c05829f2d354"
+    },
+    "open" : {
+      "en" : "Mon-Sat: 12:00-21:00, Sun: 13:00-20:00",
+      "pl" : "pon.-sob.: 12:00-21:00, niedz.: 13:00-20:00"
+    },
+    "position" : {
+      "lat" : 51.108466,
+      "lng" : 17.031747
+    },
+    "name" : "Złe mięso",
+    "profile" : {
+      "en" : "vegetarian and vegan restaurant",
+      "pl" : "wegetariańska i wegańska restauracja"
+    },
+    "email": "klubojadalnia.zlemieso@gmail.com",
+    "web" : "http://www.zlemieso.pl",
+    "fb" : "klubojadalniazlemieso"
+  }, {
+    "address" : "Kuźnicza 11/13, Wrocław",
+    "filters" : [ "vegeBar" ],
+    "id" : 7,
+    "image" : {
+      "size" : {
+        "height" : 31,
+        "width" : 63
+      },
+      "src" : "http://www.greenway.pl/static/gfx/logo-greenway.png"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 11:00-20:00, Sun-Sat: 12:00-20:00",
+      "pl" : "pon.-piąt.: 11:00-20:00, sob.-niedz.: 12:00-20:00"
+    },
+    "position" : {
+      "lat" : 51.1110645,
+      "lng" : 17.0339005
+    },
+    "name" : "Green Way Food for Life",
+    "phone": "71 341 90 98",
+    "email": "wroclaw.kuznicza@greenway.pl",
+    "web" : "http://www.greenway.pl",
+    "fb" : "green.way.wroclaw"
+  }, {
+    "address" : "Plac Kościuszki 12, Wrocław",
+    "filters" : [ "vegeBar", "vegeCatering" ],
+    "id" : 8,
+    "image" : {
+      "size" : {
+        "height" : 33,
+        "width" : 60
+      },
+      "src" : "http://www.nalanda.pl/wp-content/themes/nalanda_06d/images/logo-375087932.png"
+    },
+    "open" : {
+      "en" : "Mon-Sat: 10:00-20:00, Sut: 11:00-20:00",
+      "pl" : "pon.-sob.: 10:00-20:00, niedz.: 11:00-20:00"
+    },
+    "position" : {
+      "lat" : 51.102361,
+      "lng" : 17.029168
+    },
+    "name" : "Nalanda",    
+    "profile" : {
+      "en" : "book store, restaurant, coffe house",
+      "pl" : "księgarnia, bufer, kawiarnia"
+    },
+    "phone": "508 330 079",
+    "email": "wydarzenia@nalanda.com.pl",
+    "web" : "http://www.nalanda.pl",
+    "fb" : "Nalandia"
+  }, {
+    "address" : "Kamieńskiego 205 lok. 16, Wrocław",
+    "filters" : [ "vegeCosmetics" ],
+    "desc" : {
+      "en" : "Only online shopping",
+      "pl" : "Tylko sklep internetowy"
+    },
+    "id" : 9,
+    "position" : {
+      "lat" : 51.1565965,
+      "lng" : 17.0442764
+    },
+    "name": "Geen Line",
+    "profile" : {
+      "pl" : "kosmetyki naturalne i ekologiczne środki czystości",
+      "en" : "natural cosmetics and ecological detergents"
+    },
+    "phone": "512 144 140",
+    "email": "info@greenline-sklep.pl",
+    "web" : "http://greenline-sklep.pl",
+    "fb": "192700764111581"
+  }, {
+    "address" : "Paprotna 8, Wrocław",
+    "filters" : [ "vegeFood" ],
+    "desc" : {
+      "en" : "Only online shopping",
+      "pl" : "Tylko sklep internetowy"
+    },
+    "id" : 10,
+    "position" : {
+      "lat" : 51.1531055,
+      "lng" : 17.0256488
+    },
+    "name" : "Kamila",
+    "profile" : {
+      "pl" : "hurtownia spożywcza",
+      "en" : "wholesale grocery"
+    },
+    "phone": "783 295 188",
+    "email": "kamila@pnet.pl",
+    "web" : "http://kamila.pl"
+  }, {
+    "address" : "Komuny Paryskiej 83c, Wrocław",
+    "filters" : [ "vegeFood" ],
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "id" : 11,
+    "position" : {
+      "lat" : 51.099564,
+      "lng" : 17.050745
+    },
+    "name" : "BioManiac",
+    "profile" : {
+      "pl" : "produkty ekologiczne",
+      "en" : "ecological food"
+    },
+    "phone": "71 797 50 10",
+    "email": "sklep@biomaniac.pl",
+    "web" : "http://biomaniac.pl",
+    "fb" : "246013798839047",
+    "image" : {
+      "size" : {
+        "height" : 30,
+        "width" : 43
+      },
+      "src" : "http://biomaniac.pl/img/logo.png"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-14:00",
+      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-14:00"
+    }
+  }, {
+    "address" : "Jerzmanowska 19, Wrocław",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "desc" : {
+      "en" : "Only online shopping",
+      "pl" : "Tylko sklep internetowy"
+    },
+    "id" : 12,
+    "position" : {
+      "lat" : 51.1277819,
+      "lng" : 16.900986
+    },
+    "name" : "MarketBio",
+    "profile" : {
+      "pl" : "ekologiczna zdrowa żywność, eco bio produkty",
+      "en" : "ecological food, eco bio products"
+    },
+    "phone": "71 349 84 71, 795 40 21 21",
+    "email": "sklep@marketbio.pl",
+    "web" : "http://www.marketbio.pl",
+    "fb" : "420526034635393",
+    "image" : {
+      "size" : {
+        "height" : 38,
+        "width" : 73
+      },
+      "src" : "http://www.marketbio.pl/images/frontend/theme/market/logo.png"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-14:00",
+      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-14:00"
+    }
+  }, {
+    "address" : "DH. Renoma, Świdnicka 40, Wrocław",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "id" : 13,
+    "position" : {
+      "lat" : 51.103699,
+      "lng" : 17.030952
+    },
+    "name" : "Organic Farma Zdrowia",
+    "profile" : {
+      "pl" : "produkty ekologiczne i naturalne",
+      "en" : "ecological and natural products"
+    },
+    "phone": "71 782 32 58",
+    "email": "sklep@organic24.pl",
+    "web" : "http://www.organicmarket.pl",
+    "fb" : "ORGANICFARMAZDROWIA",
+    "image" : {
+      "size" : {
+        "height" : 32,
+        "width" : 55
+      },
+      "src" : "http://www.organicmarket.pl/images/logo.png"
+    },
+    "open" : {
+      "en" : "Mon-Sat: 09:00-21:00, Sun: 10:00-20:00",
+      "pl" : "pon.-sob.: 09:00-21:00, niedz.: 10:00-20:00"
+    }
+  }, {
+    "address" : "Krasińskiego 32, Wrocław",
+    "filters" : [ "veganBar", "vegeFood", "vegeCosmetics" ],
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "id" : 14,
+    "position" : {
+      "lat" : 51.106186,
+      "lng" : 17.043548
+    },
+    "name" : "Świnki Trzy",
+    "profile" : {
+      "pl" : "kawiarnia, sklep ze zdrową żywnością",
+      "en" : "coffee house, healthy food store"
+    },
+    "phone": "71 714 22 35",
+    "email": "kontakt@swinkitrzy.net",
+    "web" : "http://swinkitrzy.net",
+    "fb" : "swinki.trzy3",
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "http://swinkitrzy.net/wp-content/themes/swinki_trzy/images/logo.png"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-14:00",
+      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-14:00"
+    }
+  }, {
+    "address" : "Zielińskiego 22a, Wrocław",
+    "filters" : [ "vegeFood" ],
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "id" : 15,
+    "position" : {
+      "lat" : 51.099671,
+      "lng" : 17.023655
+    },
+    "name" : "zdrowegary.pl",
+    "profile" : {
+      "pl" : "artykuły zdrowe i niezwykłe",
+      "en" : "healthy food store"
+    },
+    "phone": "537 660 513",
+    "email": "sklep@zdrowegary.pl",
+    "web" : "http://sklepzdrowegary.pl",
+    "fb" : "ZdroweGary",
+    "image" : {
+      "size" : {
+        "height" : 33,
+        "width" : 71
+      },
+      "src" : "http://sklepzdrowegary.pl/img/logo.jpg"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 09:00-18:00",
+      "pl" : "pon.-piąt.: 09:00-18:00"
+    }
+  }, {
+    "address" : "Czysta 4, Wrocław",
+    "filters" : [ "vegeShoes" ],
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "id" : 16,
+    "position" : {
+      "lat" : 51.103286,
+      "lng" : 17.033344
+    },
+    "name" : "Pan Pablo",
+    "profile" : {
+      "pl" : "autorski sklep z butami",
+      "en" : "shoes store "
+    },
+    "phone": "518 424 921",
+    "email": "sklep@panpablo.pl",
+    "web" : "http://www.panpablo.pl/kategoria/buty-weganskie",
+    "fb" : "panpablo.sklep",
+        "image" : {
+      "size" : {
+        "height" : 34,
+        "width" : 49
+      },
+      "src" : "http://static.tumblr.com/098e86e879691dd7643f2a9f74f3eaf3/adgnh04/wr1n5tv9r/tumblr_static_4xp3b7llytwckog4kgkwcw0c8.png"
+    }
+  }, {
+    "address" : "Kraińskiego 14, Wrocław",
+    "filters" : [ "vegeBar" ],
+    "id" : 17,
+    "position" : {
+      "lat" : 51.1119313,
+      "lng" : 17.040233
+    },
+    "name" : "Baszta",
+    "profile" : {
+      "pl" : "jedzenie i gastronomia",
+      "en" : "food and gastronomy"
+    },
+    "phone": "668 043 255",
+    "web" : "https://facebook.com/basztaniedzwiadka",
+    "fb" : "basztaniedzwiadka",
+        "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/c5.0.200.200/p200x200/10403402_1453398348250768_6602896798332134849_n.jpg?oh=4982a7d986248aac39bb7b1217dcc6ab&oe=54A4D8AD&__gda__=1417917112_5ebf46b37901a427323ba9812ae8276e"
+    },
+    "open" : {
+      "en" : "Tue-Thu: 12:00-21:00, Fri: 12:00-23:00, Sat-Sun: 14:00-21:00",
+      "pl" : "wt.-czw.: 12:00-21:00, piąt.: 12:00-23:00, sob.-niedz.: 14:00-21:00"
+    }
+  } ],
+  "news" : [
+    {
+       "by": "vegewro",
+       "time": "2014-09-11",
+        "messages" : ["Test news 2.1", "Test news 2.2"]
+    },
+        {
+       "messages": ["Test news 1"],
+       "by": "vegewro",
+       "time": "2014-09-10"
+    }
+  ]
+}

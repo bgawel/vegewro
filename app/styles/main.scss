@@ -54,6 +54,10 @@ body {
     padding-left: 5px;
   }
   
+  .action-news {
+    padding-left: 3px;
+  }
+  
   .action-contactUs {
     padding-left: 3px;
   }
@@ -233,14 +237,14 @@ body {
   cursor: pointer;
 }
 
+.section-title {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
 .addresses-section {
   .panel-title {
     font-size: 1.0em;
-  }
-
-  .addresses {
-    padding-top: 15px;
-    padding-left: 15px;
   }
   
   .address-box {
@@ -263,6 +267,26 @@ a.anchor {
   position: relative; 
   visibility: hidden;
   top: 0; 
+}
+
+.news-section {
+  .loading {
+    padding-left: 15px;
+    font-size: 0.9em;
+  }
+  
+  .news {
+    font-size: 0.9em;
+    padding-right: 0;
+    
+    .content {
+      padding-left: 15px;
+      
+      .fb-icon {
+        margin-top: -1px;
+      }
+    }
+  }
 }
  
 @media screen and (max-width: 991px) {
@@ -288,7 +312,7 @@ a.anchor {
       padding-top: 0;
     }
     
-    .action-map, .action-filters, .action-addresses, .action-contactUs {
+    .action-map, .action-filters, .action-addresses, .action-news, .action-contactUs {
       padding-left: 5px;
     }
   }
@@ -303,10 +327,8 @@ a.anchor {
     }
   }
   
-  .addresses-section {
-    .show-on-map {
-      font-size: 20px;
-    }
+  .show-on-map {
+    font-size: 20px;
   }
   
   @media (min-width: 768px) {

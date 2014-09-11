@@ -2,11 +2,17 @@
 
 angular.module('vegewroApp')
   .controller('MainCtrl', ['$scope', '$window', '$timeout', '$location', '$anchorScroll', 'backend', 'locale',
-                           'formatter', '$q', 'script', '$routeParams', 'i18n',
+                           'formatter', '$q', 'script', '$routeParams', 'i18n', 'fb',
                            function ($scope, $window, $timeout, $location, $anchorScroll, backend, locale, formatter,
-                               $q, script, $routeParams, i18n) {
+                               $q, script, $routeParams, i18n, fb) {
 
   var geocoder, map, config, markers = [];
+  var fbPosts = {check:[], fetched:[]};
+  $scope.filters = [];
+  $scope.addresses = {};
+  $scope.places = {};
+  $scope.posts = [];
+  $scope.postsLoading = true;
   
   function changePathForLang(lang) {
     $scope.i18n = i18n[lang];
@@ -30,7 +36,9 @@ angular.module('vegewroApp')
       config = data.config;
       map = new google.maps.Map(document.getElementById('map'), config.mapOptions);
       createMapLegend(map);
-      createMapMarkers(data.places);
+      createMapMarkers(data.places).then(function() {
+        readNews(data.news);
+      });
     });
   }
   
@@ -57,6 +65,10 @@ angular.module('vegewroApp')
     return deferred.promise;
   }
   
+  function makeTitle(place) {
+     return place.name + (place.profile ? (' – ' + locale.valueFor(place.profile, lang)) : '');
+  }
+  
   function createMarker(place, filterName) {
     var deferred = $q.defer();
     var filter = config.filters[filterName];
@@ -64,7 +76,7 @@ angular.module('vegewroApp')
       var marker = new google.maps.Marker({
         position: position,
         map: map,
-        title: locale.valueFor(place.title, lang),
+        title: makeTitle(place),
         icon: filter.icon,
         shape: filter.shape,
         zIndex: filter.zIndex,
@@ -88,24 +100,24 @@ angular.module('vegewroApp')
   function createBoxText(place, marker) {
     var boxText = document.createElement('div');
     var image = '';
-    if (place.image !== undefined) {
+    if (place.image) {
       image = '<img class="logo" src="' + place.image.src + '" width="' + place.image.size.width +'" height="' +
         place.image.size.height + '" border="0" />';
     }
-    var title = '<p class="title">' + locale.valueFor(place.title, lang) + '</p>';
+    var title = '<p class="title">' + makeTitle(place) + '</p>';
     var desc = '';
-    if (place.desc !== undefined) {
+    if (place.desc) {
       desc = '<p class="desc">' + locale.valueFor(place.desc, lang) + '</p>';
     }
     var address = '<p class="address">' + place.address + '</p>';
     var directions = '<p class="directions">(<a href="' + makeGoogleMapsDirections(marker.position) +
       '" target="_blank">' + $scope.i18n.directions + '</a>)</p>';
     var open = '';
-    if (place.open !== undefined) {
+    if (place.open) {
       open = '<p class="open">' + locale.valueFor(place.open, lang) + '</p>';
     }
     var web = '';
-    if (place.web !== undefined) {
+    if (place.web) {
       web = '<p class="web"><a href="' + place.web + '" target="_blank">' + formatter.web(place.web) + '</a></p>';
     }
     var email = '';
@@ -113,7 +125,7 @@ angular.module('vegewroApp')
       email = '<p class="email"><a href="mailto:' + place.email + '">' + place.email + '</a></p>';
     }
     var phone = '';
-    if (place.phone !== undefined) {
+    if (place.phone) {
       phone = '<p class="phone">' + place.phone + '</p>';
     }
     boxText.innerHTML = '<div class="pop_up_box_text pre"><div class="left">' + title + desc + address + directions +
@@ -130,23 +142,52 @@ angular.module('vegewroApp')
       // Changes the z-index property of the marker to make the marker appear on top of other markers.
       marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
       setZoomWhenMarkerClicked();
-      // Sets the marker to be the center of the map. 
+      // Do not set the marker to be the center of the map; does not work well if the map is not fully visible 
       //map.setCenter(marker.getPosition());
     };
     marker.infoBoxClicked = infoBoxClicked;
     google.maps.event.addListener(marker, 'click', infoBoxClicked);
   }
   
-  function addAddress(title, boxText, filterName, marker) {
+  function addAddress(placeId, title, boxText, filterName, marker) {
     var showOnMap = function() {
       marker.infoBoxClicked();
       $window.scrollTo(0, 100);
     };
-    $scope.addresses[filterName].push({title: title, boxText: boxText.innerHTML, showOnMap: showOnMap});
+    var address = {title: title, boxText: boxText.innerHTML, showOnMap: showOnMap, placeId: placeId};
+    $scope.addresses[filterName].push(address);
+    if (!$scope.places[placeId]) {
+      $scope.places[placeId] = address;
+    }
+  }
+  
+  function readNews(fixedNews) {
+    $q.all(fbPosts.fetched).then(function(results) {
+      angular.forEach(fbPosts.check, function(post, index) {
+        var fbPosts = results[index];
+        if (fbPosts.length > 0) {
+          post.time = new Date(fbPosts[0].created_time);
+          post.messages = fbPosts;
+          $scope.posts.push(post);
+        }
+      });
+      angular.forEach(fixedNews, function(news) {
+        news.time = new Date(news.time);
+        $scope.posts.push(news);
+      });
+      $scope.postsLoading = false;
+    });
+  } 
+  
+  function addFbPost(place) {
+    if (place.fb) {
+      fbPosts.check.push({by: place.name, fbHref: 'https://www.facebook.com/' + place.fb, placeId: place.id});
+      fbPosts.fetched.push(fb.fetchLastPosts(place.fb, config.fbToken));
+    }
   }
   
   function createMapMarkers(places) {
-    script.infoBox().then(function(results) {
+    return script.infoBox().then(function() {
       geocoder = new google.maps.Geocoder();
       angular.forEach(places, function(place) {
         if (place !== null && place.id) {
@@ -154,21 +195,20 @@ angular.module('vegewroApp')
             try {
               createMarker(place, filterName).then(function(marker) {
                 var boxText = createBoxText(place, marker);
-                addAddress(locale.valueFor(place.title, lang), boxText, filterName, marker);
+                addAddress(place.id, marker.getTitle(), boxText, filterName, marker);
                 createInfoBox(marker, boxText);
               });
             } catch (err) {
               console.log(err, 'Cannot create a marker for: ' + place);
             }
           });
+          addFbPost(place);
         }
       });
     });
   }
   
   function createMapLegend() {
-    $scope.filters = [];
-    $scope.addresses = {};
     angular.forEach(config.filters, function(filter, filterName) {
       $scope.addresses[filterName] = [];
       function toggle() {
@@ -202,7 +242,6 @@ angular.module('vegewroApp')
   $scope.scrollTo = function(hash) {
     $timeout(function() {
       var old = $location.hash();
-      console.log(hash);
       $location.hash(hash);
       $anchorScroll();
       $location.hash(old);  //reset to old to keep any additional routing logic from kicking in

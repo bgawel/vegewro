@@ -20,10 +20,13 @@ angular.module('vegewroApp')
         veganOnly: 'Wegańskie jedzenie w mieście',
         vege: 'Wegetariańskie jedzenie w mieście',
         products: 'Vege sklepy',
-        showOnMap: 'Wyświetl na mapie',
+        showOnMap: 'Pokaż miejsce na mapie',
         storesWarning: 'Uwaga: niektóre sklepy oferują także produkty niewegetariańskie',
         map: 'mapa',
-        mapFilters: 'filtry mapy'
+        mapFilters: 'filtry mapy',
+        news: 'wiadomości',
+        bNews: 'Wiadomości',
+        loading: 'Pobieranie...'
       },
       
       en : {
@@ -42,10 +45,13 @@ angular.module('vegewroApp')
         veganOnly: 'Vegan places to eat',
         vege: 'Vegetarian places to eat',
         products: 'Vege stores',
-        showOnMap: 'Display on map',
+        showOnMap: 'Show place on map',
         storesWarning: 'Be careful: some shops offer also non-vegetarian products',
         map: 'map',
-        mapFilters: 'map\'s filters'
+        mapFilters: 'map\'s filters',
+        news: 'news',
+        bNews: 'News',
+        loading: 'Loading...'
       }
     };
   }]);

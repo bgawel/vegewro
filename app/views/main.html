@@ -29,6 +29,11 @@
           </a>
         </li>
         <li>
+          <a class="action" href ng-click="scrollTo('newsAnchor')">
+            <span class="glyphicon glyphicon-info-sign"></span><span class="action-news">{{i18n.news}}</span>
+          </a>
+        </li>        
+        <li>
           <a class="action" href data-toggle="collapse" data-target="#contactUs">
             <span class="glyphicon glyphicon-bullhorn"></span><span class="action-contactUs">{{i18n.newPlace}}</span>
           </a>
@@ -93,7 +98,7 @@
   </div>
   <div class="row addresses-section">
     <a class="anchor" id="addressesAnchor"></a>
-    <h4 class="addresses caption anchor" id="addresses">{{i18n.bAddresses}}</h4>
+    <h4 class="section-title caption anchor" id="addresses">{{i18n.bAddresses}}</h4>
     <accordion close-others="'true'">
       <accordion-group ng-repeat="filter in filters | orderBy:'order'" is-open="filter.open">
         <accordion-heading>
@@ -116,9 +121,33 @@
       </accordion-group>
     </accordion>
   </div>
+  <div class="row news-section">
+    <a class="anchor" id="newsAnchor"></a>
+    <h4 class="section-title caption anchor" id="news">{{i18n.bNews}}</h4>
+    <span class="loading" ng-show="postsLoading">{{i18n.loading}}</span>
+    <div class="row col-xs-12 news" ng-repeat="post in posts | orderBy:'time':true">
+      <p class="content">
+        <b>[{{post.time | date: 'dd/MM'}}</b>,
+        <span ng-if="post.fbHref">
+          <a ng-href="{{post.fbHref}}" target="_blank">
+            <img class="fb-icon" width="12" height="12" src="images/facebook.png"> {{post.by}}</a>
+          <a href ng-click="places[post.placeId].showOnMap()" class="action action-link" tooltip-placement="right" tooltip="{{i18n.showOnMap}}">
+            <span class="glyphicon glyphicon-hand-up show-on-map"></span>
+          </a>]:
+          <span class="clearfix" ng-repeat="message in post.messages" 
+            ng-bind-html="(post.messages.length > 1 ? ' - ' + message.message : message.message) | characters:500 | linky:'_blank'"></span>
+        </span>
+        <span ng-if="!post.fbHref">
+          {{post.by}}]:
+          <span class="clearfix" ng-repeat="message in post.messages" 
+            ng-bind-html="(post.messages.length > 1 ? ' - ' + message : message) | characters:500 | linky:'_blank'"></span>
+        </span>
+      </p>
+    </div>
+  </div>
   <div class="row">
     <div class="footer">
-      <p>♥ {{i18n.from}} Dada Soft Lab &copy; | {{i18n.contact}}: <a href="vegewro@gmail.com">vegewro@gmail.com</a></p>
+      <p>♥ {{i18n.from}} DaDa Soft Lab &copy; | {{i18n.contact}}: <a href="vegewro@gmail.com">vegewro@gmail.com</a></p>
     </div>
   </div>
 </div>

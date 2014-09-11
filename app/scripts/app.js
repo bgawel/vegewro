@@ -7,7 +7,8 @@ angular.module('vegewroApp', [
   'firebase',
   'angularfire.firebase',
   'angularfire.login',
-  'simpleLoginTools'
+  'simpleLoginTools',
+  'truncate'
 ])
   .config(function ($routeProvider) {
     $routeProvider

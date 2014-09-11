@@ -12,7 +12,7 @@ angular.module('vegewroApp')
     }
     
     function isBlank(value) {
-      return value === undefined || value === null || value.length === 0;
+      return !value || value.trim().length === 0;
     }
     
     function detectUserLocale() {
@@ -22,7 +22,7 @@ angular.module('vegewroApp')
     
     function detectUserLang() {
       var locale = detectUserLocale();
-      if (locale !== undefined && locale !== null) {
+      if (locale) {
         return locale.split('-')[0];
       }
       return undefined;
