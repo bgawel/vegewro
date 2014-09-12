@@ -1,8 +1,8 @@
 {
   "config" : {
     "fbPostsNoOlderThan" : 2592000000,
-    "fbToken" : "1469482329978136|1d13ba907cf0c772f65986f08775718e#2861767027582063244",
-    "googleMapsToken" : "AIzaSyAq5XL42ERicqHYXKKmzPU7D6dVBAutA0U",
+    "fbToken" : "",
+    "googleMapsToken" : "",
     "googleMapsVersion" : "3",
     "filters" : {
       "veganBar" : {
@@ -210,16 +210,16 @@
   "news" : [ {
     "by" : "vegewro",
     "posts" : [ {
-      "created" : "2014-09-10T18:00:00+0000",
+      "created" : "2014-09-10T18:00:00",
       "message" : "Test news 2.1"
     }, {
-      "created" : "2014-09-10T17:00:00+0000",
+      "created" : "2014-09-10T17:00:00",
       "message" : "Test news 2.2"
     } ]
   }, {
     "by" : "vegewro",
     "posts" : [ {
-      "created" : "2014-09-10T16:00:00+0000",
+      "created" : "2014-09-10T16:00:00",
       "message" : "Test news 1",
       "link": "http://vegewro.pl"
     } ]

@@ -38,10 +38,8 @@ angular.module('vegewroApp')
       return posts;
     }
 
-    function isPostYoungEnough(post, data, now, postsNoOlderThan) {
-      var dateOfPost = post.created;
-      dateOfPost.setTime(dateOfPost.getTime() + postsNoOlderThan);
-      return (dateOfPost.getTime() - now.getTime() > 0);
+    function isPostYoungEnough(post, now, postsNoOlderThan) {
+      return post.created.getTime() + postsNoOlderThan > now.getTime();
     }
     
     function isToday(date1, date2) {
@@ -58,7 +56,7 @@ angular.module('vegewroApp')
     function collectYoungPosts(fbName, data, now, postsNoOlderThan) {
       var youngPosts = [];
       var posts = findAllPostsWithMessage(fbName, data);
-      if (posts.length > 0 && isPostYoungEnough(posts[0], data, now, postsNoOlderThan)) {
+      if (posts.length > 0 && isPostYoungEnough(posts[0], now, postsNoOlderThan)) {
         youngPosts.push(fixLinkToMessage(posts[0], fbName));
         for (var i=1; i<posts.length; ++i) {
           if (isToday(now, posts[i].created)) {
