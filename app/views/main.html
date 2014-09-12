@@ -146,8 +146,8 @@
         <b>[{{feed.time | date: 'dd/MM'}}</b>,
         <span ng-if="feed.fbHref">
           <a ng-href="{{feed.fbHref}}" target="_blank">
-            <img class="fb-icon" width="12" height="12" src="images/facebook.png"> {{feed.by}}
-          </a>
+            <img class="fb-icon" width="12" height="12" src="images/facebook.png"><span class="feed-by">{{feed.by}}</span><!--
+       --></a>
           <a href ng-click="places[feed.placeId].showOnMap()" class="action action-link" tooltip-placement="right" 
               tooltip="{{i18n.showOnMap}}">
             <span class="glyphicon glyphicon-hand-up show-on-map"></span><!--
