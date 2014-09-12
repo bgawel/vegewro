@@ -12,21 +12,34 @@ angular.module('vegewroApp')
     }
     
     function postsUrl(fbName, token) {
-      return appendToken(graphUrl(fbName) + '/posts?fields=message', token);
+      return appendToken(graphUrl(fbName) + '/posts?fields=message,link', token);
     }
     
-    function findAllMessages(data) {
-      var messages = [];
+    function makeFbAccountLink(uid) {
+      return 'https://www.facebook.com/' + uid;
+    }
+    
+    function isLinkToFbAccount(link, fbName) {
+      return link.indexOf(makeFbAccountLink(fbName)) === 0;
+    }
+    
+    function messageContainsLink(post) {
+      return post.message.indexOf(post.link) >= 0;
+    }
+    
+    function findAllPostsWithMessage(fbName, data) {
+      var posts = [];
       angular.forEach(data, function(post) {
         if (post.message) {
-          messages.push(post);
+          post.created = new Date(post.created_time);
+          posts.push(post);
         }
       });
-      return messages;
+      return posts;
     }
 
-    function isMessageYoungEnough(message, data, now, postsNoOlderThan) {
-      var dateOfPost = new Date(message.created_time);
+    function isPostYoungEnough(post, data, now, postsNoOlderThan) {
+      var dateOfPost = post.created;
       dateOfPost.setTime(dateOfPost.getTime() + postsNoOlderThan);
       return (dateOfPost.getTime() - now.getTime() > 0);
     }
@@ -35,35 +48,42 @@ angular.module('vegewroApp')
       return date1.toDateString() === date2.toDateString();
     }
     
-    function collectYoungMessages(data, now, postsNoOlderThan) {
-      var youngMessages = [];
-      var messages = findAllMessages(data);
-      if (messages.length > 0 && isMessageYoungEnough(messages[0], data, now, postsNoOlderThan)) {
-        youngMessages.push(messages[0]);
-        for (var i=1; i<messages.length; ++i) {
-          if (isToday(now, new Date(messages[i].created_time))) {
-            youngMessages.push(messages[i]);
+    function fixLinkToMessage(post, fbName) {
+      if (post.link && (isLinkToFbAccount(post.link, fbName) || messageContainsLink(post))) {
+        post.link = '';
+      }
+      return post;
+    }
+    
+    function collectYoungPosts(fbName, data, now, postsNoOlderThan) {
+      var youngPosts = [];
+      var posts = findAllPostsWithMessage(fbName, data);
+      if (posts.length > 0 && isPostYoungEnough(posts[0], data, now, postsNoOlderThan)) {
+        youngPosts.push(fixLinkToMessage(posts[0], fbName));
+        for (var i=1; i<posts.length; ++i) {
+          if (isToday(now, posts[i].created)) {
+            youngPosts.push(fixLinkToMessage(posts[i], fbName));
           } else {
             break;
           }
         }
       }
-      return youngMessages;
+      return youngPosts;
     }
     
     return {
       fetchLastPosts : function(fbName, token, postsNoOlderThan) {
         var now = new Date();
         return $http.get(postsUrl(fbName, token)).then(function(result) {
-          return collectYoungMessages(result.data.data, now, postsNoOlderThan);
+          return collectYoungPosts(fbName, result.data.data, now, postsNoOlderThan);
         }, function() {
           console.log('Error while reading post for ' + fbName);
           return undefined;
         });
       },
       
-      makeProfileLink: function(uid) {
-        return 'https://www.facebook.com/' + uid;
+      makeAccountLink: function(uid) {
+        return makeFbAccountLink(uid);
       }
     };
   }]);

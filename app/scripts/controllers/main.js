@@ -120,27 +120,26 @@ angular.module('vegewroApp')
   function createInfoBox(marker, boxText) {
     var infoBoxOptions = angular.copy(config.infoboxOptions);
     infoBoxOptions.content = boxText;
-    googleMaps.newInfoBox(infoBoxOptions).then(function(infoBox) {
-      var infoBoxClicked = function() {
-        if (lastInfoBoxClicked) {
-          lastInfoBoxClicked.close();
-        }
-        infoBox.open(map, marker);
-        // Changes the z-index property of the marker to make the marker appear on top of other markers.
-        marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
-        googleMaps.setMapZoomIfSmallerThan(config.zoomWhenMarkerClicked);
-        // Do not set the marker to be the center of the map; does not work well if the map is not fully visible 
-        // map.setCenter(marker.getPosition());
-        lastInfoBoxClicked = infoBox;
-      };
-      marker.infoBoxClicked = infoBoxClicked;
-      googleMaps.addMarkerClickedListener(marker, infoBoxClicked);
-    });
+    var infoBox = googleMaps.newInfoBox(infoBoxOptions);
+    var infoBoxClicked = function() {
+      if (lastInfoBoxClicked) {
+        lastInfoBoxClicked.close();
+      }
+      infoBox.open(map, marker);
+      // Changes the z-index property of the marker to make the marker appear on top of other markers.
+      marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
+      googleMaps.setMapZoomIfSmallerThan(config.zoomWhenMarkerClicked);
+      // Do not set the marker to be the center of the map; does not work well if the map is not fully visible 
+      // map.setCenter(marker.getPosition());
+      lastInfoBoxClicked = infoBox;
+    };
+    marker.infoBoxClicked = infoBoxClicked;
+    googleMaps.addMarkerClickedListener(marker, infoBoxClicked);
   }
   
   function addFbFeed(place) {
     if (place.fb) {
-      fbFeeds.check.push({by: place.name, fbHref: fb.makeProfileLink(place.fb), placeId: place.id});
+      fbFeeds.check.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id});
       fbFeeds.fetched.push(fb.fetchLastPosts(place.fb, config.fbToken, config.fbPostsNoOlderThan));
     }
   }
@@ -169,8 +168,8 @@ angular.module('vegewroApp')
       angular.forEach(fbFeeds.check, function(feed, index) {
         var fbPosts = results[index];
         if (fbPosts.length > 0) {
-          feed.time = new Date(fbPosts[0].created_time);
-          feed.messages = fbPosts;
+          feed.time = fbPosts[0].created;
+          feed.posts = fbPosts;
           $scope.feeds.push(feed);
         }
       });
@@ -179,8 +178,11 @@ angular.module('vegewroApp')
   
   function readFixedFeeds(fixedFeeds) {
     angular.forEach(fixedFeeds, function(feed) {
-      feed.time = new Date(feed.time);
+      feed.time = new Date(feed.posts[0].created);
       feed.fixed = true;
+      angular.forEach(feed.posts, function(post) {
+        post.created = new Date(post.created);
+      });
       $scope.feeds.push(feed);
     });
   }

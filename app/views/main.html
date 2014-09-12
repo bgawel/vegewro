@@ -152,14 +152,14 @@
               tooltip="{{i18n.showOnMap}}">
             <span class="glyphicon glyphicon-hand-up show-on-map"></span><!--
        --></a>]:
-          <span class="clearfix" ng-repeat="message in feed.messages" 
-            ng-bind-html="(feed.messages.length > 1 ? ' - ' + message.message : message.message) | characters:500 | linky:'_blank'">
+          <span class="clearfix" ng-repeat="post in feed.posts" 
+            ng-bind-html="((feed.posts.length > 1 ? '[' + (post.created | date:'HH:mm') + '] ' + post.message : post.message) | characters:500) + ' ' + post.link | linky:'_blank'">
           </span>
         </span>
         <span ng-if="feed.fixed">
           {{feed.by}}]:
-          <span class="clearfix" ng-repeat="message in feed.messages" 
-            ng-bind-html="(feed.messages.length > 1 ? ' - ' + message : message) | characters:500 | linky:'_blank'">
+          <span class="clearfix" ng-repeat="post in feed.posts" 
+            ng-bind-html="((feed.posts.length > 1 ? '[' + (post.created | date:'HH:mm') + '] ' + post.message : post.message) | characters:500) + ' ' + post.link | linky:'_blank'">
           </span>
         </span>
       </p>

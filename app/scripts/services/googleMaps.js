@@ -4,12 +4,7 @@ angular.module('vegewroApp')
   .factory('googleMaps', ['$q', 'script', function($q, script) {
     
     var map, geocoder;
-    var infoBox = $q.defer();
-    
-    function infoBoxAvailable() {
-      return infoBox.promise;
-    }
-    
+        
     return {
       load: function(googleMapsVersion, googleMapsToken, lang) {
         var deferred = $q.defer();
@@ -17,9 +12,8 @@ angular.module('vegewroApp')
           'other_params' :
           'key=' + googleMapsToken + '&sensor=false&language=' + lang,
           'callback' : function() {
-            deferred.resolve();
             script.infoBox().then(function() {
-              infoBox.resolve();
+              deferred.resolve();
             });
           }
         });
@@ -67,11 +61,7 @@ angular.module('vegewroApp')
       },
       
       newInfoBox: function(infoBoxOptions) {
-        var deferred = $q.defer();
-        infoBoxAvailable().then(function() {
-          deferred.resolve(new InfoBox(infoBoxOptions));
-        });
-        return deferred.promise;
+        return new InfoBox(infoBoxOptions);
       },
       
       addMarkerClickedListener: function(marker, infoBoxClicked) {
