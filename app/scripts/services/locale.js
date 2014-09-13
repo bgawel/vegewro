@@ -39,7 +39,7 @@ angular.module('vegewroApp')
     
     function changePathForLang(lang) {
       $rootScope.i18n = i18n[lang];
-      $location.path('/' + lang, false);
+      $location.path('/' + (fallbackLang === lang ? '' : lang), false);
     }
     
     $rootScope.changeLang = function(lang) {

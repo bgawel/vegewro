@@ -10,7 +10,8 @@ angular.module('vegewroApp', [
   'simpleLoginTools',
   'truncate'
 ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/:lang?', {
         templateUrl: 'views/main.html',
@@ -19,7 +20,7 @@ angular.module('vegewroApp', [
       .otherwise({
         redirectTo: '/'
       });
-  })
+  }])
   .run(['$route', '$rootScope', '$location', '$timeout', '$anchorScroll', '$window',
         function ($route, $rootScope, $location, $timeout, $anchorScroll, $window) {
     // see http://joelsaupe.com/programming/angularjs-change-path-without-reloading/
