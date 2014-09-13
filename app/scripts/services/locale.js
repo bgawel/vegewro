@@ -35,7 +35,10 @@ angular.module('vegewroApp')
     }
     
     function getLang(urlLang) {
-      return isSupportedLang(urlLang) ? urlLang : determineUserLang();
+      if (urlLang) {
+        return isSupportedLang(urlLang) ? urlLang : determineUserLang();
+      }
+      return fallbackLang;
     }
     
     function changePathForLang(lang) {
