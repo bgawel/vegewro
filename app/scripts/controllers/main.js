@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('vegewroApp')
-  .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps',
-                           function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps) {
+  .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps', 'task',
+                           function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps, task) {
 
   var map, config, markers = [], lastInfoBoxClicked;
   var fbFeeds = {check:[], fetched:[]};
@@ -17,15 +17,15 @@ angular.module('vegewroApp')
     config = data.config;
     googleMaps.load(config.googleMapsVersion, config.googleMapsToken, $scope.lang).then(function() {
       createMap(data);
+      readNews(data.news);
+      loadFbLikeButton();
     });
-    fb.loadSdk(config.fbAppId, $scope.locale);
   });
   
   function createMap(data) {
     map = googleMaps.newMap(document.getElementById('map'), config.mapOptions);
     createMapLegend(map);
     createMapMarkers(data.places);
-    readNews(data.news);
   }
   
   function createMapLegend() {
@@ -140,8 +140,7 @@ angular.module('vegewroApp')
   
   function addFbFeed(place) {
     if (place.fb) {
-      fbFeeds.check.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id});
-      fbFeeds.fetched.push(fb.fetchLastPosts(place.fb, config.fbToken, config.fbPostsNoOlderThan));
+      fbFeeds.check.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id, fb: place.fb});
     }
   }
   
@@ -165,6 +164,9 @@ angular.module('vegewroApp')
   }
   
   function readFbFeeds() {
+    angular.forEach(fbFeeds.check, function(feed) {
+      fbFeeds.fetched.push(fb.fetchLastPosts(feed.fb, config.fbToken, config.fbPostsNoOlderThan));
+    });
     return $q.all(fbFeeds.fetched).then(function(results) {
       angular.forEach(fbFeeds.check, function(feed, index) {
         var fbPosts = results[index];
@@ -189,10 +191,16 @@ angular.module('vegewroApp')
   }
   
   function readNews(fixedFeeds) {
-    readFbFeeds().then(function() {
-      readFixedFeeds(fixedFeeds);
-      $scope.feedsLoading = false;
+    task.runBackgroundTask(function() {
+      readFbFeeds().then(function() {
+        readFixedFeeds(fixedFeeds);
+        $scope.feedsLoading = false;
+      });
     });
+  }
+  
+  function loadFbLikeButton() {
+    task.runBackgroundTask(function(){ fb.loadSdk(config.fbAppId, $scope.locale); });
   }
   
   $scope.enableFilters = function(type) {
