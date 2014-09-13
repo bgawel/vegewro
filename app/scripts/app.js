@@ -45,11 +45,11 @@ angular.module('vegewroApp', [
         $location.hash(hash);
         $anchorScroll();
         $location.hash(old);  //reset to old to keep any additional routing logic from kicking in
-      }, 50);
+      }, 50, false);
     };
     
     $rootScope.reload = function() {
-      $timeout(function() { $window.location.reload(); }, 0);
+      $timeout(function() { $window.location.reload(); }, 0, false);
     };
   }]);
 

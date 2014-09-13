@@ -19,7 +19,7 @@ angular.module('vegewroApp')
     
     function detectUserLocale() {
       // see http://stackoverflow.com/questions/1043339/javascript-for-detecting-browser-language-preference
-      return window.navigator.userLanguage || window.navigator.language;
+      return $window.navigator.userLanguage || $window.navigator.language;
     }
     
     function detectUserLang() {
@@ -35,25 +35,22 @@ angular.module('vegewroApp')
     }
     
     function getLang(urlLang) {
-      if (urlLang) {
-        return isSupportedLang(urlLang) ? urlLang : determineUserLang();
-      }
-      return fallbackLang;
+      return isSupportedLang(urlLang) ? urlLang : determineUserLang();
     }
     
     function changePathForLang(lang) {
-      $rootScope.i18n = i18n[lang];
-      $location.path('/' + (fallbackLang === lang ? '' : lang), false);
+      $location.path('/' + lang, false);
     }
     
     $rootScope.changeLang = function(lang) {
       changePathForLang(lang);
-      $timeout(function() { $window.location.reload(); }, 0);
+      $rootScope.reload();
     };
     
-    $rootScope.lang = getLang($routeParams.lang);
-    $rootScope.locale = langToLocale[$rootScope.lang];
-    changePathForLang($rootScope.lang);
+    var lang = $rootScope.lang = getLang($routeParams.lang);
+    $rootScope.locale = langToLocale[lang];
+    $rootScope.i18n = i18n[lang];
+    changePathForLang(lang === fallbackLang ? '' : lang);
     
     return {
       valueFor : function(fromObject) {

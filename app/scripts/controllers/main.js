@@ -140,7 +140,8 @@ angular.module('vegewroApp')
   
   function addFbFeed(place) {
     if (place.fb) {
-      fbFeeds.check.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id, fb: place.fb});
+      fbFeeds.check.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id});
+      fbFeeds.fetched.push(fb.fetchLastPosts(place.fb, config.fbToken, config.fbPostsNoOlderThan));
     }
   }
   
@@ -164,13 +165,10 @@ angular.module('vegewroApp')
   }
   
   function readFbFeeds() {
-    angular.forEach(fbFeeds.check, function(feed) {
-      fbFeeds.fetched.push(fb.fetchLastPosts(feed.fb, config.fbToken, config.fbPostsNoOlderThan));
-    });
     return $q.all(fbFeeds.fetched).then(function(results) {
       angular.forEach(fbFeeds.check, function(feed, index) {
         var fbPosts = results[index];
-        if (fbPosts.length > 0) {
+        if (fbPosts && fbPosts.length > 0) {
           feed.time = fbPosts[0].created;
           feed.posts = fbPosts;
           $scope.feeds.push(feed);
