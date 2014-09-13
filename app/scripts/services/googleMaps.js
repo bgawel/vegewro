@@ -4,7 +4,11 @@ angular.module('vegewroApp')
   .factory('googleMaps', ['$q', 'script', function($q, script) {
     
     var map, geocoder;
-        
+   
+    function infoBox() {
+      return script.getScript('ext_components/infobox/infobox_packed.js');
+    }
+    
     return {
       load: function(googleMapsVersion, googleMapsToken, lang) {
         var deferred = $q.defer();
@@ -12,7 +16,7 @@ angular.module('vegewroApp')
           'other_params' :
           'key=' + googleMapsToken + '&sensor=false&language=' + lang,
           'callback' : function() {
-            script.infoBox().then(function() {
+            infoBox().then(function() {
               deferred.resolve();
             });
           }

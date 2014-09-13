@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('vegewroApp')
-  .factory('fb', ['$http', function($http) {
+  .factory('fb', ['$http', 'script', function($http, script) {
     
     function graphUrl(fbName) {
       return 'https://graph.facebook.com/' + fbName;
@@ -70,6 +70,12 @@ angular.module('vegewroApp')
     }
     
     return {
+      loadSdk : function(appId, locale) {
+        script.getScript('//connect.facebook.net/' + locale + '/sdk.js').then(function(){
+          FB.init({appId: appId, xfbml: true, version: 'v2.0'});
+        });
+      },
+      
       fetchLastPosts : function(fbName, token, postsNoOlderThan) {
         var now = new Date();
         return $http.get(postsUrl(fbName, token)).then(function(result) {

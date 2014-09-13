@@ -18,6 +18,7 @@ angular.module('vegewroApp')
     googleMaps.load(config.googleMapsVersion, config.googleMapsToken, $scope.lang).then(function() {
       createMap(data);
     });
+    fb.loadSdk(config.fbAppId, $scope.locale);
   });
   
   function createMap(data) {

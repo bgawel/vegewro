@@ -5,6 +5,7 @@ angular.module('vegewroApp')
                       function($rootScope, $window, $timeout, $location, $routeParams, i18n) {
 
     var supportedLangs = ['en', 'pl'];
+    var langToLocale = {'en': 'en_US', 'pl': 'pl_PL'};
     var defaultLang = supportedLangs[0];
     var fallbackLang = supportedLangs[1];
 
@@ -48,6 +49,7 @@ angular.module('vegewroApp')
     };
     
     $rootScope.lang = getLang($routeParams.lang);
+    $rootScope.locale = langToLocale[$rootScope.lang];
     changePathForLang($rootScope.lang);
     
     return {

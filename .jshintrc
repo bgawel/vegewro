@@ -23,6 +23,7 @@
     "$": false,
     "google": false,
     "Firebase": false,
-    "InfoBox": false
+    "InfoBox": false,
+    "FB": false
   }
 }

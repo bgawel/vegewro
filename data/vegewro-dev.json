@@ -2,6 +2,7 @@
   "config" : {
     "fbPostsNoOlderThan" : 2592000000,
     "fbToken" : "",
+    "fbAppId" : "",
     "googleMapsToken" : "",
     "googleMapsVersion" : "3",
     "filters" : {
