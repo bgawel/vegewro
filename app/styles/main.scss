@@ -40,7 +40,6 @@ body {
   padding-top: 0;
   padding-bottom: 20px;
   background-color: whitesmoke;
-  overflow-x: hidden;
 }
 
 .navbar {
@@ -292,6 +291,7 @@ a.anchor {
     .content {
       padding-left: 15px;
       margin-bottom: 0;
+      word-wrap: break-word;
     }
     
     .fb-icon {
