@@ -57,11 +57,20 @@ angular.module('vegewroApp')
         return new google.maps.Marker(markerOptions);
       },
       
-      makeDirectionsLink: function(position, zoom, lang) {
+      makeDirectionsLink: function(directionsHints, position, zoom, lang) {
+        if (directionsHints.dirLink) {
+          return directionsHints.dirLink.replace('{{zoom}}', zoom + 'z') + 'hl=' + lang;
+        }
         var lat = position.lat();
         var lng = position.lng();
-        return 'https://www.google.com/maps/dir//' + lat + ',' + lng + '/@' + lat + ',' + lng + ',' + zoom + 'z?hl=' +
-          lang;
+        var prefix = 'https://www.google.com/maps/dir//';
+        var place;
+        if (directionsHints.dirPosition) {
+          place = lat + ',' + lng;
+        } else {
+          place = directionsHints.name + ',' + directionsHints.address.replace(new RegExp('\\/', 'g'), '%2F');
+        }
+        return prefix + place + '/@' + lat + ',' + lng + ',' + zoom + 'z?hl=' + lang;
       },
       
       newInfoBox: function(infoBoxOptions) {

@@ -83,7 +83,7 @@ angular.module('vegewroApp')
       desc = '<p class="desc">' + locale.valueFor(place.desc) + '</p>';
     }
     var address = '<p class="address">' + place.address + '</p>';
-    var directions = '<p class="directions">(<a href="' + googleMaps.makeDirectionsLink(marker.position,
+    var directions = '<p class="directions">(<a href="' + googleMaps.makeDirectionsLink(place, marker.position,
         config.zoomWhenDirections, $scope.lang) + '" target="_blank">' + $scope.i18n.directions + '</a>)</p>';
     var open = '';
     if (place.open) {

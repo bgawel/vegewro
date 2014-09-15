@@ -116,8 +116,8 @@
         },
         "order" : 40,
         "title" : {
-          "en" : "Stores with vege cosmetics and detergents",
-          "pl" : "Sklepy z vege kosmetykami i detergentami"
+          "en" : "Stores with eco cosmetics and detergents",
+          "pl" : "Sklepy z eko kosmetykami i detergentami"
         },
         "type" : "products",
         "zIndex" : 50
@@ -148,8 +148,8 @@
         },
         "order" : 80,
         "title" : {
-          "en" : "Stores with vege food",
-          "pl" : "Sklepy z vege żywnością"
+          "en" : "Stores with vege and eco food",
+          "pl" : "Sklepy z vege i eko żywnością"
         },
         "type" : "products",
         "zIndex" : 40
@@ -275,6 +275,7 @@
       "lat" : 51.111474,
       "lng" : 17.0318039
     },
+    "dirPosition": true,
     "profile" : {
       "en" : "creative vegan cooking",
       "pl" : "kreatywna kuchnia roślinna"
@@ -307,6 +308,7 @@
       "lat" : 51.1220129,
       "lng" : 17.044137
     },
+    "dirLink": "https://www.google.pl/maps/dir//Jedności+Narodowej+93,+Wrocław/@51.1220129,17.044137,{{zoom}}",
     "profile" : {
       "en" : "coffee house, health food store, toy store",
       "pl" : "kawiarnia, sklep ze zdrową żywnością, sklep z zabawkami"
@@ -324,6 +326,10 @@
         "width" : 40
       },
       "src" : "https://scontent-b-ams.xx.fbcdn.net/hprofile-xpa1/l/t1.0-1/p160x160/1465291_579250645488880_25128854_n.jpg"
+    },
+    "position" : {
+      "lat" : 51.110532,
+      "lng" : 17.026004
     },
     "name" : "Machina Organica",
     "open" : {
@@ -410,9 +416,10 @@
     },
     "phone" : "71 341 90 98",
     "position" : {
-      "lat" : 51.1110645,
-      "lng" : 17.0339005
+      "lat" : 51.111044,
+      "lng" : 17.03383
     },
+    "dirLink": "https://www.google.pl/maps/dir//Green+Way,+Kuźnicza+11%2F13,+50-138+Wrocław/@51.1110239,16.9651638,{{zoom}}",
     "web" : "http://www.greenway.pl"
   }, {
     "address" : "Plac Kościuszki 12, Wrocław",
@@ -443,7 +450,7 @@
     },
     "web" : "http://www.nalanda.pl"
   }, {
-    "address" : "Kamieńskiego 205 lok. 16, Wrocław",
+    "address" : " Kamieńskiego 205/16, Wrocław",
     "desc" : {
       "en" : "Only online shopping",
       "pl" : "Tylko sklep internetowy"
@@ -455,8 +462,8 @@
     "name" : "Geen Line",
     "phone" : "512 144 140",
     "position" : {
-      "lat" : 51.1565965,
-      "lng" : 17.0442764
+      "lat" : 51.152769,
+      "lng" : 17.043926
     },
     "profile" : {
       "en" : "natural cosmetics and ecological detergents",
@@ -475,8 +482,8 @@
     "name" : "Kamila",
     "phone" : "783 295 188",
     "position" : {
-      "lat" : 51.1531055,
-      "lng" : 17.0256488
+      "lat" : 51.153443,
+      "lng" : 17.027254
     },
     "profile" : {
       "en" : "wholesale grocery",
@@ -539,8 +546,8 @@
     },
     "phone" : "71 349 84 71, 795 40 21 21",
     "position" : {
-      "lat" : 51.1277819,
-      "lng" : 16.900986
+      "lat" : 51.127481,
+      "lng" : 16.901679
     },
     "profile" : {
       "en" : "ecological food, eco bio products",
@@ -571,8 +578,8 @@
     },
     "phone" : "71 782 32 58",
     "position" : {
-      "lat" : 51.103699,
-      "lng" : 17.030952
+      "lat" : 51.103735,
+      "lng" : 17.030765
     },
     "profile" : {
       "en" : "ecological and natural products",
@@ -628,7 +635,7 @@
       },
       "src" : "http://sklepzdrowegary.pl/img/logo.jpg"
     },
-    "name" : "zdrowegary.pl",
+    "name" : "Zdrowe Gary",
     "open" : {
       "en" : "Mon-Fri: 09:00-18:00",
       "pl" : "pon.-piąt.: 09:00-18:00"
@@ -638,6 +645,7 @@
       "lat" : 51.099671,
       "lng" : 17.023655
     },
+    "dirLink": "https://www.google.pl/maps/dir//Sklep+Zdrowe+Gary,+Zielińskiego+22A,+53-534+Wrocław/@51.099671,17.023655,{{zoom}}",
     "profile" : {
       "en" : "healthy food store",
       "pl" : "artykuły zdrowe i niezwykłe"
@@ -663,8 +671,8 @@
     "name" : "Pan Pablo",
     "phone" : "518 424 921",
     "position" : {
-      "lat" : 51.103286,
-      "lng" : 17.033344
+      "lat" : 51.10311,
+      "lng" : 17.032993
     },
     "profile" : {
       "en" : "shoes store ",
@@ -693,10 +701,139 @@
       "lat" : 51.1119313,
       "lng" : 17.040233
     },
+    "dirLink" : "https://www.google.pl/maps/dir//Baszta,+Kraińskiego,+52-007+Wrocław/@51.1119313,17.040233,{{zoom}}",
     "profile" : {
       "en" : "food and gastronomy",
       "pl" : "jedzenie i gastronomia"
     },
     "web" : "https://facebook.com/basztaniedzwiadka"
-  } ]
+  }, {
+    "address" : "Pomorska 55/33U, Wrocław",
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "email" : "sklep@naturobranie.pl",
+    "fb" : "naturobranie",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "id" : 18,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p200x200/10570271_278994482307577_253469586036897452_n.jpg?oh=d6b7bccbf5738e18740c386479085665&oe=5492AB7D&__gda__=1419385575_42f28f1f38e5a4af4b42f2bbae9f3ad8"
+    },
+    "name" : "Naturobranie",
+    "open" : {
+      "en" : "Mon-Fri: 09:00-18:00, Sat: 09:00-15:00",
+      "pl" : "pon.-piąt.: 09:00-18:00, sob.: 09:00-15:00"
+    },
+    "phone" : "695 420 566",
+    "position" : {
+      "lat" : 51.121297,
+      "lng" : 17.03108
+    },
+    "profile" : {
+      "en" : "natural products",
+      "pl" : "produkty naturalne"
+    },
+    "web" : "http://naturobranie.pl"
+  }, {
+    "address" : "Świętego Mikołaja 40, Wrocław",
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "email" : "mikolaja@helfy.pl",
+    "fb" : "sklep.helfy",
+    "filters" : [ "vegeCosmetics" ],
+    "id" : 19,
+    "image" : {
+      "size" : {
+        "height" : 37,
+        "width" : 53
+      },
+      "src" : "http://www.helfy.pl/sites/all/themes/helfy_theme/logo-sklepu-z-kosmetykami-naturalnymi-i-orientalnymi-helfy.png"
+    },
+    "name" : "Helfy",
+    "open" : {
+      "en" : "Mon-Fri: 10:00-19:00, Sat: 10:00-16:00",
+      "pl" : "pon.-piąt.: 10:00-19:00, sob.: 10:00-16:00"
+    },
+    "phone" : "690 010 475",
+    "position" : {
+      "lat" : 51.111368,
+      "lng" : 17.023786
+    },
+    "dirPosition": true,
+    "profile" : {
+      "en" : "natural and oriental cosmetics",
+      "pl" : "kosmetyki naturalne i orientalne"
+    },
+    "web" : "http://www.helfy.pl"
+  }, {
+    "address" : "Hallera 8, Wrocław",
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "email" : "hallera@helfy.pl",
+    "filters" : [ "vegeCosmetics" ],
+    "id" : 20,
+    "image" : {
+      "size" : {
+        "height" : 37,
+        "width" : 53
+      },
+      "src" : "http://www.helfy.pl/sites/all/themes/helfy_theme/logo-sklepu-z-kosmetykami-naturalnymi-i-orientalnymi-helfy.png"
+    },
+    "name" : "Helfy",
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00",
+      "pl" : "pon.-piąt.: 10:00-18:00"
+    },
+    "phone" : "607 526 016",
+    "position" : {
+      "lat" : 51.086993,
+      "lng" : 17.010585
+    },
+    "profile" : {
+      "en" : "natural and oriental cosmetics",
+      "pl" : "kosmetyki naturalne i orientalne"
+    },
+    "web" : "http://www.helfy.pl"
+  }, {
+    "address" : "Jaracza 73d, Wrocław",
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "email" : "sklep@centrumzdrowejdiety.pl",
+    "filters" : [ "vegeFood" ],
+    "id" : 21,
+    "image" : {
+      "size" : {
+        "height" : 35,
+        "width" : 62
+      },
+      "src" : "http://sklep.centrumzdrowejdiety.pl/img/logo.jpg"
+    },
+    "name" : "Centrum zdrowej diety",
+    "open" : {
+      "en" : "Mon-Fri: 09:00-18:00, Sat: 09:00-14:00",
+      "pl" : "pon.-piąt.: 09:00-18:00, sob.: 09:00-14:00"
+    },
+    "phone" : "508 324 525",
+    "position" : {
+      "lat" : 51.127781,
+      "lng" : 17.056969
+    },
+    "profile" : {
+      "en" : "healthy food store, nutritionist",
+      "pl" : "sklep ze zdrową żywnością, dietetyk"
+    },
+    "web" : "http://sklep.centrumzdrowejdiety.pl",
+    "fb" : "centrumzdrowejdiety"
+  }  ]
 }

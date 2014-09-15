@@ -151,12 +151,11 @@
           <a href ng-click="places[feed.placeId].showOnMap()" class="action action-link" tooltip-placement="right" 
               tooltip="{{i18n.showOnMap}}">
             <span class="glyphicon glyphicon-hand-up show-on-map"></span><!--
-       --></a>
-        </span>
-        <span ng-if="feed.fixed">
-          {{feed.by}}
-        </span>
-        ]:
+       --></a><!--
+     --></span><!--
+     --><span ng-if="feed.fixed">
+          {{feed.by}}<!--
+     --></span>]:
       </p>
       <p class="content" ng-repeat="post in feed.posts">
         <span ng-bind-html="((feed.posts.length > 1 ? '[' + (post.created | date:'HH:mm') + '] ' + post.message : post.message) | characters:500) + ' ' + post.link | linky:'_blank'">
