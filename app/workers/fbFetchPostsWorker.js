@@ -5,31 +5,41 @@ importScripts('/int_components/fb/fbUtils.min.js');
 
 $(function (config) {
   
-  var fetchedFeeds = [];
+  var fetchedFeeds = {};
   var feedsToCheck = config.fbFeeds;
   var numberOfFeedsToCheck = feedsToCheck.length;
   var token = config.token;
   var postsNoOlderThan = config.postsNoOlderThan;
   var now = new Date();
+  var successCounter = 0;
+  
+  var sendResult = function(feeds) {
+    $.send({feeds: feeds});
+  };
   
   var sendResultIfFinished = function() {
-    if (fetchedFeeds.length === numberOfFeedsToCheck) {
-      $.send( {feeds: FbUtils.getTransformedFeedsWithPosts(feedsToCheck, fetchedFeeds)} );
+    if (successCounter === numberOfFeedsToCheck) {
+      sendResult(FbUtils.getTransformedFeedsWithPosts(feedsToCheck, fetchedFeeds));
     }
   };
   
-  var fetchLastPostsForFbFeed = function(fbName) {
+  var fetchLastPostsForFbFeed = function(fbName, indexOfFeedToCheck) {
     $.ajax.get({
       url: FbUtils.postsUrl(fbName, token),
       dataType: 'json',
       success: function(data) {
-        fetchedFeeds.push(FbUtils.collectYoungPosts(fbName, data.data, now, postsNoOlderThan));
-        sendResultIfFinished();
+        fetchedFeeds[indexOfFeedToCheck] = FbUtils.collectYoungPosts(fbName, data.data, now, postsNoOlderThan);
+        sendResultIfFinished(++successCounter);
       }
     });
   };
   
-  for (var i=0; i<numberOfFeedsToCheck; ++i) {
-    fetchLastPostsForFbFeed(feedsToCheck[i].fb);
+  if (feedsToCheck.length > 0) {
+    for (var i=0; i<numberOfFeedsToCheck; ++i) {
+      fetchLastPostsForFbFeed(feedsToCheck[i].fb, i);
+    }
+  } else {
+    sendResult([]);
   }
+  
 });
