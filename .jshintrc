@@ -24,6 +24,8 @@
     "google": false,
     "Firebase": false,
     "InfoBox": false,
-    "FB": false
+    "FB": false,
+    "FbUtils": false,
+    "importScripts": false
   }
 }

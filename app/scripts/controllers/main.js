@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('vegewroApp')
-  .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps', 'task',
-                           function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps, task) {
+  .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps',
+                           function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps) {
 
   var map, config, markers = [], lastInfoBoxClicked;
-  var fbFeeds = {check:[], fetched:[]};
+  var fbFeeds = [];
   $scope.filters = [];
   $scope.addresses = {};
   $scope.places = {};
@@ -140,8 +140,7 @@ angular.module('vegewroApp')
   
   function addFbFeed(place) {
     if (place.fb) {
-      fbFeeds.check.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id});
-      fbFeeds.fetched.push(fb.fetchLastPosts(place.fb, config.fbToken, config.fbPostsNoOlderThan));
+      fbFeeds.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id, fb: place.fb});
     }
   }
   
@@ -165,15 +164,8 @@ angular.module('vegewroApp')
   }
   
   function readFbFeeds() {
-    return $q.all(fbFeeds.fetched).then(function(results) {
-      angular.forEach(fbFeeds.check, function(feed, index) {
-        var fbPosts = results[index];
-        if (fbPosts && fbPosts.length > 0) {
-          feed.time = fbPosts[0].created;
-          feed.posts = fbPosts;
-          $scope.feeds.push(feed);
-        }
-      });
+    return fb.fetchLastPosts(fbFeeds, config.fbToken, config.fbPostsNoOlderThan).then(function(outputFeeds) {
+      $scope.feeds = outputFeeds;
     });
   }
   
@@ -189,16 +181,14 @@ angular.module('vegewroApp')
   }
   
   function readNews(fixedFeeds) {
-    task.runBackgroundTask(function() {
-      readFbFeeds().then(function() {
-        readFixedFeeds(fixedFeeds);
-        $scope.feedsLoading = false;
-      });
+    readFbFeeds().then(function() {
+      readFixedFeeds(fixedFeeds);
+      $scope.feedsLoading = false;
     });
   }
   
   function loadFbLikeButton() {
-    task.runBackgroundTask(function(){ fb.loadSdk(config.fbAppId, $scope.locale); });
+    fb.loadSdk(config.fbAppId, $scope.locale);
   }
   
   $scope.enableFilters = function(type) {

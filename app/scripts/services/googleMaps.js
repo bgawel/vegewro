@@ -59,16 +59,17 @@ angular.module('vegewroApp')
       
       makeDirectionsLink: function(directionsHints, position, zoom, lang) {
         if (directionsHints.dirLink) {
-          return directionsHints.dirLink.replace('{{zoom}}', zoom + 'z') + 'hl=' + lang;
+          return directionsHints.dirLink.replace('{{zoom}}', zoom + 'z') + '?hl=' + lang;
         }
         var lat = position.lat();
         var lng = position.lng();
         var prefix = 'https://www.google.com/maps/dir//';
+        var address = directionsHints.address.replace(new RegExp('\\/', 'g'), '%2F');
         var place;
         if (directionsHints.dirPosition) {
-          place = lat + ',' + lng;
+          place = address;
         } else {
-          place = directionsHints.name + ',' + directionsHints.address.replace(new RegExp('\\/', 'g'), '%2F');
+          place = directionsHints.name + ',' + address;
         }
         return prefix + place + '/@' + lat + ',' + lng + ',' + zoom + 'z?hl=' + lang;
       },

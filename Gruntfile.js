@@ -30,7 +30,11 @@ module.exports = function (grunt) {
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: [
+          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '<%= yeoman.app %>/int_components/{,*/}*.js',
+          '<%= yeoman.app %>/workers/{,*/}*.js'
+        ],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: true
@@ -110,7 +114,10 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/scripts/{,*/}*.js'
+        '<%= yeoman.app %>/scripts/{,*/}*.js',
+        '<%= yeoman.app %>/workers/{,*/}*.js',
+        '<%= yeoman.app %>/int_components/{,*/}*.js',
+        '!<%= yeoman.app %>/*/{,*/}*.min.js',
       ],
       test: {
         options: {
@@ -296,6 +303,8 @@ module.exports = function (grunt) {
             'views/{,*/}*.html',
             'bower_components/**/*',
             'ext_components/**/*',
+            'int_components/**/*',
+            'workers/*',
             'styles/fonts/*',
             'images/{,*/}*.{webp}'
           ]

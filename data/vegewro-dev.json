@@ -308,7 +308,7 @@
       "lat" : 51.1220129,
       "lng" : 17.044137
     },
-    "dirLink": "https://www.google.pl/maps/dir//Jedności+Narodowej+93,+Wrocław/@51.1220129,17.044137,{{zoom}}",
+    "dirPosition": true,
     "profile" : {
       "en" : "coffee house, health food store, toy store",
       "pl" : "kawiarnia, sklep ze zdrową żywnością, sklep z zabawkami"
@@ -345,7 +345,7 @@
   }, {
     "address" : "Rynek 27a, Wrocław",
     "fb" : "Vega.Bar.Weganski.Wroclaw",
-    "filters" : [ "veganBar" ],
+    "filters" : [ "veganBar", "veganCatering" ],
     "id" : 5,
     "image" : {
       "size" : {
@@ -835,5 +835,169 @@
     },
     "web" : "http://sklep.centrumzdrowejdiety.pl",
     "fb" : "centrumzdrowejdiety"
-  }  ]
+  }, {
+    "address" : "Hala Targowa, Piaskowa 15, Wrocław",
+    "desc" : {
+      "en" : "Stall no 127",
+      "pl" : "Stoisko nr 127"
+    },
+    "filters" : [ "vegeFood" ],
+    "id" : 22,
+    "name" : "Biostacja, Zieleniak Piętaszka",
+    "open" : {
+      "en" : "Mon-Fri: 08:00-19:00, Sat: 09:00-15:00",
+      "pl" : "pon.-piąt.: 08:00-19:00, sob.: 09:00-15:00"
+    },
+    "phone" : "697 909 989",
+    "position" : {
+      "lat" : 51.112584,
+      "lng" : 17.039821
+    },
+    "dirPosition" : true,
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    }
+  }, {
+    "address" : "Wita Stwosza 14, Wrocław",
+    "filters" : [ "vegeFood" ],
+    "id" : 23,
+    "name" : "Przyprawy Świata",
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-15:00",
+      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-15:00"
+    },
+    "phone" : "71 372 45 50",
+    "email" : "przyprawy@vp.pl",
+    "position" : {
+      "lat" : 51.109717,
+      "lng" : 17.0364478
+    },
+    "dirPosition": true,
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    }
+  }, {
+    "address" : "Rynek 31, Wrocław",
+    "filters" : [ "vegeFood" ],
+    "id" : 24,
+    "name" : "Społem PSS Feniks",
+    "open" : {
+      "en" : "Mon-Wed: 06:30-21:00, Thu-Sat: 06:30-24:00, Sun: 10:00-18:00",
+      "pl" : "pon.-śr.: 06:30-21:00, czw.-sob.: 06:30-24:00, niedz.: 10:00-18:00"
+    },
+    "phone" : "71 377 18 49, 71 377 18 67",
+    "position" : {
+      "lat" : 51.109502,
+      "lng" : 17.033262
+    },
+    "profile" : {
+      "en" : "stall with healthy food",
+      "pl" : "stoisko ze zdrową żywnością"
+    }
+  }, {
+    "address" : "Szczytnicka 41, Wrocław",
+    "filters" : [ "vegeBar", "vegeFood" ],
+    "id" : 25,
+    "name" : "Zdrowa Krowa",
+    "phone" : "696 041 802, 790 896 607",
+    "email" : "zdrowakrowa.wroclaw@gmail.com",
+    "web" : "https://facebook.com/sklepo.kawiarniaZDROWAKROWA",
+    "fb" : "sklepo.kawiarniaZDROWAKROWA",
+    "position" : {
+      "lat" : 51.113072,
+      "lng" : 17.0545846
+    },
+    "dirPosition": true,
+    "profile" : {
+      "en" : "healthy food store, kawiarnia",
+      "pl" : "sklep ze zdrową żywnością, coffee house"
+    },
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p160x160/10557430_256293041227913_1711699132404282419_n.jpg?oh=c01b08955f5af46dd4b4988ca0e51f17&oe=548A8B17&__gda__=1422881950_820e0bd745662b104c8b2b4030195de3"
+    }
+  }, {
+    "address" : "Hala Strzegomska, Strzegomska 206-208, Wrocław",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "id" : 26,
+    "name" : "Sklep na zdrowie",
+    "phone" : "505 210 914",
+    "web" : "http://sklepnazdrowie.pl",
+    "fb" : "sklepnazdrowie",
+    "position" : {
+      "lat" : 51.111581,
+      "lng" : 16.959334
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//Hala+Strzegomska.+PHU.+ZPChr.+Korczak+E.,+Ulica+Strzegomska+206,+Wrocław/@51.111581,16.959334,{{zoom}}",
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/v/t1.0-1/p160x160/1185435_1508699352689526_329673603_n.jpg?oh=8346fa598221ef252954c9aec29bb8e2&oe=54922474&__gda__=1422233118_be70ede367b23765065e7584aebdddd8"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-15:00",
+      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-15:00"
+    }
+  }, {
+    "address" : "Krucza 112, Wrocław",
+    "filters" : [ "vegeFood"],
+    "id" : 27,
+    "name" : "Herbavit",
+    "phone" : "71 783 74 20",
+    "web" : "http://www.herbavit.com.pl",
+    "fb" : "107265929300925",
+    "position" : {
+      "lat" : 51.093242,
+      "lng" : 17.002321
+    },
+    "profile" : {
+      "en" : "herbal drugstore, healthy food store",
+      "pl" : "sklep zielarsko-medyczny, ze zdrową żywnością"
+    },
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p160x160/1797345_780356361991875_745350250_n.jpg?oh=40229a53c994f7032935691ac7ea918d&oe=54C50644&__gda__=1419027675_d385874503b015fdee8ddb940ee5e936"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-14:00",
+      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-14:00"
+    }
+  }, {
+    "address" : "Grabiszyńska 55, Wrocław",
+    "filters" : [ "vegeFood", "vegeCosmetics"],
+    "id" : 28,
+    "name" : "Źródło Zdrowego Życia",
+    "phone" : "607 315 333",
+    "position" : {
+      "lat" : 51.102934,
+      "lng" : 17.014924
+    },
+    "dirPosition" : true,
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 11:00-19:00, Sat: 10:00-14:00",
+      "pl" : "pon.-piąt.: 11:00-19:00, sob.: 10:00-14:00"
+    }
+  } ]
 }
