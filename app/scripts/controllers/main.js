@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('vegewroApp')
-  .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps',
-                           function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps) {
+  .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps', 'news',
+                           function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps, news) {
 
   var map, config, markers = [], lastInfoBoxClicked;
   var fbFeeds = [];
@@ -13,7 +13,6 @@ angular.module('vegewroApp')
   $scope.feedsLoading = true;
   
   backend.data().then(function(data) {
-    Firebase.goOffline(); // release connection
     config = data.config;
     googleMaps.load(config.googleMapsVersion, config.googleMapsToken, $scope.lang).then(function() {
       createMap(data);
@@ -163,26 +162,9 @@ angular.module('vegewroApp')
     });
   }
   
-  function readFbFeeds() {
-    return fb.fetchLastPosts(fbFeeds, config.fbToken, config.fbPostsNoOlderThan).then(function(outputFeeds) {
-      $scope.feeds = outputFeeds;
-    });
-  }
-  
-  function readFixedFeeds(fixedFeeds) {
-    angular.forEach(fixedFeeds, function(feed) {
-      feed.time = new Date(feed.posts[0].created);
-      feed.fixed = true;
-      angular.forEach(feed.posts, function(post) {
-        post.created = new Date(post.created);
-      });
-      $scope.feeds.push(feed);
-    });
-  }
-  
-  function readNews(fixedFeeds) {
-    readFbFeeds().then(function() {
-      readFixedFeeds(fixedFeeds);
+  function readNews(newsSnapshot) {
+    news.read(newsSnapshot, fbFeeds, config).then(function(feeds) {
+      $scope.feeds = feeds;
       $scope.feedsLoading = false;
     });
   }

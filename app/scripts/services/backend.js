@@ -4,13 +4,20 @@ angular.module('vegewroApp')
   .factory('backend', ['syncData', function(syncData) {
     return {
       data : function() {
-        return syncData().$asObject().$loaded();
+        return syncData().$asObject().$loaded().then(function(data) {
+          Firebase.goOffline(); // release connection
+          return data;
+        });
       },
-      config : function() {
-        return syncData('config').$asObject().$loaded();
-      },
-      places : function() {
-        return syncData('places').$asObject().$loaded();
+      
+      save : function(node, data) {
+        Firebase.goOnline();
+        syncData(node).$set(data).then(function() {
+          Firebase.goOffline();
+        }, function(error) {
+          Firebase.goOffline();
+          console.log('Data could not be saved: ' + error);
+        });
       }
     };
   }]);

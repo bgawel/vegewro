@@ -876,8 +876,16 @@
       "lng" : 17.033262
     },
     "profile" : {
-      "en" : "stall with healthy food",
-      "pl" : "stoisko ze zdrową żywnością"
+      "en" : "healthy food offer",
+      "pl" : "m.in. oferta zdrowej żywności"
+    },
+    "web" : "http://feniks.wroc.pl",
+    "image" : {
+      "size" : {
+        "height" : 41,
+        "width" : 40
+      },
+      "src" : "http://feniks.wroc.pl/pics/daszek.gif"
     }
   }, {
     "address" : "Szczytnicka 41, Wrocław",
@@ -903,6 +911,10 @@
         "width" : 40
       },
       "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p160x160/10557430_256293041227913_1711699132404282419_n.jpg?oh=c01b08955f5af46dd4b4988ca0e51f17&oe=548A8B17&__gda__=1422881950_820e0bd745662b104c8b2b4030195de3"
+    },
+    "open" : {
+      "en" : "Mon-Fri: 10:00-19:00, Sat: 12:00-18:00",
+      "pl" : "pon.-piąt.: 10:00-19:00, sob.: 12:00-18:00"
     }
   }, {
     "address" : "Hala Strzegomska, Strzegomska 206-208, Wrocław",
@@ -982,5 +994,11 @@
       "en" : "Mon-Fri: 11:00-19:00, Sat: 10:00-14:00",
       "pl" : "pon.-piąt.: 11:00-19:00, sob.: 10:00-14:00"
     }
-  }  ]
+  }  ],
+  "news" : {
+    "fixed" : [],
+    "fbFeeds" : {
+      "timestamp": 1
+    }
+  }
 }

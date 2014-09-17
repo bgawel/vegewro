@@ -6,7 +6,7 @@ angular.module('vegewroApp')
     return {
       fetchLastPosts : function(fbFeeds, token, postsNoOlderThan, deferred) {
         $.Hive.create({
-          worker: 'workers/fbFetchPostsWorker.js',
+          worker: 'workers/fbFetchPostsWorker.min.js',
           
           created: function() {
             $($.Hive.get(0)).send({
