@@ -206,7 +206,8 @@
       "zoom" : 12
     },
     "zoomWhenDirections" : 16,
-    "zoomWhenMarkerClicked" : 14
+    "zoomWhenMarkerClicked" : 14,
+    "cacheFeedsFor" : 660000
   },
  "places" : [ {
     "address" : "Nożownicza 40, Wrocław",

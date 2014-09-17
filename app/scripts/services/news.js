@@ -46,7 +46,10 @@ angular.module('vegewroApp')
           if (!feeds) {
             feeds = [];
           }
-          return feeds.concat(readFixedFeeds(newsSnapshot.fixed));
+          if (newsSnapshot.fixed) {
+            feeds = feeds.concat(readFixedFeeds(newsSnapshot.fixed));
+          }
+          return feeds;
         });
       }
     };
