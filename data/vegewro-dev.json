@@ -357,7 +357,7 @@
     "address" : "Ofiar Oświęcimskich 18, Wrocław",
     "email" : "klubojadalnia.zlemieso@gmail.com",
     "fb" : "klubojadalniazlemieso",
-    "filters" : [ "vegeBar", "vegeCatering" ],
+    "filters" : [ "vegeBar", "vegeDelivery", "vegeCatering" ],
     "id" : 6,
     "image" : {
       "size" : {
@@ -379,7 +379,11 @@
       "en" : "vegetarian and vegan restaurant",
       "pl" : "wegetariańska i wegańska restauracja"
     },
-    "web" : "http://www.zlemieso.pl"
+    "web" : "http://www.zlemieso.pl",
+    "desc2" : {
+      "en" : "Delivery only by http://sklep.hermescafe.pl",
+      "pl" : "Dowozy tylko przez http://sklep.hermescafe.pl"
+    }
   }, {
     "address" : "Kuźnicza 11/13, Wrocław",
     "email" : "wroclaw.kuznicza@greenway.pl",
@@ -994,6 +998,39 @@
     "open" : {
       "en" : "Mon-Fri: 11:00-19:00, Sat: 10:00-14:00",
       "pl" : "pon.-piąt.: 11:00-19:00, sob.: 10:00-14:00"
+    }
+  }, {
+    "address" : "Hala Kupców Perła, Widna 6, Wrocław",
+    "filters" : [ "vegeFood" ],
+    "id" : 29,
+    "name" : "Eko Kraina",
+    "phone" : "785 012 777",
+    "email" : "jola-pon@wp.pl",
+    "web" : "https://facebook.com/ekokraina.132",
+    "fb" : "ekokraina.132",
+    "position" : {
+      "lat" : 51.083868,
+      "lng" : 17.045274
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//Perła.+Hala+kupców.+Wynajem+powierzchni+handlowych,+Widna+6,+Wrocław/@51.083868,17.045274,{{zoom}}",
+    "open" : {
+      "en" : "Mon-Fri: 09:00-19:00, Sat: 08:00-16:00",
+      "pl" : "pon.-piąt.: 09:00-19:00, sob.: 08:00-16:00"
+    },
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c8.0.200.200/p200x200/1395399_218582714976209_2107422989_n.jpg?oh=4ef1295368b8ccd059405d5cadb78d30&oe=54CF69D4&__gda__=1422043366_7e82e6a35a6f95d2d93fda1713053af6"
+    },
+    "desc" : {
+      "en" : "Stall no 47",
+      "pl" : "Stoisko nr 47"
     }
   } ],
   "news" : {

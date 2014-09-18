@@ -100,8 +100,12 @@ angular.module('vegewroApp')
     if (place.phone) {
       phone = '<p class="phone">' + place.phone + '</p>';
     }
+    var desc2 = '';
+    if (place.desc2) {
+      desc2 = '<p class="desc2">' + locale.valueFor(place.desc2) + '</p>';
+    }
     boxText.innerHTML = '<div class="pop_up_box_text pre"><div class="left">' + title + desc + address + directions +
-      open + '</div><div class="right">' + web + email + phone + image + '</div></div>';
+      open + '</div><div class="right">' + web + email + phone + desc2 + image + '</div></div>';
     return boxText;
   }
   
