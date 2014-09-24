@@ -434,7 +434,7 @@
     },
     "profile" : {
       "en" : "book store, restaurant, coffe house",
-      "pl" : "księgarnia, bufer, kawiarnia"
+      "pl" : "księgarnia, bufet, kawiarnia"
     },
     "web" : "http://www.nalanda.pl"
   }, {
@@ -1038,18 +1038,23 @@
       {
         "by" : "vegewro",
         "posts" : [ {
-          "created_time" : "2014-09-10T18:00:00",
+          "created_time" : "2014-09-10T18:00:00Z",
           "message" : "Test news 2.1"
         }, {
-          "created_time" : "2014-09-10T17:00:00",
+          "created_time" : "2014-09-10T17:00:00+0000",
           "message" : "Test news 2.2"
         } ]
       }, 
       {
         "by" : "vegewro",
         "posts" : [ {
-          "created_time" : "2014-09-10T16:00:00",
-          "message" : "Test news 1",
+          "created_time" : "2014-09-10T18:00:00",
+          "message" : "Test news 1.2",
+          "link": "http://vegewro.pl"
+        },
+         {
+          "created_time" : "2014-09-10T17:00:00",
+          "message" : "Test news 1.1",
           "link": "http://vegewro.pl"
         } ]
       } 

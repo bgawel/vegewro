@@ -12,18 +12,18 @@
     return url + '&access_token=' + token;
   }
 
-  function makeFbAccountLink(uid) {
-    return 'https://www.facebook.com/' + uid;
-  }
-
   function isLinkToFbAccount(link, fbName) {
-    return link.indexOf(makeFbAccountLink(fbName)) === 0;
+    return link.indexOf(fbUtils.makeAccountLink(fbName)) === 0;
   }
 
   function messageContainsLink(post) {
     var lastIndexOfLink = post.link.length - 1;
     return post.message.indexOf(post.link[lastIndexOfLink] === '/' ? post.link.substring(0, lastIndexOfLink)
         : post.link) >= 0;
+  }
+  
+  function fbStringToDate(dateString) {
+    return new Date(dateString.replace(/\+0000/g, 'Z')); // IE support
   }
 
   function findAllPostsWithMessage(fbName, data) {
@@ -33,7 +33,7 @@
       for (var i=0; i<data.length; ++i) {
         post = data[i];
         if (post.message) {
-          post.created = new Date(post.created_time);
+          post.created = fbStringToDate(post.created_time);
           posts.push(post);
         }
       }
@@ -91,6 +91,26 @@
   };
 
   fbUtils.makeAccountLink = function(uid) {
-    return makeFbAccountLink(uid);
+    return 'https://www.facebook.com/' + uid;
+  };
+  
+  fbUtils.deserializeFeeds = function(feeds, postProcessing) {
+    if (feeds) {
+      var feed, post, posts;
+      for (var j,i=0; i<feeds.length; ++i) {
+        feed = feeds[i];
+        posts = feed.posts;
+        feed.time = fbStringToDate(posts[0].created_time);
+        for (j=0; j<posts.length; ++j) {
+          post = posts[j];
+          post.created = fbStringToDate(post.created_time);
+        }
+        if (postProcessing) {
+          postProcessing(feed);
+        }
+      }
+      return feeds;
+    }
+    return [];
   };
 }.call(this));
