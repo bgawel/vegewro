@@ -296,6 +296,11 @@ a.anchor {
       padding-left: 15px;
       margin-bottom: 0;
       word-wrap: break-word;
+      
+      .fixed-by {
+        background-color: rgb(0, 127, 14);
+        font-weight: bold;
+      }
     }
     
     .fb-icon {

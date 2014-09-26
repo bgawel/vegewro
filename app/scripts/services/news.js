@@ -26,18 +26,17 @@ angular.module('vegewroApp')
     }
     
     function readFixedFeeds(fixedFeeds) {
+      var now = new Date();
       return FbUtils.deserializeFeeds(fixedFeeds, function(feed) {
         feed.fixed = true;
+        feed.time = now;
       });
     }
     
     return {
       read : function(newsSnapshot, fbFeedsToCheck, config) {
         return readFbFeeds(newsSnapshot.fbFeeds, fbFeedsToCheck, config).then(function(feeds) {
-          if (newsSnapshot.fixed) {
-            feeds = feeds.concat(readFixedFeeds(newsSnapshot.fixed));
-          }
-          return feeds;
+          return feeds.concat(readFixedFeeds(newsSnapshot.fixed));
         });
       }
     };

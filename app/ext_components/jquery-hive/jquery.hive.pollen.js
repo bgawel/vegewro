@@ -530,10 +530,11 @@
         if (_xhr) {
           Pollen.ajax._confXHR(_xhr, options, json, ajaxSuccess);
           _xhr.open(options.type, options.url, options.async);
-          _xhr.setRequestHeader("X-Requested-With", "Worker-XMLHttpRequest");
-          _xhr.setRequestHeader("X-Worker-Hive", "Pollen-JS");
+          // bgawel: custom headers commented, IE sends OPTIONS that is not accepted by Facebook
+          //_xhr.setRequestHeader("X-Requested-With", "Worker-XMLHttpRequest");
+          //_xhr.setRequestHeader("X-Worker-Hive", "Pollen-JS");
           if (Pollen.evaluate.isDef(Pollen.identity)) {
-            _xhr.setRequestHeader("X-Pollen-Thread-Id", Pollen.identity);
+            //_xhr.setRequestHeader("X-Pollen-Thread-Id", Pollen.identity);
           }
           if (_type == "post") {
             _xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

@@ -1,6 +1,6 @@
 'use strict';
 
-importScripts('/ext_components/jquery-hive/jquery.hive.pollen.min.js');
+importScripts('/ext_components/jquery-hive/1.jquery.hive.pollen.min.js');
 importScripts('/int_components/fb/fbUtils.min.js');
 
 $(function (config) {
@@ -28,7 +28,8 @@ $(function (config) {
       url: FbUtils.postsUrl(fbName, token),
       dataType: 'json',
       success: function(data) {
-        fetchedFeeds[indexOfFeedToCheck] = FbUtils.collectYoungPosts(fbName, data.data, now, postsNoOlderThan);
+        fetchedFeeds[indexOfFeedToCheck] = data ? 
+            FbUtils.collectYoungPosts(fbName, data.data, now, postsNoOlderThan) : data;
         sendResultIfFinished(++successCounter);
       }
     });
