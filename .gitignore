@@ -7,3 +7,4 @@ app/bower_components
 .settings
 *~
 deploy/vegewro
+deploy/devphp
