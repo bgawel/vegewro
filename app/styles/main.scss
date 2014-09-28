@@ -96,7 +96,6 @@ body {
 
 /*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
 #map { 
-  height: 600px;
 }
 
 .progress-striped {
@@ -368,6 +367,39 @@ a.anchor {
     width: 260px !important;
     & > img {
       width: 7%;
+      right: -25px;
+    }
+    
+    & > div {
+      position:relative;
+      left: 25px;
+    }
+    
+    .pop_up_box_text {
+      .right {
+        padding-top: 5px;
+        width: 240px;
+      }
+      
+      .phone {
+        margin: 0;
+      }
+    
+      .title, .address {
+        font-size: 12px;
+      }
+      
+      .logo, .email {
+        display: none;
+      }
+      
+      .web {
+        margin-bottom: 0;
+      }
+      
+      .desc {
+        font-weight: 300;
+      }
     }
   }
   
@@ -379,27 +411,6 @@ a.anchor {
       
       .logo {
         margin-bottom: 5px;
-      }
-    }
-  }
-  
-  .infoBox {
-    .pop_up_box_text {
-      .title, .address {
-        font-size: 12px;
-      }
-      
-      .logo, .email, .phone {
-        display: none;
-      }
-      
-      .web {
-        padding-top: 5px;
-        margin-bottom: 0;
-      }
-      
-      .desc {
-        font-weight: 300;
       }
     }
   }

@@ -1,7 +1,7 @@
 {
   "config" : {
-    "fbAppId" : "",
     "fbToken" : "",
+    "fbAppId" : "",
     "googleMapsToken" : "",
     "cacheFeedsFor" : 660000,
     "fbPostsNoOlderThan" : 2592000000,
@@ -197,8 +197,8 @@
     },
     "mapOptions" : {
       "center" : {
-        "lat" : 51.10789,
-        "lng" : 17.03854
+        "lat" : 51.109834,
+        "lng" : 17.032724
       },
       "mapTypeControl" : true,
       "mapTypeId" : "roadmap",
@@ -612,7 +612,7 @@
     },
     "web" : "http://sklepzdrowegary.pl"
   }, {
-    "address" : "Czysta 4, Wrocław",
+    "address" : "Kazimierza Wielkiego 41, Wrocław",
     "desc" : {
       "en" : "Stationery and online shopping",
       "pl" : "Sklep stacjonarny i internetowy"
@@ -634,6 +634,7 @@
       "lat" : 51.10311,
       "lng" : 17.032993
     },
+    "dirLink" : "https://www.google.pl/maps/place/Kazimierza+Wielkiego+41,+Wrocław/@51.1075124,17.0302908,{{zoom}}",
     "profile" : {
       "en" : "shoes store ",
       "pl" : "autorski sklep z butami"
@@ -654,8 +655,8 @@
     },
     "name" : "Baszta",
     "open" : {
-      "en" : "Tue-Thu: 12:00-21:00, Fri: 12:00-23:00, Sat-Sun: 14:00-21:00",
-      "pl" : "wt.-czw.: 12:00-21:00, piąt.: 12:00-23:00, sob.-niedz.: 14:00-21:00"
+      "en" : "Tue-Fri: 12:00-21:00, Sat-Sun: 14:00-21:00",
+      "pl" : "wt.-piąt.: 12:00-21:00, sob.-niedz.: 14:00-21:00"
     },
     "phone" : "668 043 255",
     "email" : "kontakt@baszta.wroclaw.pl",
@@ -1006,7 +1007,7 @@
     },
     "web" : "https://facebook.com/ekokraina.132"
   }, {
-    "address" : "Poznańska, Wrocław",
+    "address" : "Poznańska 20A, Wrocław",
     "desc" : {
       "en" : "Stationery and online shopping",
       "pl" : "Sklep stacjonarny i internetowy"
@@ -1031,22 +1032,140 @@
       "lat" : 51.115059,
       "lng" : 17.00626
     },
+    "dirLink" : "https://www.google.pl/maps/dir//Z-EKO+%C5%BBywno%C5%9B%C4%87+ekologiczna,+zdrowa+%C5%BCywno%C5%9B%C4%87,+Pozna%C5%84ska,+52-443+Wroc%C5%82aw/@51.115059,17.00626,{{zoom}}",
     "profile" : {
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
     "web" : "http://z-eko.pl"
-  } ],
+  }, {
+    "address" : "Kasprowicza 9a, Wrocław",
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "email" : "biuro@kraina-zdrowia.com",
+    "phone" : "534 098 400",
+    "filters" : [ "vegeFood" ],
+    "id" : 31,
+    "image" : {
+      "size" : {
+        "height" : 35,
+        "width" : 60
+      },
+      "src" : "http://kraina-zdrowia.com/images/logo_2.jpg"
+    },
+    "name" : "Kraina Zdrowia",
+    "open" : {
+      "en" : "Mon-Fri: 08:00-18:00, Sat: 10:00-14:00",
+      "pl" : "pon.-piąt.: 08:00-18:00, sob.: 10:00-14:00"
+    },
+    "position" : {
+      "lat" : 51.135779,
+      "lng" : 17.03811
+    },
+    "dirPosition" : true,
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://kraina-zdrowia.com",
+    "fb" : "485955304851090"
+  }, {
+    "address" : "Wojszyce, Wrocław",
+    "desc" : {
+      "en" : "Only online shopping",
+      "pl" : "Tylko sklep internetowy"
+    },
+    "email" : "sklep@naturalnaspizarnia.pl",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "id" : 32,
+    "image" : {
+      "size" : {
+        "height" : 32,
+        "width" : 62
+      },
+      "src" : "http://www.naturalnaspizarnia.pl/skins/user/light_green_1//images/logo.png"
+    },
+    "name" : "Naturalna Spiżarnia",
+    "position" : {
+      "lat" : 51.087748,
+      "lng" : 17.023498
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//51.087748,17.023498/@51.087748,17.023498,{{zoom}}",
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://www.naturalnaspizarnia.pl",
+    "fb" : "172593546215769"
+  }, {
+    "address" : "Długa 66d, Wrocław",
+    "desc" : {
+      "en" : "Stationery and online shopping",
+      "pl" : "Sklep stacjonarny i internetowy"
+    },
+    "email" : "sklep@straganzdrowia.pl",
+    "phone" : "509 708 296, 796 838 005",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "id" : 33,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/c14.14.181.181/970081_159890567528131_1902626588_n.jpg?oh=45cdf99785ffe10b0869714d1db60e5d&oe=5487EF5E&__gda__=1421379695_3a6cd8942dd61dcbaa612748f3a218b0"
+    },
+    "name" : "Stragan Zdrowia",
+    "position" : {
+      "lat" : 51.120344,
+      "lng" : 17.013108
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://www.straganzdrowia.pl",
+    "fb" : "StraganZdrowia",
+    "open" : {
+      "en" : "Mon-Fri: 09:00-17:00, Sat: 09:00-13:00",
+      "pl" : "pon.-piąt.: 09:00-17:00, sob.: 09:00-13:00"
+    }
+  }, {
+    "address" : "Magnolia Park, Legnicka 58, Wrocław",
+    "desc" : {
+      "en" : "First floor",
+      "pl" : "I piętro"
+    },
+    "email" : "vegelife@vegelife.pl",
+    "phone" : "71 390 65 87",
+    "filters" : [ "vegeBar" ],
+    "id" : 34,
+    "image" : {
+      "size" : {
+        "height" : 28,
+        "width" : 151
+      },
+      "src" : "http://www.vegelife.pl/images/logo.png"
+    },
+    "name" : "Vege Life",
+    "position" : {
+      "lat" : 51.119106,
+      "lng" : 16.989032
+    },
+    "profile" : {
+      "en" : "food and gastronomy",
+      "pl" : "jedzenie i gastronomia"
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//Magnolia+Park,+Legnicka+58,+50-051+Wrocław/@51.119106,16.989032,{{zoom}}",
+    "web" : "http://www.vegelife.pl",
+    "fb" : "385188948231973",
+    "open" : {
+      "en" : "Mon-Sun: 08:30-21:00",
+      "pl" : "pon.-niedz.: 08:30-21:00"
+    }
+  }    ],
   "news" : {
-    "fixed" : [
-      {
-        "by" : "VegeWro",
-        "posts" : [{
-          "created_time" : "2014-09-26T18:00:00Z",
-          "message" : "VII Wrocławskie Dni Promocji Zdrowia, 27 września (sobota): http://www.miastowformie.pl/dnipromocjizdrowia"
-        }]
-      }
-    ],
     "fbFeeds" : {
       "timestamp": 1
     }

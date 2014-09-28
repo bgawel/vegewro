@@ -11,7 +11,7 @@
         <span class="brand-name">rocław <span class="green">vege</span> map</span>
       </a>
     </div>
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" close-nav-menu>
       <ul class="nav navbar-nav navbar-right">
         <li class="action-mobile">
           <a class="action" href ng-click="scrollTo('mapAnchor')">
@@ -62,7 +62,7 @@
 <div class="container">   
   <div class="row">
     <a class="anchor" id="mapAnchor"></a>
-    <div id="map" class="col-md-9">
+    <div id="map" class="col-md-9" map-resize>
       <progressbar class="progress-striped active" value="'80'" type="success">
         {{i18n.loadingMap}}
       </progressbar>

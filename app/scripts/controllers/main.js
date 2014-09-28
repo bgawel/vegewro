@@ -4,7 +4,7 @@ angular.module('vegewroApp')
   .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps', 'news',
                            function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps, news) {
 
-  var map, config, markers = [], lastInfoBoxClicked;
+  var map, config, markers = [], lastInfoBoxClicked, mapCenter;
   var fbFeeds = [];
   $scope.filters = [];
   $scope.addresses = {};
@@ -22,11 +22,19 @@ angular.module('vegewroApp')
   });
   
   function createMap(data) {
-    map = googleMaps.newMap(document.getElementById('map'), config.mapOptions);
+    createGoogleMap();
     createMapLegend(map);
     createMapMarkers(data.places);
   }
   
+  function createGoogleMap() {
+    map = googleMaps.newMap(document.getElementById('map'), config.mapOptions);
+    mapCenter = map.getCenter();
+    google.maps.event.addDomListener(window, 'resize', function() {
+      map.setCenter(mapCenter);
+    });
+  }
+
   function createMapLegend() {
     var toggle = function() {
       var filterId = this.id;
@@ -133,8 +141,8 @@ angular.module('vegewroApp')
       // Changes the z-index property of the marker to make the marker appear on top of other markers.
       marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
       googleMaps.setMapZoomIfSmallerThan(config.zoomWhenMarkerClicked);
-      // Do not set the marker to be the center of the map; does not work well if the map is not fully visible 
-      // map.setCenter(marker.getPosition());
+      map.panTo(marker.getPosition());
+      mapCenter = map.getCenter();
       lastInfoBoxClicked = infoBox;
     };
     marker.infoBoxClicked = infoBoxClicked;

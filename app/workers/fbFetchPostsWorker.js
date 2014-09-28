@@ -28,7 +28,7 @@ $(function (config) {
       url: FbUtils.postsUrl(fbName, token),
       dataType: 'json',
       success: function(data) {
-        fetchedFeeds[indexOfFeedToCheck] = data ? 
+        fetchedFeeds[indexOfFeedToCheck] = data ?
             FbUtils.collectYoungPosts(fbName, data.data, now, postsNoOlderThan) : data;
         sendResultIfFinished(++successCounter);
       }

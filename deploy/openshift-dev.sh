@@ -8,6 +8,5 @@ cp -r ../dist/.htaccess devphp/
 cd devphp
 mv index.html index.php
 git add --all :/
-read -p "Enter commit/deployment message: " message
-git commit -m message
+git commit -am 'go'
 git push

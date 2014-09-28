@@ -14,4 +14,4 @@ angular.module('vegewroApp')
   .constant('loginProviders', 'password')
 
   // your Firebase URL goes here
-  .constant('FBURL', 'https://vegewro.firebaseio.com');
+  .constant('FBURL', 'https://vegewro-dev.firebaseio.com');
