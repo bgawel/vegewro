@@ -218,7 +218,7 @@ body {
 }
 
 .filters {
-  margin-top: 20px;
+  margin-top: 7px;
   display: inline-block;
   font-size: 0.9em;
   
@@ -231,8 +231,11 @@ body {
   a {      
     &.legend-item {
       &:not(.active) {
-        text-decoration: line-through;
         font-weight: lighter;
+      }
+      
+      &.active {
+        font-weight: bold;
       }
     }
   }

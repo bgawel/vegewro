@@ -36,7 +36,16 @@ angular.module('vegewroApp')
   }
 
   function createMapLegend() {
-    var toggle = function() {
+    var exclusiveMode = function() {
+      angular.forEach(markers, function(marker) {
+        marker.setMap(null);
+      });
+    };
+    var toggle = function(toggledByUser) {
+      if (exclusiveMode && toggledByUser) {
+        exclusiveMode();
+      }
+      exclusiveMode = undefined;
       var filterId = this.id;
       var markerMap = this.enabled ? map : null;
       angular.forEach(markers, function(marker) {
@@ -48,7 +57,7 @@ angular.module('vegewroApp')
     angular.forEach(config.filters, function(filter, filterName) {
       $scope.addresses[filterName] = [];
       $scope.filters.push({id: filterName, title: locale.valueFor(filter.title), iconUrl: filter.icon.url,
-        enabled: true, toggle: toggle, order: -filter.order, type: filter.type});
+        enabled: false, toggle: toggle, order: -filter.order, type: filter.type});
     });
   }
   

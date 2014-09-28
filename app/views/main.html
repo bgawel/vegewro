@@ -80,7 +80,7 @@
       </p>
       <p ng-repeat="filter in filters | filter:{type: 'vegan'} | orderBy:'order'">
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
-            ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+            ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
           {{filter.title}}
         </a>
@@ -90,7 +90,7 @@
       </p>
       <p ng-repeat="filter in filters | filter:{type: 'vege'} | orderBy:'order'">
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
-            ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+            ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
           {{filter.title}}
         </a>
@@ -102,7 +102,7 @@
       </p>
       <p ng-repeat="filter in filters | filter:{type: 'products'} | orderBy:'order'">
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
-            ng-click="filter.enabled = !filter.enabled; filter.toggle()">
+            ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
           {{filter.title}}
         </a>
