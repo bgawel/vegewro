@@ -6,7 +6,7 @@ angular.module('vegewroApp')
     var map, geocoder;
    
     function infoBox() {
-      return script.getScript('ext_components/infobox/infobox_packed.js');
+      return script.getScript('ext_components/infobox/1.infobox.min.js');
     }
     
     return {

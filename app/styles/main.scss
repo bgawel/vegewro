@@ -42,13 +42,13 @@ body {
   background-color: whitesmoke;
 }
 
+.action-mobile {
+  display: none !important;
+}
+
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
-  
-  .action-mobile {
-    display: none;
-  }
   
   .action-addresses {
     padding-left: 5px;
@@ -75,6 +75,10 @@ body {
   }
 }
 
+.green {
+  color: rgb(0, 127, 14);
+}
+
 .navbar-brand {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -82,10 +86,6 @@ body {
   
   .brand-name {
     margin-left: -15px;
-    
-    .green {
-      color: rgb(0, 127, 14);
-    }
   }
 }
 
@@ -95,7 +95,7 @@ body {
 }
 
 /*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
-#map { 
+#map {
 }
 
 .progress-striped {
@@ -130,6 +130,19 @@ body {
       filter: alpha(opacity=100);
     }
   }
+  
+  .right {
+    p:not(.desc2) {
+      text-overflow: ellipsis;
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      word-wrap: normal;
+      max-width: 170px;
+      vertical-align: bottom;
+    }
+  }
 }
 
 .pop_up_box_text {
@@ -154,6 +167,7 @@ body {
     display: inline-block;
     vertical-align: top;
     width: 170px;
+    display: inline-block;
   }
   
   p:last-child {
@@ -319,12 +333,12 @@ a.anchor {
   body {
     padding-top: 60px;
   }
+
+  .action-mobile {
+    display: initial !important;
+  }
   
   .navbar { 
-    .action-mobile {
-      display: initial;
-    }
-    
     &.navbar-specific {  // .navbar-fixed-top
       position: fixed;
       right: 0;
@@ -357,10 +371,45 @@ a.anchor {
     font-size: 20px;
   }
   
+  .filters .filters-caption {
+    padding-top: 13px;
+  }
+  
   @media (min-width: 768px) {
     .navbar.navbar-specific {
       border-radius: 0;
     }
+  }
+  
+  #map {
+    .map-filters {
+      -moz-border-bottom-colors: none;
+      -moz-border-left-colors: none;
+      -moz-border-right-colors: none;
+      -moz-border-top-colors: none;
+      -moz-user-select: none;
+      background-clip: padding-box;
+      background-color: #fff;
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15);
+      border-image: none;
+      border-style: solid solid solid solid;
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
+      border-width: 1px 1px 1px 1px;
+      box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+      color: #565656;
+      direction: ltr;
+      font-family: Roboto,Arial,sans-serif;
+      font-size: 11px;
+      min-width: 40px;
+      overflow: hidden;
+      padding: 1px 6px;
+      position: relative;
+      text-align: center;
+      right: 5px;
+    } 
   }
 }
 
@@ -382,6 +431,9 @@ a.anchor {
       .right {
         padding-top: 5px;
         width: 240px;
+        p:not(.desc2) {
+          max-width: 240px;
+        }
       }
       
       .phone {

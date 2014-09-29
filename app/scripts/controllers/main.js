@@ -27,12 +27,21 @@ angular.module('vegewroApp')
     createMapMarkers(data.places);
   }
   
+  function createFiltersOnGoogleMap() {
+    var mapFiltersDiv = document.createElement('div');
+    var scrollTo = '$(\'html,body\').animate({scrollTop:$(\'#filtersAnchor\').offset().top},50);';
+    mapFiltersDiv.innerHTML = '<div class="map-filters action-mobile"><a class="action" href="" onclick="' + scrollTo +
+      '">' + $scope.i18n.filters + '</span></a></div>';
+    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(mapFiltersDiv);
+  }
+  
   function createGoogleMap() {
     map = googleMaps.newMap(document.getElementById('map'), config.mapOptions);
     mapCenter = map.getCenter();
     google.maps.event.addDomListener(window, 'resize', function() {
       map.setCenter(mapCenter);
     });
+    createFiltersOnGoogleMap();
   }
 
   function createMapLegend() {
@@ -57,7 +66,8 @@ angular.module('vegewroApp')
     angular.forEach(config.filters, function(filter, filterName) {
       $scope.addresses[filterName] = [];
       $scope.filters.push({id: filterName, title: locale.valueFor(filter.title), iconUrl: filter.icon.url,
-        enabled: false, toggle: toggle, order: -filter.order, type: filter.type});
+        enabled: false, toggle: toggle, order: -filter.order, type: filter.type, 
+        htmlTitle: locale.valueFor(filter.htmlTitle)});
     });
   }
   
@@ -107,7 +117,7 @@ angular.module('vegewroApp')
     }
     var web = '';
     if (place.web) {
-      web = '<p class="web"><a href="' + place.web + '" target="_blank">' + formatter.web(place.web) + '</a></p>';
+      web = '<p class="web" title="This is my tooltip"><a href="' + place.web + '" target="_blank">' + formatter.web(place.web) + '</a></p>';
     }
     var email = '';
     if (place.email) {
@@ -121,7 +131,7 @@ angular.module('vegewroApp')
     if (place.desc2) {
       desc2 = '<p class="desc2">' + locale.valueFor(place.desc2) + '</p>';
     }
-    boxText.innerHTML = '<div class="pop_up_box_text pre"><div class="left">' + title + desc + address + directions +
+    boxText.innerHTML = '<div class="pop_up_box_text"><div class="left">' + title + desc + address + directions +
       open + '</div><div class="right">' + web + email + phone + desc2 + image + '</div></div>';
     return boxText;
   }

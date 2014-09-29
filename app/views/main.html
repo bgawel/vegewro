@@ -69,7 +69,10 @@
     </div>
     <a class="anchor" id="filtersAnchor"></a>
     <div class="col-md-3 filters">
-      <p>
+      <a class="action action-mobile" href ng-click="scrollTo('mapAnchor')">
+        <span class="glyphicon glyphicon-chevron-up"></span> {{i18n.map}}
+      </a>
+      <p class="filters-caption">
         <span class="caption anchor" id="filters">{{i18n.filters}} (</span><!--
      --><a href ng-click="enableAllFilters(false)" class="action filter-helper action-link">{{i18n.clearAll}}</a>, 
         <a href ng-click="enableAllFilters(true)" class="action filter-helper action-link">{{i18n.setAll}}</a><!--
@@ -116,7 +119,7 @@
       <accordion-group ng-repeat="filter in filters | orderBy:'order'" is-open="filter.open">
         <accordion-heading>
           <div>
-            {{filter.title}} <span class="badge">{{addresses[filter.id].length}}</span>
+            <span ng-bind-html="filter.htmlTitle"></span> <span class="badge">{{addresses[filter.id].length}}</span>
             <span class="pull-right glyphicon" 
               ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}">
             </span>

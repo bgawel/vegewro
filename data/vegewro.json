@@ -20,9 +20,13 @@
         },
         "order" : 200,
         "title" : {
-          "en" : "Vegan bars, restaurants, coffee houses",
-          "pl" : "Wegańskie bary, restauracje, kawiarnie"
+          "en" : "bars, restaurants, coffee houses",
+          "pl" : "bary, restauracje, kawiarnie"
         },
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan bars, restaurants, coffee houses",
+          "pl" : "<span class=\"green\">W</span>egańskie bary, restauracje, kawiarnie"
+        },        
         "type" : "vegan",
         "zIndex" : 150
       },
@@ -40,8 +44,12 @@
         },
         "order" : 160,
         "title" : {
-          "en" : "Vegan catering",
-          "pl" : "Wegański katering"
+          "en" : "catering",
+          "pl" : "katering"
+        },
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan catering",
+          "pl" : "<span class=\"green\">W</span>egański katering"
         },
         "type" : "vegan",
         "zIndex" : 130
@@ -56,9 +64,13 @@
         },
         "order" : 180,
         "title" : {
-          "en" : "Vegan food delivery",
-          "pl" : "Wegańskie dowozy"
+          "en" : "food delivery",
+          "pl" : "dowozy na telefon"
         },
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan food delivery",
+          "pl" : "<span class=\"green\">W</span>egańskie dowozy na telefon"
+        },        
         "type" : "vegan",
         "zIndex" : 140
       },
@@ -76,8 +88,12 @@
         },
         "order" : 140,
         "title" : {
-          "en" : "Vegan-vegetarian bars, restaurants, coffee houses",
-          "pl" : "Wegańsko-wegetariańskie bary, restauracje, kawiarnie"
+          "en" : "bars, restaurants, coffee houses",
+          "pl" : "bary, restauracje, kawiarnie"
+        },
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian bars, restaurants, coffee houses",
+          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariańskie bary, restauracje, kawiarnie"
         },
         "type" : "vege",
         "zIndex" : 90
@@ -96,9 +112,13 @@
         },
         "order" : 100,
         "title" : {
-          "en" : "Vegan-vegetarian catering",
-          "pl" : "Wegańsko-wegetariański katering"
+          "en" : "catering",
+          "pl" : "katering"
         },
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian catering",
+          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariański katering"
+        },        
         "type" : "vege",
         "zIndex" : 70
       },
@@ -116,9 +136,13 @@
         },
         "order" : 40,
         "title" : {
-          "en" : "Stores with eco cosmetics and detergents",
-          "pl" : "Sklepy z eko kosmetykami i detergentami"
+          "en" : "eco cosmetics and detergents",
+          "pl" : "eko kosmetyki i detergenty"
         },
+        "htmlTitle" : {
+          "en" : "Stores with <span class=\"green\">e</span>co cosmetics and detergents",
+          "pl" : "Sklepy z <span class=\"green\">e</span>ko kosmetykami i detergentami"
+        },        
         "type" : "products",
         "zIndex" : 50
       },
@@ -132,9 +156,13 @@
         },
         "order" : 120,
         "title" : {
-          "en" : "Vegan-vegetarian food delivery",
-          "pl" : "Wegańsko-wegetariańskie dowozy"
+          "en" : "food delivery",
+          "pl" : "dowozy na telefon"
         },
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian food delivery",
+          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariańskie dowozy na telefon"
+        },        
         "type" : "vege",
         "zIndex" : 80
       },
@@ -148,9 +176,13 @@
         },
         "order" : 80,
         "title" : {
-          "en" : "Stores with vege and eco food",
-          "pl" : "Sklepy z vege i eko żywnością"
+          "en" : "vege and eco food",
+          "pl" : "wege i eko żywność"
         },
+        "htmlTitle" : {
+          "en" : "Stores with <span class=\"green\">v</span>ege and <span class=\"green\">e</span>co food",
+          "pl" : "Sklepy z <span class=\"green\">w</span>ege i <span class=\"green\">e</span>ko żywnością"
+        },        
         "type" : "products",
         "zIndex" : 40
       },
@@ -164,9 +196,13 @@
         },
         "order" : 60,
         "title" : {
-          "en" : "Stores with vege shoes",
-          "pl" : "Sklepy z vege butami"
+          "en" : "vege shoes",
+          "pl" : "wege buty"
         },
+        "htmlTitle" : {
+          "en" : "Stores with <span class=\"green\">v</span>ege shoes",
+          "pl" : "Sklepy z <span class=\"green\">w</span>ege butami"
+        },        
         "type" : "products",
         "zIndex" : 60
       }
@@ -239,10 +275,6 @@
     "web" : "http://najadacze.pl"
   }, {
     "address" : "Jedności Narodowej 93A, Wrocław",
-    "desc" : {
-      "en" : "Only stationery shopping",
-      "pl" : "Tylko sklep stacjonarny"
-    },
     "dirPosition" : true,
     "email" : "ewa.rudakita@gmail.com",
     "fb" : "rudakitawroclaw",
