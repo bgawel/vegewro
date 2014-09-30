@@ -295,10 +295,11 @@ body {
     font-size: 0.85em;
     
     .second {
-      margin-left: 5px;
+      margin-left: 8px;
     }
     
     .caption {
+      padding-left: 3px;
       cursor: pointer;
     
       &:hover, &:active, &:focus {

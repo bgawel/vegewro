@@ -127,10 +127,10 @@
         </accordion-heading>
         <div class="row">
           <div class="options" ng-show="filter.type === 'products'">
-            <input type="checkbox" ng-init="stationary=true" ng-model="stationary">
-              <span href class="caption" ng-click="stationary = !stationary">{{i18n.stationary}}</span>          
-            <input class="second" type="checkbox" ng-init="online=true" ng-model="online">
-              <span class="caption" ng-click="online = !online"> {{i18n.online}}</span>
+            <input type="checkbox" ng-init="stationary=true" ng-model="stationary"><!--
+            --><span class="caption" ng-click="stationary = !stationary">{{i18n.stationary}}</span>          
+            <input class="second" type="checkbox" ng-init="online=true" ng-model="online"><!--
+            --><span class="caption" ng-click="online = !online"> {{i18n.online}}</span>
           </div>
           <div ng-repeat="address in addresses[filter.id] | shopFilter:{online: online, stationary: stationary} | orderBy:'title'">
             <div class="{{$last && $even ? 'col-md-12' : 'col-md-6'}}">
