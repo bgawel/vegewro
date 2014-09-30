@@ -33,6 +33,7 @@
       for (var i=0; i<data.length; ++i) {
         post = data[i];
         if (post.message) {
+          /*jshint camelcase:false*/
           post.created = fbStringToDate(post.created_time);
           posts.push(post);
         }
@@ -100,9 +101,11 @@
       for (var j,i=0; i<feeds.length; ++i) {
         feed = feeds[i];
         posts = feed.posts;
+        /*jshint camelcase:false*/
         feed.time = fbStringToDate(posts[0].created_time);
         for (j=0; j<posts.length; ++j) {
           post = posts[j];
+          /*jshint camelcase:false*/
           post.created = fbStringToDate(post.created_time);
         }
         if (postProcessing) {
@@ -113,4 +116,5 @@
     }
     return [];
   };
+/*jshint validthis:true*/
 }.call(this));

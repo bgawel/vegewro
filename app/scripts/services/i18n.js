@@ -26,7 +26,11 @@ angular.module('vegewroApp')
         mapFilters: 'filtry mapy',
         news: 'wiadomości',
         bNews: 'Wiadomości',
-        loading: 'Pobieranie...'
+        loading: 'Pobieranie...',
+        online: 'Sklepy internetowe',
+        stationary: 'Sklepy stacjonarne',
+        onlyOnlineShop: 'Tylko sklep internetowy',
+        stationaryAndOnlineShop: 'Sklep stacjonarny i internetowy'
       },
       
       en : {
@@ -51,7 +55,11 @@ angular.module('vegewroApp')
         mapFilters: 'map\'s filters',
         news: 'news',
         bNews: 'News',
-        loading: 'Loading...'
+        loading: 'Loading...',
+        online: 'Online shopping',
+        stationary: 'Stationery shopping',
+        onlyOnlineShop: 'Only online shopping',
+        stationaryAndOnlineShop: 'Stationery and online shopping'
       }
     };
   }]);

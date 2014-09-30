@@ -4,6 +4,8 @@ angular.module('vegewroApp')
   .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps', 'news',
                            function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps, news) {
 
+  $('#map').css('height', $(window).height() - 60);
+    
   var map, config, markers = [], lastInfoBoxClicked, mapCenter;
   var fbFeeds = [];
   $scope.filters = [];
@@ -66,7 +68,7 @@ angular.module('vegewroApp')
     angular.forEach(config.filters, function(filter, filterName) {
       $scope.addresses[filterName] = [];
       $scope.filters.push({id: filterName, title: locale.valueFor(filter.title), iconUrl: filter.icon.url,
-        enabled: false, toggle: toggle, order: -filter.order, type: filter.type, 
+        enabled: false, toggle: toggle, order: -filter.order, type: filter.type,
         htmlTitle: locale.valueFor(filter.htmlTitle)});
     });
   }
@@ -104,9 +106,22 @@ angular.module('vegewroApp')
         place.image.size.height + '" border="0" />';
     }
     var title = '<p class="title">' + makeMarkerTitle(place) + '</p>';
-    var desc = '';
+    var typeText = '';
+    if (place.type) {
+      if (place.type === backend.ONLINE_SHOP) {
+        typeText = $scope.i18n.onlyOnlineShop;
+      } else if (place.type === backend.STATIONARY_AND_ONLINE_SHOP) {
+        typeText = $scope.i18n.stationaryAndOnlineShop;
+      }
+    }
+    var descText = '';
     if (place.desc) {
-      desc = '<p class="desc">' + locale.valueFor(place.desc) + '</p>';
+      descText = typeText ? '. ' : '';
+      descText += locale.valueFor(place.desc);
+    }
+    var desc = '';
+    if (typeText || descText) {
+      desc = '<p class="desc">' + typeText + descText + '</p>';
     }
     var address = '<p class="address">' + place.address + '</p>';
     var directions = '<p class="directions">(<a href="' + googleMaps.makeDirectionsLink(place, marker.position,
@@ -117,7 +132,8 @@ angular.module('vegewroApp')
     }
     var web = '';
     if (place.web) {
-      web = '<p class="web" title="This is my tooltip"><a href="' + place.web + '" target="_blank">' + formatter.web(place.web) + '</a></p>';
+      web = '<p class="web" title="This is my tooltip"><a href="' + place.web + '" target="_blank">' +
+        formatter.web(place.web) + '</a></p>';
     }
     var email = '';
     if (place.email) {
@@ -136,12 +152,13 @@ angular.module('vegewroApp')
     return boxText;
   }
   
-  function addAddress(placeId, title, boxText, filterName, marker) {
+  function addAddress(place, title, boxText, filterName, marker) {
     var showOnMap = function() {
       marker.infoBoxClicked();
-      $window.scrollTo(0, 100);
+      $window.scrollTo(0, 0);
     };
-    var address = {title: title, boxText: boxText.innerHTML, showOnMap: showOnMap, placeId: placeId};
+    var placeId = place.id;
+    var address = {title: title, boxText: boxText.innerHTML, showOnMap: showOnMap, placeId: placeId, type: place.type};
     $scope.addresses[filterName].push(address);
     if (!$scope.places[placeId]) {  // reference to the first marker; assumption: it's the most relevant
       $scope.places[placeId] = address;
@@ -181,7 +198,7 @@ angular.module('vegewroApp')
           try {
             createMarker(place, filterName).then(function(marker) {
               var boxText = createBoxText(place, marker);
-              addAddress(place.id, marker.getTitle(), boxText, filterName, marker);
+              addAddress(place, marker.getTitle(), boxText, filterName, marker);
               createInfoBox(marker, boxText);
             });
           } catch (err) {

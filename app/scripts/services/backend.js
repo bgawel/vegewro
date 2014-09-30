@@ -18,6 +18,10 @@ angular.module('vegewroApp')
           Firebase.goOffline();
           console.log('Data could not be saved: ' + error);
         });
-      }
+      },
+
+      STATIONARY_SHOP : 2,
+      ONLINE_SHOP : 4,
+      STATIONARY_AND_ONLINE_SHOP : 6
     };
   }]);

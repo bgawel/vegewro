@@ -218,7 +218,6 @@
       "closeBoxURL" : "images/close.png",
       "disableAutoPan" : false,
       "enableEventPropagation" : false,
-      "contextmenu": true,
       "infoBoxClearance" : {
         "height" : 1,
         "width" : 1
@@ -280,6 +279,7 @@
     "email" : "ewa.rudakita@gmail.com",
     "fb" : "rudakitawroclaw",
     "filters" : [ "vegeFood", "veganBar" ],
+    "type" : 2,
     "id" : 3,
     "image" : {
       "size" : {
@@ -444,13 +444,10 @@
     "web" : "http://www.nalanda.pl"
   }, {
     "address" : " Kamieńskiego 205/16, Wrocław",
-    "desc" : {
-      "en" : "Only online shopping",
-      "pl" : "Tylko sklep internetowy"
-    },
     "email" : "info@greenline-sklep.pl",
     "fb" : "192700764111581",
     "filters" : [ "vegeCosmetics" ],
+    "type" : 4,
     "id" : 9,
     "name" : "Geen Line",
     "phone" : "512 144 140",
@@ -465,12 +462,9 @@
     "web" : "http://greenline-sklep.pl"
   }, {
     "address" : "Paprotna 8, Wrocław",
-    "desc" : {
-      "en" : "Only online shopping",
-      "pl" : "Tylko sklep internetowy"
-    },
     "email" : "kamila@pnet.pl",
     "filters" : [ "vegeFood" ],
+    "type" : 4,
     "id" : 10,
     "name" : "Kamila",
     "phone" : "783 295 188",
@@ -485,13 +479,10 @@
     "web" : "http://kamila.pl"
   }, {
     "address" : "Komuny Paryskiej 83c, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "sklep@biomaniac.pl",
     "fb" : "246013798839047",
     "filters" : [ "vegeFood" ],
+    "type" : 6,    
     "id" : 11,
     "image" : {
       "size" : {
@@ -517,13 +508,10 @@
     "web" : "http://biomaniac.pl"
   }, {
     "address" : "Jerzmanowska 19, Wrocław",
-    "desc" : {
-      "en" : "Only online shopping",
-      "pl" : "Tylko sklep internetowy"
-    },
     "email" : "sklep@marketbio.pl",
     "fb" : "420526034635393",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "type" : 4,    
     "id" : 12,
     "image" : {
       "size" : {
@@ -549,13 +537,10 @@
     "web" : "http://www.marketbio.pl"
   }, {
     "address" : "DH. Renoma, Świdnicka 40, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "sklep@organic24.pl",
     "fb" : "ORGANICFARMAZDROWIA",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "type" : 6,    
     "id" : 13,
     "image" : {
       "size" : {
@@ -581,13 +566,10 @@
     "web" : "http://www.organicmarket.pl"
   }, {
     "address" : "Krasińskiego 32, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "kontakt@swinkitrzy.net",
     "fb" : "swinki.trzy3",
     "filters" : [ "veganBar", "vegeFood", "vegeCosmetics" ],
+    "type" : 6,    
     "id" : 14,
     "image" : {
       "size" : {
@@ -613,14 +595,11 @@
     "web" : "http://swinkitrzy.net"
   }, {
     "address" : "Zielińskiego 22a, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "dirLink" : "https://www.google.pl/maps/dir//Sklep+Zdrowe+Gary,+Zielińskiego+22A,+53-534+Wrocław/@51.099671,17.023655,{{zoom}}",
     "email" : "sklep@zdrowegary.pl",
     "fb" : "ZdroweGary",
     "filters" : [ "vegeFood" ],
+    "type" : 6,    
     "id" : 15,
     "image" : {
       "size" : {
@@ -646,13 +625,10 @@
     "web" : "http://sklepzdrowegary.pl"
   }, {
     "address" : "Kazimierza Wielkiego 41, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "sklep@panpablo.pl",
     "fb" : "panpablo.sklep",
     "filters" : [ "vegeShoes" ],
+    "type" : 6,    
     "id" : 16,
     "image" : {
       "size" : {
@@ -704,13 +680,10 @@
     }
   }, {
     "address" : "Pomorska 55/33U, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "sklep@naturobranie.pl",
     "fb" : "naturobranie",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "type" : 6,    
     "id" : 18,
     "image" : {
       "size" : {
@@ -736,14 +709,11 @@
     "web" : "http://naturobranie.pl"
   }, {
     "address" : "Świętego Mikołaja 40, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "dirPosition" : true,
     "email" : "mikolaja@helfy.pl",
     "fb" : "sklep.helfy",
     "filters" : [ "vegeCosmetics" ],
+    "type" : 6,    
     "id" : 19,
     "image" : {
       "size" : {
@@ -769,12 +739,9 @@
     "web" : "http://www.helfy.pl"
   }, {
     "address" : "Hallera 8, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "hallera@helfy.pl",
     "filters" : [ "vegeCosmetics" ],
+    "type" : 6,    
     "id" : 20,
     "image" : {
       "size" : {
@@ -800,13 +767,10 @@
     "web" : "http://www.helfy.pl"
   }, {
     "address" : "Jaracza 73d, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "sklep@centrumzdrowejdiety.pl",
     "fb" : "centrumzdrowejdiety",
     "filters" : [ "vegeFood" ],
+    "type" : 6,    
     "id" : 21,
     "image" : {
       "size" : {
@@ -838,6 +802,7 @@
     },
     "dirPosition" : true,
     "filters" : [ "vegeFood" ],
+    "type" : 2,    
     "id" : 22,
     "name" : "Biostacja, Zieleniak Piętaszka",
     "open" : {
@@ -858,6 +823,7 @@
     "dirPosition" : true,
     "email" : "przyprawy@vp.pl",
     "filters" : [ "vegeFood" ],
+    "type" : 2,    
     "id" : 23,
     "name" : "Przyprawy Świata",
     "open" : {
@@ -876,6 +842,7 @@
   }, {
     "address" : "Rynek 31, Wrocław",
     "filters" : [ "vegeFood" ],
+    "type" : 2,    
     "id" : 24,
     "image" : {
       "size" : {
@@ -905,6 +872,7 @@
     "email" : "zdrowakrowa.wroclaw@gmail.com",
     "fb" : "sklepo.kawiarniaZDROWAKROWA",
     "filters" : [ "vegeBar", "vegeFood" ],
+    "type" : 2,    
     "id" : 25,
     "image" : {
       "size" : {
@@ -930,13 +898,10 @@
     "web" : "https://facebook.com/sklepo.kawiarniaZDROWAKROWA"
   }, {
     "address" : "Hala Strzegomska, Strzegomska 206-208, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "dirLink" : "https://www.google.pl/maps/dir//Hala+Strzegomska.+PHU.+ZPChr.+Korczak+E.,+Ulica+Strzegomska+206,+Wrocław/@51.111581,16.959334,{{zoom}}",
     "fb" : "sklepnazdrowie",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "type" : 6,    
     "id" : 26,
     "image" : {
       "size" : {
@@ -964,6 +929,7 @@
     "address" : "Krucza 112, Wrocław",
     "fb" : "107265929300925",
     "filters" : [ "vegeFood" ],
+    "type" : 2,    
     "id" : 27,
     "image" : {
       "size" : {
@@ -991,6 +957,7 @@
     "address" : "Grabiszyńska 55, Wrocław",
     "dirPosition" : true,
     "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "type" : 2,    
     "id" : 28,
     "name" : "Źródło Zdrowego Życia",
     "open" : {
@@ -1016,6 +983,7 @@
     "email" : "jola-pon@wp.pl",
     "fb" : "ekokraina.132",
     "filters" : [ "vegeFood" ],
+    "type" : 2,    
     "id" : 29,
     "image" : {
       "size" : {
@@ -1041,12 +1009,9 @@
     "web" : "https://facebook.com/ekokraina.132"
   }, {
     "address" : "Poznańska 20A, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "sklep@z-eko.pl",
     "filters" : [ "vegeFood" ],
+    "type" : 6,    
     "id" : 30,
     "image" : {
       "size" : {
@@ -1073,13 +1038,10 @@
     "web" : "http://z-eko.pl"
   }, {
     "address" : "Kasprowicza 9a, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "biuro@kraina-zdrowia.com",
     "phone" : "534 098 400",
     "filters" : [ "vegeFood" ],
+    "type" : 6,    
     "id" : 31,
     "image" : {
       "size" : {
@@ -1106,12 +1068,9 @@
     "fb" : "485955304851090"
   }, {
     "address" : "Wojszyce, Wrocław",
-    "desc" : {
-      "en" : "Only online shopping",
-      "pl" : "Tylko sklep internetowy"
-    },
     "email" : "sklep@naturalnaspizarnia.pl",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "type" : 4,    
     "id" : 32,
     "image" : {
       "size" : {
@@ -1134,13 +1093,10 @@
     "fb" : "172593546215769"
   }, {
     "address" : "Długa 66d, Wrocław",
-    "desc" : {
-      "en" : "Stationery and online shopping",
-      "pl" : "Sklep stacjonarny i internetowy"
-    },
     "email" : "sklep@straganzdrowia.pl",
     "phone" : "509 708 296, 796 838 005",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "type" : 6,    
     "id" : 33,
     "image" : {
       "size" : {
@@ -1199,15 +1155,6 @@
     }
   }    ],
   "news" : {
-    "fixed" : [
-      {
-        "by" : "VegeWro",
-        "posts" : [{
-          "created_time" : "2014-09-26T18:00:00Z",
-          "message" : "VII Wrocławskie Dni Promocji Zdrowia, 27 września (sobota): http://www.miastowformie.pl/dnipromocjizdrowia"
-        }]
-      }
-    ],
     "fbFeeds" : {
       "timestamp": 1
     }

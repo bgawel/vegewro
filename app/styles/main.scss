@@ -288,6 +288,24 @@ body {
       }
     }
   }
+  
+  .options {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    font-size: 0.85em;
+    
+    .second {
+      margin-left: 5px;
+    }
+    
+    .caption {
+      cursor: pointer;
+    
+      &:hover, &:active, &:focus {
+        color: #5C5C5C;
+      }
+    }
+  }
 }
 
 a.anchor {

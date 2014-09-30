@@ -85,7 +85,7 @@
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
             ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
-          {{filter.title}}
+          <span class="glyphicon glyphicon-ok" ng-show="filter.enabled"></span> {{filter.title}}
         </a>
       </p>
       <p class="sub-filter">
@@ -95,7 +95,7 @@
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
             ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
-          {{filter.title}}
+          <span class="glyphicon glyphicon-ok" ng-show="filter.enabled"></span> {{filter.title}}
         </a>
       </p> 
       <p class="sub-filter">
@@ -107,7 +107,7 @@
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
             ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
-          {{filter.title}}
+          <span class="glyphicon glyphicon-ok" ng-show="filter.enabled"></span> {{filter.title}}
         </a>
       </p>            
     </div>
@@ -119,14 +119,20 @@
       <accordion-group ng-repeat="filter in filters | orderBy:'order'" is-open="filter.open">
         <accordion-heading>
           <div>
-            <span ng-bind-html="filter.htmlTitle"></span> <span class="badge">{{addresses[filter.id].length}}</span>
+            <span ng-bind-html="filter.htmlTitle"></span> <span class="badge"> {{addresses[filter.id].length}}</span>
             <span class="pull-right glyphicon" 
               ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}">
             </span>
           </div>
         </accordion-heading>
         <div class="row">
-          <div ng-repeat="address in addresses[filter.id] | orderBy:'title'">
+          <div class="options" ng-show="filter.type === 'products'">
+            <input type="checkbox" ng-init="stationary=true" ng-model="stationary"><!--
+            --><span href class="caption" ng-click="stationary = !stationary"> {{i18n.stationary}}</span>          
+            <input class="second" type="checkbox" ng-init="online=true" ng-model="online"><!--
+            --><span class="caption" ng-click="online = !online"> {{i18n.online}}</span>
+          </div>
+          <div ng-repeat="address in addresses[filter.id] | shopFilter:{online: online, stationary: stationary} | orderBy:'title'">
             <div class="{{$last && $even ? 'col-md-12' : 'col-md-6'}}">
               <a href ng-click="address.showOnMap()" class="action action-link" tooltip-placement="right" 
                   tooltip="{{i18n.showOnMap}}">

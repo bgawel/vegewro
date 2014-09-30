@@ -7,7 +7,7 @@ angular.module('vegewroApp')
       link: function(scope, elem, attrs) {
         var offsetTop = attrs.offsetTop ? attrs.offsetTop : 60;
         var resizeDelay = attrs.resizeDelay ? attrs.resizeDelay : 250;
-        $(elem).css('height', $(window).height() - offsetTop);
+        //$(elem).css('height', $(window).height() - offsetTop);
         
         var delay = (function(){
           var timer = 0;
