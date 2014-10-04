@@ -7,7 +7,7 @@ angular.module('vegewroApp')
       link: function(scope, elem, attrs) {
         var offsetTop = attrs.offsetTop ? attrs.offsetTop : 60;
         var resizeDelay = attrs.resizeDelay ? attrs.resizeDelay : 250;
-        //$(elem).css('height', $(window).height() - offsetTop);
+        $(elem).css('height', $(window).height() - offsetTop);
         
         var map, mapCenter;
         
@@ -28,10 +28,12 @@ angular.module('vegewroApp')
         
         $(window).resize(function() {
           map = scope.map;
-          if (!mapCenter) {
-            mapCenter = map.getCenter();
+          if (map) {
+            if (!mapCenter) {
+              mapCenter = map.getCenter();
+            }
+            delay(onResizeCompleted, resizeDelay);
           }
-          delay(onResizeCompleted, resizeDelay);
         });
       }
     };

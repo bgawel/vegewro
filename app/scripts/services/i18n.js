@@ -33,7 +33,9 @@ angular.module('vegewroApp')
         stationaryAndOnlineShop: 'Sklep stacjonarny i internetowy',
         search: 'znajdź miejsce',
         searching: 'Wyszukiwanie...',
-        noResult: 'Brak wyników wyszukiwania'
+        noResult: 'Brak wyników wyszukiwania',
+        youHere: 'Jesteś tutaj!',
+        geoerror: 'Błąd geolokalizacji'
       },
       
       en : {
@@ -65,7 +67,9 @@ angular.module('vegewroApp')
         stationaryAndOnlineShop: 'Stationery and online shopping',
         search: 'find a place',
         searching: 'Searching...',
-        noResult: 'No results found'
+        noResult: 'No results found',
+        youHere: 'You are here!',
+        geoerror: 'Geolocalization error'
       }
     };
   }]);

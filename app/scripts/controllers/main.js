@@ -4,8 +4,6 @@ angular.module('vegewroApp')
   .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps', 'news',
                            function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps, news) {
 
-  $('#map').css('height', $(window).height() - 60);
-    
   var map, config, markers = [], lastInfoBoxClicked, mapCenter;
   var fbFeeds = [];
   $scope.filters = {$asArray:[]};
@@ -39,9 +37,38 @@ angular.module('vegewroApp')
     map.controls[google.maps.ControlPosition.RIGHT_TOP].push(mapFiltersDiv);
   }
   
+  function createGeolocOnGoogleMap() {
+    if (navigator.geolocation) {
+      var mapLocDiv = document.createElement('div');
+      window.locUser = function() {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var userCoords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+          googleMaps.setMapZoomIfSmallerThan(config.zoomWhenMarkerClicked);
+          new google.maps.Marker({
+            position: userCoords,
+            map: map,
+            title: $scope.i18n.youHere,
+            icon: 'images/rabbit.png'
+          });
+          map.panTo(userCoords);
+        }, function(error) {
+          console.log('Geolocation error occurred: ' + error);
+          alert($scope.i18n.geoerror + ': ' + error.message);
+        },
+        {maximumAge: 100, timeout: 30000, enableHighAccuracy: true});
+      };
+      mapLocDiv.innerHTML = '<div class="map-loc"><a class="action" href="" ' +
+        'onclick="window.locUser()"><img src="images/target.png"/></a></div>';
+      map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(mapLocDiv);
+    } else {
+      console.log('Geolocation is not supported');
+    }
+  }
+  
   function createGoogleMap() {
     $scope.map = map = googleMaps.newMap(document.getElementById('map'), config.mapOptions);
     createFiltersOnGoogleMap();
+    createGeolocOnGoogleMap();
   }
 
   var exclusiveMode = function() {

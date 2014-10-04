@@ -27,6 +27,7 @@
     "InfoBox": false,
     "FB": false,
     "FbUtils": false,
-    "importScripts": false
+    "importScripts": false,
+    "alert": false
   }
 }

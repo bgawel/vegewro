@@ -225,6 +225,11 @@ body {
 
 /*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
 #map {
+  .map-loc {
+    overflow: hidden;
+    padding: 1px 3px;
+    position: relative;
+  } 
 }
 
 .progress-striped {
