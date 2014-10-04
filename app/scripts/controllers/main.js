@@ -8,11 +8,13 @@ angular.module('vegewroApp')
     
   var map, config, markers = [], lastInfoBoxClicked, mapCenter;
   var fbFeeds = [];
-  $scope.filters = [];
+  $scope.filters = {$asArray:[]};
   $scope.addresses = {};
   $scope.places = {};
   $scope.feeds = [];
   $scope.feedsLoading = true;
+  $scope.searchable = [];
+  $scope.selected = {};
   
   backend.data().then(function(data) {
     config = data.config;
@@ -38,20 +40,17 @@ angular.module('vegewroApp')
   }
   
   function createGoogleMap() {
-    map = googleMaps.newMap(document.getElementById('map'), config.mapOptions);
-    mapCenter = map.getCenter();
-    google.maps.event.addDomListener(window, 'resize', function() {
-      map.setCenter(mapCenter);
-    });
+    $scope.map = map = googleMaps.newMap(document.getElementById('map'), config.mapOptions);
     createFiltersOnGoogleMap();
   }
 
+  var exclusiveMode = function() {
+    angular.forEach(markers, function(marker) {
+      marker.setMap(null);
+    });
+  };
+  
   function createMapLegend() {
-    var exclusiveMode = function() {
-      angular.forEach(markers, function(marker) {
-        marker.setMap(null);
-      });
-    };
     var toggle = function(toggledByUser) {
       if (exclusiveMode && toggledByUser) {
         exclusiveMode();
@@ -67,9 +66,10 @@ angular.module('vegewroApp')
     };
     angular.forEach(config.filters, function(filter, filterName) {
       $scope.addresses[filterName] = [];
-      $scope.filters.push({id: filterName, title: locale.valueFor(filter.title), iconUrl: filter.icon.url,
-        enabled: false, toggle: toggle, order: -filter.order, type: filter.type,
-        htmlTitle: locale.valueFor(filter.htmlTitle)});
+      var legend = {id: filterName, title: locale.valueFor(filter.title), iconUrl: filter.icon.url, enabled: false,
+          toggle: toggle, order: -filter.order, type: filter.type, htmlTitle: locale.valueFor(filter.htmlTitle)};
+      $scope.filters[filterName] = legend;
+      $scope.filters.$asArray.push(legend);
     });
   }
   
@@ -90,6 +90,7 @@ angular.module('vegewroApp')
         zIndex: filter.zIndex,
         filterId: filterName
       });
+      marker.filterName = filterName;
       markers.push(marker);
       deferred.resolve(marker);
     }, function(error) {
@@ -152,27 +153,42 @@ angular.module('vegewroApp')
     return boxText;
   }
   
-  function addAddress(place, title, boxText, filterName, marker) {
+  function addPlace(placeId, address, marker) {
+    var place = $scope.places[placeId];
+    if (!place) {
+      place = $scope.places[placeId] = address;
+      place.markers = [];
+    }
+    place.markers.push(marker);
+  }
+  
+  function addAddress(place, title, boxText, filterName, addressMarker) {
     var showOnMap = function() {
-      marker.infoBoxClicked();
+      addressMarker.infoBoxClicked();
+      angular.forEach(this.markers, function(marker) {
+        marker.setMap(map);
+      });
       $window.scrollTo(0, 0);
     };
-    var placeId = place.id;
-    var address = {title: title, boxText: boxText.innerHTML, showOnMap: showOnMap, placeId: placeId, type: place.type};
+    var address = {title: title, boxText: boxText.innerHTML, showOnMap: showOnMap, placeId: place.id, type: place.type};
     $scope.addresses[filterName].push(address);
-    if (!$scope.places[placeId]) {  // reference to the first marker; assumption: it's the most relevant
-      $scope.places[placeId] = address;
+    addPlace(place.id, address, addressMarker);
+    return address;
+  }
+  
+  function closeInfoBox(infoBox) {
+    if (infoBox) {
+      infoBox.close();
+      google.maps.event.trigger(infoBox, 'closeclick');
     }
   }
   
-  function createInfoBox(marker, boxText) {
+  function createInfoBox(marker, boxText, address) {
     var infoBoxOptions = angular.copy(config.infoboxOptions);
     infoBoxOptions.content = boxText;
     var infoBox = googleMaps.newInfoBox(infoBoxOptions);
     var infoBoxClicked = function() {
-      if (lastInfoBoxClicked) {
-        lastInfoBoxClicked.close();
-      }
+      closeInfoBox(lastInfoBoxClicked);
       infoBox.open(map, marker);
       // Changes the z-index property of the marker to make the marker appear on top of other markers.
       marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
@@ -181,8 +197,23 @@ angular.module('vegewroApp')
       mapCenter = map.getCenter();
       lastInfoBoxClicked = infoBox;
     };
+    var infoBoxClosed = function() {
+      if (!exclusiveMode) {
+        angular.forEach(address.markers, function(marker) {
+          if (!$scope.filters[marker.filterName].enabled) {
+            marker.setMap(null);
+          }
+        });
+      }
+    };
     marker.infoBoxClicked = infoBoxClicked;
     googleMaps.addMarkerClickedListener(marker, infoBoxClicked);
+    google.maps.event.addListener(infoBox, 'closeclick', infoBoxClosed);
+  }
+  
+  function addToSearchable(place) {
+    var profile = place.profile ? locale.valueFor(place.profile) : '';
+    $scope.searchable.push({name: place.name, profile: profile, address: place.address, id: place.id});
   }
   
   function addFbFeed(place) {
@@ -198,13 +229,14 @@ angular.module('vegewroApp')
           try {
             createMarker(place, filterName).then(function(marker) {
               var boxText = createBoxText(place, marker);
-              addAddress(place, marker.getTitle(), boxText, filterName, marker);
-              createInfoBox(marker, boxText);
+              var address = addAddress(place, marker.getTitle(), boxText, filterName, marker);
+              createInfoBox(marker, boxText, address);
             });
           } catch (err) {
             console.log(err, 'Cannot create a marker for: ' + place);
           }
         });
+        addToSearchable(place);
         addFbFeed(place);
       }
     });
@@ -222,16 +254,22 @@ angular.module('vegewroApp')
   }
   
   $scope.enableFilters = function(type) {
-    angular.forEach($scope.filters, function(filter) {
+    angular.forEach($scope.filters.$asArray, function(filter) {
       filter.enabled = (filter.type === type);
       filter.toggle();
     });
   };
   
   $scope.enableAllFilters = function(enable) {
-    angular.forEach($scope.filters, function(filter) {
+    angular.forEach($scope.filters.$asArray, function(filter) {
       filter.enabled = enable;
       filter.toggle();
     });
   };
+  
+  $scope.$watch('selected.place', function(newVal, oldVal) {
+    if (newVal !== oldVal && newVal) {
+      $scope.places[newVal.originalObject.id].showOnMap();
+    }
+  });
 }]);

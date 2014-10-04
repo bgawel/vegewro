@@ -388,7 +388,7 @@
       "en" : "vegetarian and vegan restaurant",
       "pl" : "wegetariańska i wegańska restauracja"
     },
-    "web" : "http://www.zlemieso.pl"
+    "web" : "http://zlemieso.pl"
   }, {
     "address" : "Kuźnicza 11/13, Wrocław",
     "dirLink" : "https://www.google.pl/maps/dir//Green+Way,+Kuźnicza+11%2F13,+50-138+Wrocław/@51.1110239,16.9651638,{{zoom}}",
@@ -441,7 +441,7 @@
       "en" : "book store, restaurant, coffe house",
       "pl" : "księgarnia, bufet, kawiarnia"
     },
-    "web" : "http://www.nalanda.pl"
+    "web" : "http://nalanda.pl"
   }, {
     "address" : " Kamieńskiego 205/16, Wrocław",
     "email" : "info@greenline-sklep.pl",
@@ -534,7 +534,7 @@
       "en" : "ecological food, eco bio products",
       "pl" : "ekologiczna zdrowa żywność, eco bio produkty"
     },
-    "web" : "http://www.marketbio.pl"
+    "web" : "http://marketbio.pl"
   }, {
     "address" : "DH. Renoma, Świdnicka 40, Wrocław",
     "email" : "sklep@organic24.pl",
@@ -563,7 +563,7 @@
       "en" : "ecological and natural products",
       "pl" : "produkty ekologiczne i naturalne"
     },
-    "web" : "http://www.organicmarket.pl"
+    "web" : "http://organicmarket.pl"
   }, {
     "address" : "Krasińskiego 32, Wrocław",
     "email" : "kontakt@swinkitrzy.net",
@@ -736,7 +736,7 @@
       "en" : "natural and oriental cosmetics",
       "pl" : "kosmetyki naturalne i orientalne"
     },
-    "web" : "http://www.helfy.pl"
+    "web" : "http://helfy.pl"
   }, {
     "address" : "Hallera 8, Wrocław",
     "email" : "hallera@helfy.pl",
@@ -764,7 +764,7 @@
       "en" : "natural and oriental cosmetics",
       "pl" : "kosmetyki naturalne i orientalne"
     },
-    "web" : "http://www.helfy.pl"
+    "web" : "http://helfy.pl"
   }, {
     "address" : "Jaracza 73d, Wrocław",
     "email" : "sklep@centrumzdrowejdiety.pl",
@@ -952,7 +952,7 @@
       "en" : "herbal drugstore, healthy food store",
       "pl" : "sklep zielarsko-medyczny, ze zdrową żywnością"
     },
-    "web" : "http://www.herbavit.com.pl"
+    "web" : "http://herbavit.com.pl"
   }, {
     "address" : "Grabiszyńska 55, Wrocław",
     "dirPosition" : true,
@@ -1089,7 +1089,7 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "web" : "http://www.naturalnaspizarnia.pl",
+    "web" : "http://naturalnaspizarnia.pl",
     "fb" : "172593546215769"
   }, {
     "address" : "Długa 66d, Wrocław",
@@ -1114,7 +1114,7 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "web" : "http://www.straganzdrowia.pl",
+    "web" : "http://straganzdrowia.pl",
     "fb" : "StraganZdrowia",
     "open" : {
       "en" : "Mon-Fri: 09:00-17:00, Sat: 09:00-13:00",
@@ -1147,13 +1147,129 @@
       "pl" : "jedzenie i gastronomia"
     },
     "dirLink" : "https://www.google.pl/maps/dir//Magnolia+Park,+Legnicka+58,+50-051+Wrocław/@51.119106,16.989032,{{zoom}}",
-    "web" : "http://www.vegelife.pl",
+    "web" : "http://vegelife.pl",
     "fb" : "385188948231973",
     "open" : {
       "en" : "Mon-Sun: 08:30-21:00",
       "pl" : "pon.-niedz.: 08:30-21:00"
     }
-  }    ],
+  }, {
+    "address" : "Żwirki i Wigury 5/3B, Wrocław",
+    "email" : "sklep@jesz-zdrowo.pl",
+    "phone" : "796 144 884",
+    "filters" : [ "vegeFood" ],
+    "type" : 2,
+    "id" : 35,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/c32.90.526.526/s200x200/530821_259947440803162_659507866_n.png?oh=93c8d7d3cc7b918c290df3d2c0338361&oe=54B6AB97&__gda__=1421136214_c448cd88c444a91a8149d26607da9463"
+    },
+    "name" : "Jesz Zdrowo",
+    "position" : {
+      "lat" : 51.098049,
+      "lng" : 16.935679
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//Sklep+'Jesz+Zdrowo',+Franciszka+Żwirki+i+Stanisława+Wigury,+Wrocław/@51.098049,16.935679,{{zoom}}",
+    "web" : "http://jesz-zdrowo.pl",
+    "fb" : "JeszZdrowo",
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-14:00",
+      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-14:00"
+    }
+  }, {
+    "address" : "Poranna 46 B, Wrocław",
+    "phone" : "780 044 916",
+    "filters" : [ "vegeFood" ],
+    "type" : 6,
+    "id" : 36,
+    "image" : {
+      "size" : {
+        "height" : 36,
+        "width" : 36
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/10616000_525852007547451_7361141789112383294_n.png?oh=059c36e3708aa17e38536d15a5b5d879&oe=54C8E856&__gda__=1422864540_b995a495dbdb26bc2f09941b8b93c8f8"
+    },
+    "name" : "Eko-Farma",
+    "position" : {
+      "lat" : 51.0719522,
+      "lng" : 16.9921406
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "dirPosition" : true,
+    "web" : "http://ekofarmawroclaw.pl",
+    "open" : {
+      "en" : "Mon-Fri: 11:00-19:00, Sat: 09:00-14:00",
+      "pl" : "pon.-piąt.: 11:00-19:00, sob.: 09:00-14:00"
+    }
+  }, {
+    "address" : "Pomorska 32, Wrocław",
+    "email" : "sklep@wrytmieziemi.pl",
+    "phone" : "605 578 893",
+    "filters" : [ "vegeFood" ],
+    "type" : 2,
+    "id" : 37,
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/p160x160/10313466_633401433417249_5749636331967982846_n.jpg?oh=6ac85be987bc9d12202d02d549792b95&oe=54C91DD3&__gda__=1422545518_006f8fb5ae1cd23dfd1dffcfa3306bc7"
+    },
+    "name" : "W Rytmie Ziemi",
+    "position" : {
+      "lat" : 51.1201691,
+      "lng" : 17.03024
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "dirPosition" : true,
+    "web" : "http://wrytmieziemi.pl",
+    "open" : {
+      "en" : "Mon,Tue,Thu: 10:00-18:00, Wed,Fri: 10-17, Sat: 11:00-14:00",
+      "pl" : "pon.,wt.,czw.: 10:00-18:00, śr.,piąt.: 10-17, sob.: 11:00-14:00"
+    },
+    "fb" : "WRytmieZiemi"
+  }, {
+    "address" : "Trawowa 55A, Wrocław",
+    "email" : "zamowienia@jemcodobre.pl",
+    "phone" : "666 608 805",
+    "filters" : [ "vegeFood" ],
+    "type" : 6,
+    "id" : 38,
+    "image" : {
+      "size" : {
+        "height" : 39,
+        "width" : 39
+      },
+      "src" : "http://jemcodobre.pl/logo-eko-sklepu-jemcodobre.png"
+    },
+    "name" : "Jem Co Dobre",
+    "position" : {
+      "lat" : 51.099809,
+      "lng" : 16.950717
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://jemcodobre.pl",
+    "open" : {
+      "en" : "Mon-Sat: 08:00-20:00, Sun: 08:00-16:00",
+      "pl" : "pon.-sob.: 08:00-20:00, niedz.: 08:00-16:00"
+    }
+  }     ],
   "news" : {
     "fbFeeds" : {
       "timestamp": 1

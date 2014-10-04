@@ -30,7 +30,10 @@ angular.module('vegewroApp')
         online: 'Sklepy internetowe',
         stationary: 'Sklepy stacjonarne',
         onlyOnlineShop: 'Tylko sklep internetowy',
-        stationaryAndOnlineShop: 'Sklep stacjonarny i internetowy'
+        stationaryAndOnlineShop: 'Sklep stacjonarny i internetowy',
+        search: 'znajdź miejsce',
+        searching: 'Wyszukiwanie...',
+        noResult: 'Brak wyników wyszukiwania'
       },
       
       en : {
@@ -59,7 +62,10 @@ angular.module('vegewroApp')
         online: 'Online shopping',
         stationary: 'Stationery shopping',
         onlyOnlineShop: 'Only online shopping',
-        stationaryAndOnlineShop: 'Stationery and online shopping'
+        stationaryAndOnlineShop: 'Stationery and online shopping',
+        search: 'find a place',
+        searching: 'Searching...',
+        noResult: 'No results found'
       }
     };
   }]);

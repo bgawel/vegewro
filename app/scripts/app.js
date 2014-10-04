@@ -8,7 +8,8 @@ angular.module('vegewroApp', [
   'angularfire.firebase',
   'angularfire.login',
   'simpleLoginTools',
-  'truncate'
+  'truncate',
+  'angucomplete',
 ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);

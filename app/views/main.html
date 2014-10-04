@@ -8,8 +8,17 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand action" href ng-click="reload()"><img src="images/logo.png" width="57" height="50"/>
-        <span class="brand-name">rocław <span class="green">vege</span> map</span>
+        <span ng-init="brand=true" ng-show="brand" class="brand-name">rocław <span class="green">vege</span> map</span>
       </a>
+      <div class="search-desktop search" ng-include="'views/search.html'">
+      </div>
+      <div class="search-mobile search">
+        <div ng-hide="brand" ng-include="'views/search.html'">
+        </div>
+        <button class="search-button" ng-click="brand=false" ng-show="brand" focus-on="input.search-query">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </div>
     </div>
     <div class="collapse navbar-collapse" close-nav-menu>
       <ul class="nav navbar-nav navbar-right">
@@ -79,9 +88,9 @@
      --><span class="caption">):</span>
       </p>
       <p class="sub-filter">
-        <a href ng-click="enableFilters('vegan')" class="action action-link filter-helper">{{i18n.veganOnly}}:</a>
+        <a href ng-click="enableFilters('vegan')" class="action action-link filter-helper">{{i18n.veganOnly}}</a>
       </p>
-      <p ng-repeat="filter in filters | filter:{type: 'vegan'} | orderBy:'order'">
+      <p ng-repeat="filter in filters.$asArray | filter:{type: 'vegan'} | orderBy:'order'">
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
             ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
@@ -89,9 +98,9 @@
         </a>
       </p>
       <p class="sub-filter">
-        <a href ng-click="enableFilters('vege')" class="action action-link filter-helper">{{i18n.vege}}:</a>
+        <a href ng-click="enableFilters('vege')" class="action action-link filter-helper">{{i18n.vege}}</a>
       </p>
-      <p ng-repeat="filter in filters | filter:{type: 'vege'} | orderBy:'order'">
+      <p ng-repeat="filter in filters.$asArray | filter:{type: 'vege'} | orderBy:'order'">
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
             ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
@@ -100,10 +109,10 @@
       </p> 
       <p class="sub-filter">
         <a href ng-click="enableFilters('products')" class="action action-link filter-helper">{{i18n.products}}
-          (<span tooltip-placement="bottom" tooltip="{{i18n.storesWarning}}">*</span>):
         </a>
+        <span class="action-link" tooltip-placement="bottom" tooltip="{{i18n.storesWarning}}">*</span>
       </p>
-      <p ng-repeat="filter in filters | filter:{type: 'products'} | orderBy:'order'">
+      <p ng-repeat="filter in filters.$asArray | filter:{type: 'products'} | orderBy:'order'">
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
             ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
           <img ng-src="{{filter.iconUrl}}"/>
