@@ -1,0 +1,213 @@
+<div class="container">
+  <div class="row breadcrumb-section">
+    <ol class="breadcrumb">
+      <li><a href="#">home</a></li>
+      <li class="active">{{i18n.guide}}</li>
+    </ol>
+  </div>
+  <div class="row guide-section">
+    <p class="intro"><b>VegeWro.pl</b> udostępnia listę miejsc przyjaznych wegetarianom.
+      Nie mamy jednak możliwości zweryfikowania, czy wszystkie produkty, oferowane przez promowane na naszej stronie sklepy,
+      są przyjazne dla środowiska, a zwłaszcza, czy nie powstają kosztem cierpienia i życia zwierząt.
+      Dlatego w niniejszej sekcji publikować będziemy przewodniki po produktach wege-przyjaznych.
+    </p>
+    <p>
+      Zakres eksploatacji zwierząt przez człowieka: 
+      <a href="http://www.peta.org/living/beauty/animal-ingredients-list/">lista składników pochodzenia zwierzęcego</a>
+    </p>
+    <div class="cosmetics">
+      <h4 class="caption">
+        <img class="cosmetics-image" ng-src="images/cosmetics4.png" src="images/cosmetics4.png">Kosmetyki / detergenty
+      </h4>
+      <div class="lead-text">
+        <p>Źródłem informacji na temat wege-przyjaznych produktów kosmetycznych i środków czystości są wykazy firm 
+          <b>cruelty-free</b>, udostępnianie przez organizacje non-profit, zajmujące się walką o prawa zwierząt oraz ich ochroną.
+        </p>
+        <p>
+          Występowanie firmy na liście firm <b>cruelty-free nie gwarantuje</b> jednak, że produkuje ona kosmetyki / środki czystości
+          przyjazne wegetarianom; firma może nie testować swoich produktów na zwierzętach, ale wykorzystywać składniki
+          pozyskiwane z martwych zwierząt, na przykład placentę, dodawaną do kremów, a uzyskiwaną z łożysk.
+          Dlatego użyteczne są tylko te listy cruelty-free, na których zaznaczono firmy odpowiednie dla wegan i wegetarian.
+        <p>
+        <a class="action more" href data-toggle="collapse" data-target="#moreAboutCosmetics" 
+            ng-init="more=false" ng-click="more=!more">
+          <span ng-show="!more">[więcej]</span>
+          <span ng-show="more">[mniej]</span>
+        </a>
+      </div>
+      <div id="moreAboutCosmetics" class="collapse">
+        <ul>
+          <li>
+            <b>Zakaz testowania kosmetyków na zwierzętach w UE</b>
+            <p>
+              Od marca 2013r. w Unii Europejskiej obowiązuje zakaz wprowadzania na rynek kosmetyków testowanych na zwierzętach.
+              Zakaz dotyczy również składników kosmetyków.
+              Jednak firmy nadal mogą testować kosmetyki na zwierzętach poza Unią Europejską i tamże je sprzedawać.
+              Na przykład chińskie prawo wymusza, by wszystkie kosmetyki wprowadzane na rynek chiński, były przetestowane
+              na zwierzętach. Dlatego żadna firma sprzedająca kosmetyki w Chinach, nie powinna znajdować się na listach cruelty-free.
+              Dodatkowo przepis o nie testowaniu kosmetyków na zwierzętach jest na tyle niejasny, iż
+              jest wielce prawdopodobne, że nadal wiele firm używa składników testowanych na zwierzętach.
+            </p>
+          </li>
+          <li>
+            <b>Ikony króliczków</b>
+            <p>
+              Ikony króliczków, czy też liści, ziemi, nie muszą oznaczać niczego i często umieszczane są przez firmy 
+              kosmetyczne w celu przekonania klienta, iż firma dba o środowisko / zwierzęta oraz by zapewnić klientowi spokój sumienia.
+              W rzeczywistości każda firma może umieszczać na swoich produktach dowolne, nic nie znaczące ikony.
+              Należy poszukiwać więc produktów z ikonami renomowanych organizacji ekologicznych, 
+              takich jak <a href="http://www.leapingbunny.org">Leaping Bunny</a> czy <a href="http://www.peta.org">PETA</a>.
+            </p>
+          </li>
+          <li>
+            <b>Środki czystości</b>
+            <p>
+              Środki czystości nie podlegają unijnemu zakazowi nie testowania na zwierzętach, czyli nadal mogą być testowane.
+            </p>
+          </li>
+          <li>
+            <b>Kosmetyki eko, bio, organiczne, naturalne</b>
+            <p>
+              Takie kosmetyki (oraz ich składniki) nie są automatycznie cruelty-free.
+              W świetle prawa nie ma różnicy między kosmetykami syntetycznymi a naturalnymi, co oznacza, iż
+              dowiedzenie ich bezpieczeństwa może odbywać się przy wykorzystaniu testów na zwierzętach. 
+            </p>
+          </li>
+        </ul>
+        <p>[<i>na podstawie:</i> <a href="http://www.gocrueltyfree.org/consumer/faqs">gocrueltyfree.org</a>]</p>
+      </div>
+      <div>
+        <h5 class="caption">Wyszukiwarki (w kolejności rekomendacji)</h5>
+        <ul>
+          <li>
+            <p class="search-key">
+              <a href="http://www.gocrueltyfree.org/search?vegetarian=yes&vegan=yes&product-type=cosmetics&country=195">
+                <img src="http://leapingbunny.org/images/lbLogo-facebook.jpg" width="50px" height="50px"><!-- 
+             --><span class="logo-caption">Wyszukiwarka</span><!--
+           --></a>
+              <b>Cruelty Free International</b>
+            </p>
+            <p>
+              Dostępne kryteria wyszukiwania: kosmetyki, detergenty, produkty <b>wegetariańskie</b>, <b>wegańskie</b>,
+              nazwa producenta, dostępność online, kraj. Dodatkowo można wyświetlić profil firmy.
+            </p>
+            <p>
+              <a href="http://www.crueltyfreeinternational.org">Cruelty Free International</a>
+              (założona przez <a href="http://www.buav.org/">BUAV</a>) zajmuje się certyfikowaniem firm, 
+              kandydujących do otrzymania znaku <a href="http://www.leapingbunny.org">Leaping Bunny</a>.<br>
+              Firma aspirująca do otrzymania certyfikatu, musi zgodzić się na przeprowadzenie niezależnego audytu produkcji i 
+              dostaw składników.
+            </p>
+            <p>
+              Organizacje współtworzące program <a href="http://www.leapingbunny.org">Leaping Bunny</a>,
+              a składające się na Coalition for Consumer Information on Cosmetics (CCIC):<br>
+              <a href="http://www.aavs.org">American Anti-Vivisection Society</a><br>
+              <a href="http://www.animalalliance.ca">Animal Alliance of Canada</a><br>
+              <a href="http://www.beautywithoutcruelty.com">Beauty Without Cruelty</a><br>
+              <a href="http://www.ddal.org">Doris Day Animal League</a><br>
+              <a href="http://www.humanesociety.com/">The Humane Society of Canada</a><br>
+              <a href="http://www.hsus.org/">The Humane Society of the United States</a><br>
+              <a href="http://www.mspca.org">MSPCA Center for Laboratory Animal Welfare</a><br>
+              <a href="http://www.navs.org">National Anti-Vivisection Society</a><br>
+              <a href="http://www.neavs.org/">New England Anti-Vivisection Society</a>
+            </p>
+            <p>
+              Wyszukiwarka uwzględnia również włoskich producentów z listy
+              <a href="http://www.lav.it/cosa-facciamo/vivisezione/le-aziende-cruelty-free">LAV</a>
+            </p>
+          </li>
+          <li>
+            <p class="search-key">
+              <a href="http://features.peta.org/cruelty-free-company-search/index.aspx">
+                <img src="http://shopkaunis.com/wp-content/uploads/2013/11/PETA_logo.jpg" width="50px" height="50px"><!-- 
+             --><span class="logo-caption">Wyszukiwarki</span><!--
+           --></a>
+              <b>PETA</b>
+            </p>
+            <p>
+              Na skróty:
+              <a href="http://www.mediapeta.com/PETA/PDF/cruelty-free-companies-PolandPETA.pdf">
+                lista firm cruelty-free dla Polski (pdf)
+              </a>
+              (<b>V</b> - firmy sprzedające jedynie produkty <b>wegańskie</b>)
+            </p>
+            <p>
+              Dostępne wyszukiwarki: producenci cruelty-free (dostępny filtr wyświetlający firmy <b>wegańskie</b>),
+              typ produktu (dostępny filtr wyświetlający firmy wegańskie),
+              kraj (dostępny filtr wyświetlający firmy wegańskie), firmy testujące na zwierzętach,
+              firmy testujące na zwierzętach pod wpływem prawa. 
+            </p>
+            <p>
+              <a href="http://www.peta.org">PETA</a> dzieli firmy na dwie grupy: <b>wegańskie i pozostałe cruelty-free</b>;
+              nie wyszczególnia specjalnej kategorii dla firm wegetariańskich.
+            </p>
+            <p>
+              Firma aspirująca do znalezienia się na liście PETA cruelty-free, musi podpisać stosowne oświadczenie 
+              o nie testowaniu produktów na zwierzętach.
+            </p>
+            <p class="comment">
+              Różnica między <a href="http://www.leapingbunny.org">Leaping Bunny</a> a <a href="http://www.peta.org">PETA</a>:
+              <a href="http://www.hotashi.com/jetaime/?p=7596">tutaj</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="caption">Listy</h5>
+        <ul>
+          <li>
+            <p class="search-key">
+              <a href="http://www.tierschutzbund.de/information/service/publikationen/kosmetik-positivliste/hersteller.html">
+                Lista niemieckich producentów<!--
+           --></a><!--
+           -->,
+              <a href="http://www.tierschutzbund.de/information/service/publikationen/kosmetik-positivliste/laeden-und-vertriebe.html">
+                sklepów i firm dystrybucyjnych<!--
+           --></a>
+              <b>Deutscher Tierschutzbund</b>
+            </p>
+            <p>
+              Oznaczenia:<br>
+              emblemat głaskanego króliczka - firmy promujące nietestowanie kosmetyków na zwierzętach<br>
+              <b class="is-small">°</b> - kosmetyki przeznaczone dla <b>wegan</b><br>
+              <b class="is-small">*</b> - kosmetyki ze składnikami pozyskanymi z <span class="warning">martwych</span> zwierząt<br>
+              pozostałe - <b>przeznaczone dla wegetarian</b>
+            </p>
+            <p>
+              Firma aspirująca do znalezienia się na liście <a href="http://www.tierschutzbund.de">Deutscher Tierschutzbund</a>,
+              musi złożyć stosowne <a href="http://www.tierschutzbund.de/kosmetik-positivliste.html">oświadczenie</a>
+              o nie testowaniu produktów na zwierzętach.
+            </p>
+          </li>
+          <li>
+            <p class="search-key">
+              <a href="http://ok.3bird.net/cosmetics-pl.html">
+                Lista firm widzianych na rynku polskim<!--
+           --></a>
+              <b>Klubu OK!</b>
+            </p>
+            <p>
+              Wszystkie firmy z listy produkują kosmetyki / detergenty przeznaczone dla <b>wegetarian</b>.
+              Firmy <b>wegańskie</b> oznaczone zostały na zielono.
+            </p>
+            <p>
+              Lista zawiera krótkie opisy asortymentu danej firmy wraz ze wskazówkami, gdzie produkty można nabyć. 
+            </p>
+            <p>
+              <a href="http://ok.3bird.net">Klub OK!</a> publikuje również listę firm przyjaznych zwierzętom na świecie,
+              przy układaniu której korzysta ze źródeł rekomendowanych powyżej;
+              niektórej firmy zostały jednak pominięte z niewiadomych przyczyn.
+            </p>
+          </li>          
+        </ul>
+      </div>      
+   </div> 
+  </div>
+  <div class="row">
+    <div class="footer">
+      <div class="text-center"><a href="#">home</a></div>
+      <div id="like" class="fb-like" data-href="http://www.vegewro.pl" data-width="1px" data-layout="button" data-action="recommend" data-show-faces="true" data-share="false"></div>
+      <p class="contact">♥ {{i18n.from}} DaDa Soft Lab &copy; | {{i18n.contact}}: <a href="vegewro@gmail.com">vegewro@gmail.com</a></p>
+    </div>
+  </div>
+</div>

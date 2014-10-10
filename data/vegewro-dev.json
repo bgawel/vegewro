@@ -1,12 +1,16 @@
 {
   "config" : {
-    "fbToken" : "",
     "fbAppId" : "",
+    "fbToken" : "",
     "googleMapsToken" : "",
     "cacheFeedsFor" : 660000,
     "fbPostsNoOlderThan" : 2592000000,
     "filters" : {
       "veganBar" : {
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan bars, restaurants, coffee houses",
+          "pl" : "<span class=\"green\">W</span>egańskie bary, restauracje, kawiarnie"
+        },
         "icon" : {
           "anchor" : {
             "x" : 24,
@@ -23,14 +27,14 @@
           "en" : "bars, restaurants, coffee houses",
           "pl" : "bary, restauracje, kawiarnie"
         },
-        "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan bars, restaurants, coffee houses",
-          "pl" : "<span class=\"green\">W</span>egańskie bary, restauracje, kawiarnie"
-        },        
         "type" : "vegan",
         "zIndex" : 150
       },
       "veganCatering" : {
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan catering",
+          "pl" : "<span class=\"green\">W</span>egański katering"
+        },
         "icon" : {
           "anchor" : {
             "x" : 6,
@@ -42,19 +46,19 @@
           },
           "url" : "images/courgette.png"
         },
-        "order" : 160,
+        "order" : 180,
         "title" : {
           "en" : "catering",
           "pl" : "katering"
-        },
-        "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan catering",
-          "pl" : "<span class=\"green\">W</span>egański katering"
         },
         "type" : "vegan",
         "zIndex" : 130
       },
       "veganDelivery" : {
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan food delivery",
+          "pl" : "<span class=\"green\">W</span>egańskie dowozy na telefon"
+        },
         "icon" : {
           "size" : {
             "height" : 32,
@@ -62,19 +66,19 @@
           },
           "url" : "images/leek.png"
         },
-        "order" : 180,
+        "order" : 160,
         "title" : {
           "en" : "food delivery",
           "pl" : "dowozy na telefon"
         },
-        "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan food delivery",
-          "pl" : "<span class=\"green\">W</span>egańskie dowozy na telefon"
-        },        
         "type" : "vegan",
         "zIndex" : 140
       },
       "vegeBar" : {
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian bars, restaurants, coffee houses",
+          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariańskie bary, restauracje, kawiarnie"
+        },
         "icon" : {
           "anchor" : {
             "x" : 24,
@@ -91,14 +95,14 @@
           "en" : "bars, restaurants, coffee houses",
           "pl" : "bary, restauracje, kawiarnie"
         },
-        "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian bars, restaurants, coffee houses",
-          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariańskie bary, restauracje, kawiarnie"
-        },
         "type" : "vege",
         "zIndex" : 90
       },
       "vegeCatering" : {
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian catering",
+          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariański katering"
+        },
         "icon" : {
           "anchor" : {
             "x" : 6,
@@ -110,19 +114,79 @@
           },
           "url" : "images/milkycourgette.png"
         },
-        "order" : 100,
+        "order" : 120,
         "title" : {
           "en" : "catering",
           "pl" : "katering"
         },
-        "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian catering",
-          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariański katering"
-        },        
         "type" : "vege",
         "zIndex" : 70
       },
+      "vegeDelivery" : {
+        "htmlTitle" : {
+          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian food delivery",
+          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariańskie dowozy na telefon"
+        },
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/milkyleek.png"
+        },
+        "order" : 100,
+        "title" : {
+          "en" : "food delivery",
+          "pl" : "dowozy na telefon"
+        },
+        "type" : "vege",
+        "zIndex" : 80
+      },
+      "vegeFood" : {
+        "htmlTitle" : {
+          "en" : "Stores with <span class=\"green\">v</span>ege and <span class=\"green\">e</span>co food",
+          "pl" : "Sklepy z <span class=\"green\">w</span>ege i <span class=\"green\">e</span>ko żywnością"
+        },
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/shop.png"
+        },
+        "order" : 80,
+        "title" : {
+          "en" : "vege and eco food",
+          "pl" : "wege i eko żywność"
+        },
+        "type" : "products",
+        "zIndex" : 40
+      },
+      "vegeShoes" : {
+        "htmlTitle" : {
+          "en" : "Stores with <span class=\"green\">v</span>ege shoes",
+          "pl" : "Sklepy z <span class=\"green\">w</span>ege butami"
+        },
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/shoes2.png"
+        },
+        "order" : 60,
+        "title" : {
+          "en" : "vege shoes",
+          "pl" : "wege buty"
+        },
+        "type" : "products",
+        "zIndex" : 60
+      },
       "vegeCosmetics" : {
+        "htmlTitle" : {
+          "en" : "Stores with <span class=\"green\">e</span>co cosmetics and detergents",
+          "pl" : "Sklepy z <span class=\"green\">e</span>ko kosmetykami i detergentami"
+        },
         "icon" : {
           "anchor" : {
             "x" : 8,
@@ -139,72 +203,8 @@
           "en" : "eco cosmetics and detergents",
           "pl" : "eko kosmetyki i detergenty"
         },
-        "htmlTitle" : {
-          "en" : "Stores with <span class=\"green\">e</span>co cosmetics and detergents",
-          "pl" : "Sklepy z <span class=\"green\">e</span>ko kosmetykami i detergentami"
-        },        
         "type" : "products",
         "zIndex" : 50
-      },
-      "vegeDelivery" : {
-        "icon" : {
-          "size" : {
-            "height" : 32,
-            "width" : 32
-          },
-          "url" : "images/milkyleek.png"
-        },
-        "order" : 120,
-        "title" : {
-          "en" : "food delivery",
-          "pl" : "dowozy na telefon"
-        },
-        "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian food delivery",
-          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariańskie dowozy na telefon"
-        },        
-        "type" : "vege",
-        "zIndex" : 80
-      },
-      "vegeFood" : {
-        "icon" : {
-          "size" : {
-            "height" : 32,
-            "width" : 32
-          },
-          "url" : "images/shop.png"
-        },
-        "order" : 80,
-        "title" : {
-          "en" : "vege and eco food",
-          "pl" : "wege i eko żywność"
-        },
-        "htmlTitle" : {
-          "en" : "Stores with <span class=\"green\">v</span>ege and <span class=\"green\">e</span>co food",
-          "pl" : "Sklepy z <span class=\"green\">w</span>ege i <span class=\"green\">e</span>ko żywnością"
-        },        
-        "type" : "products",
-        "zIndex" : 40
-      },
-      "vegeShoes" : {
-        "icon" : {
-          "size" : {
-            "height" : 32,
-            "width" : 32
-          },
-          "url" : "images/shoes2.png"
-        },
-        "order" : 60,
-        "title" : {
-          "en" : "vege shoes",
-          "pl" : "wege buty"
-        },
-        "htmlTitle" : {
-          "en" : "Stores with <span class=\"green\">v</span>ege shoes",
-          "pl" : "Sklepy z <span class=\"green\">w</span>ege butami"
-        },        
-        "type" : "products",
-        "zIndex" : 60
       }
     },
     "googleMapsVersion" : "3",
@@ -243,7 +243,13 @@
       "zoom" : 12
     },
     "zoomWhenDirections" : 16,
-    "zoomWhenMarkerClicked" : 14
+    "zoomWhenMarkerClicked" : 14,
+    "geolocOptions": {"maximumAge": 100, "timeout": 30000, "enableHighAccuracy": true}
+  },
+  "news" : {
+    "fbFeeds" : {
+      "timestamp" : 1
+    }
   },
   "places" : [ {
     "address" : "Nożownicza 40, Wrocław",
@@ -279,7 +285,6 @@
     "email" : "ewa.rudakita@gmail.com",
     "fb" : "rudakitawroclaw",
     "filters" : [ "vegeFood", "veganBar" ],
-    "type" : 2,
     "id" : 3,
     "image" : {
       "size" : {
@@ -302,6 +307,7 @@
       "en" : "coffee house, health food store, toy store",
       "pl" : "kawiarnia, sklep ze zdrową żywnością, sklep z zabawkami"
     },
+    "type" : 2,
     "web" : "https://facebook.com/rudakitawroclaw"
   }, {
     "address" : "Ruska 19, Wrocław",
@@ -447,7 +453,6 @@
     "email" : "info@greenline-sklep.pl",
     "fb" : "192700764111581",
     "filters" : [ "vegeCosmetics" ],
-    "type" : 4,
     "id" : 9,
     "name" : "Geen Line",
     "phone" : "512 144 140",
@@ -459,12 +464,12 @@
       "en" : "natural cosmetics and ecological detergents",
       "pl" : "kosmetyki naturalne i ekologiczne środki czystości"
     },
+    "type" : 4,
     "web" : "http://greenline-sklep.pl"
   }, {
     "address" : "Paprotna 8, Wrocław",
     "email" : "kamila@pnet.pl",
     "filters" : [ "vegeFood" ],
-    "type" : 4,
     "id" : 10,
     "name" : "Kamila",
     "phone" : "783 295 188",
@@ -476,13 +481,13 @@
       "en" : "wholesale grocery",
       "pl" : "hurtownia spożywcza"
     },
+    "type" : 4,
     "web" : "http://kamila.pl"
   }, {
     "address" : "Komuny Paryskiej 83c, Wrocław",
     "email" : "sklep@biomaniac.pl",
     "fb" : "246013798839047",
     "filters" : [ "vegeFood" ],
-    "type" : 6,    
     "id" : 11,
     "image" : {
       "size" : {
@@ -505,13 +510,13 @@
       "en" : "ecological food",
       "pl" : "produkty ekologiczne"
     },
+    "type" : 6,
     "web" : "http://biomaniac.pl"
   }, {
     "address" : "Jerzmanowska 19, Wrocław",
     "email" : "sklep@marketbio.pl",
     "fb" : "420526034635393",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
-    "type" : 4,    
     "id" : 12,
     "image" : {
       "size" : {
@@ -534,13 +539,13 @@
       "en" : "ecological food, eco bio products",
       "pl" : "ekologiczna zdrowa żywność, eco bio produkty"
     },
+    "type" : 4,
     "web" : "http://marketbio.pl"
   }, {
     "address" : "DH. Renoma, Świdnicka 40, Wrocław",
     "email" : "sklep@organic24.pl",
     "fb" : "ORGANICFARMAZDROWIA",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
-    "type" : 6,    
     "id" : 13,
     "image" : {
       "size" : {
@@ -563,13 +568,13 @@
       "en" : "ecological and natural products",
       "pl" : "produkty ekologiczne i naturalne"
     },
+    "type" : 6,
     "web" : "http://organicmarket.pl"
   }, {
     "address" : "Krasińskiego 32, Wrocław",
     "email" : "kontakt@swinkitrzy.net",
     "fb" : "swinki.trzy3",
     "filters" : [ "veganBar", "vegeFood", "vegeCosmetics" ],
-    "type" : 6,    
     "id" : 14,
     "image" : {
       "size" : {
@@ -592,6 +597,7 @@
       "en" : "coffee house, healthy food store",
       "pl" : "kawiarnia, sklep ze zdrową żywnością"
     },
+    "type" : 6,
     "web" : "http://swinkitrzy.net"
   }, {
     "address" : "Zielińskiego 22a, Wrocław",
@@ -599,7 +605,6 @@
     "email" : "sklep@zdrowegary.pl",
     "fb" : "ZdroweGary",
     "filters" : [ "vegeFood" ],
-    "type" : 6,    
     "id" : 15,
     "image" : {
       "size" : {
@@ -622,13 +627,14 @@
       "en" : "healthy food store",
       "pl" : "artykuły zdrowe i niezwykłe"
     },
+    "type" : 6,
     "web" : "http://sklepzdrowegary.pl"
   }, {
     "address" : "Kazimierza Wielkiego 41, Wrocław",
+    "dirLink" : "https://www.google.pl/maps/place/Kazimierza+Wielkiego+41,+Wrocław/@51.1075124,17.0302908,{{zoom}}",
     "email" : "sklep@panpablo.pl",
     "fb" : "panpablo.sklep",
     "filters" : [ "vegeShoes" ],
-    "type" : 6,    
     "id" : 16,
     "image" : {
       "size" : {
@@ -643,15 +649,16 @@
       "lat" : 51.10311,
       "lng" : 17.032993
     },
-    "dirLink" : "https://www.google.pl/maps/place/Kazimierza+Wielkiego+41,+Wrocław/@51.1075124,17.0302908,{{zoom}}",
     "profile" : {
       "en" : "shoes store ",
       "pl" : "autorski sklep z butami"
     },
+    "type" : 6,
     "web" : "http://www.panpablo.pl/kategoria/buty-weganskie"
   }, {
     "address" : "Kraińskiego 14, Wrocław",
     "dirLink" : "https://www.google.pl/maps/dir//Baszta,+Kraińskiego,+52-007+Wrocław/@51.1119313,17.040233,{{zoom}}",
+    "email" : "kontakt@baszta.wroclaw.pl",
     "fb" : "basztaniedzwiadka",
     "filters" : [ "vegeBar" ],
     "id" : 17,
@@ -668,8 +675,6 @@
       "pl" : "wt.-piąt.: 12:00-21:00, sob.-niedz.: 14:00-21:00"
     },
     "phone" : "668 043 255",
-    "email" : "kontakt@baszta.wroclaw.pl",
-    "web" : "http://baszta.wroclaw.pl",
     "position" : {
       "lat" : 51.1119313,
       "lng" : 17.040233
@@ -677,13 +682,13 @@
     "profile" : {
       "en" : "food and gastronomy",
       "pl" : "jedzenie i gastronomia"
-    }
+    },
+    "web" : "http://baszta.wroclaw.pl"
   }, {
     "address" : "Pomorska 55/33U, Wrocław",
     "email" : "sklep@naturobranie.pl",
     "fb" : "naturobranie",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
-    "type" : 6,    
     "id" : 18,
     "image" : {
       "size" : {
@@ -706,6 +711,7 @@
       "en" : "natural products",
       "pl" : "produkty naturalne"
     },
+    "type" : 6,
     "web" : "http://naturobranie.pl"
   }, {
     "address" : "Świętego Mikołaja 40, Wrocław",
@@ -713,7 +719,6 @@
     "email" : "mikolaja@helfy.pl",
     "fb" : "sklep.helfy",
     "filters" : [ "vegeCosmetics" ],
-    "type" : 6,    
     "id" : 19,
     "image" : {
       "size" : {
@@ -736,12 +741,12 @@
       "en" : "natural and oriental cosmetics",
       "pl" : "kosmetyki naturalne i orientalne"
     },
+    "type" : 6,
     "web" : "http://helfy.pl"
   }, {
     "address" : "Hallera 8, Wrocław",
     "email" : "hallera@helfy.pl",
     "filters" : [ "vegeCosmetics" ],
-    "type" : 6,    
     "id" : 20,
     "image" : {
       "size" : {
@@ -764,13 +769,13 @@
       "en" : "natural and oriental cosmetics",
       "pl" : "kosmetyki naturalne i orientalne"
     },
+    "type" : 6,
     "web" : "http://helfy.pl"
   }, {
     "address" : "Jaracza 73d, Wrocław",
     "email" : "sklep@centrumzdrowejdiety.pl",
     "fb" : "centrumzdrowejdiety",
     "filters" : [ "vegeFood" ],
-    "type" : 6,    
     "id" : 21,
     "image" : {
       "size" : {
@@ -793,6 +798,7 @@
       "en" : "healthy food store, nutritionist",
       "pl" : "sklep ze zdrową żywnością, dietetyk"
     },
+    "type" : 6,
     "web" : "http://sklep.centrumzdrowejdiety.pl"
   }, {
     "address" : "Hala Targowa, Piaskowa 15, Wrocław",
@@ -802,7 +808,6 @@
     },
     "dirPosition" : true,
     "filters" : [ "vegeFood" ],
-    "type" : 2,    
     "id" : 22,
     "name" : "Biostacja, Zieleniak Piętaszka",
     "open" : {
@@ -817,13 +822,13 @@
     "profile" : {
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
-    }
+    },
+    "type" : 2
   }, {
     "address" : "Wita Stwosza 14, Wrocław",
     "dirPosition" : true,
     "email" : "przyprawy@vp.pl",
     "filters" : [ "vegeFood" ],
-    "type" : 2,    
     "id" : 23,
     "name" : "Przyprawy Świata",
     "open" : {
@@ -838,11 +843,11 @@
     "profile" : {
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
-    }
+    },
+    "type" : 2
   }, {
     "address" : "Rynek 31, Wrocław",
     "filters" : [ "vegeFood" ],
-    "type" : 2,    
     "id" : 24,
     "image" : {
       "size" : {
@@ -865,6 +870,7 @@
       "en" : "healthy food offer",
       "pl" : "m.in. oferta zdrowej żywności"
     },
+    "type" : 2,
     "web" : "http://feniks.wroc.pl"
   }, {
     "address" : "Szczytnicka 41, Wrocław",
@@ -872,7 +878,6 @@
     "email" : "zdrowakrowa.wroclaw@gmail.com",
     "fb" : "sklepo.kawiarniaZDROWAKROWA",
     "filters" : [ "vegeBar", "vegeFood" ],
-    "type" : 2,    
     "id" : 25,
     "image" : {
       "size" : {
@@ -895,13 +900,13 @@
       "en" : "healthy food store, kawiarnia",
       "pl" : "sklep ze zdrową żywnością, coffee house"
     },
+    "type" : 2,
     "web" : "https://facebook.com/sklepo.kawiarniaZDROWAKROWA"
   }, {
     "address" : "Hala Strzegomska, Strzegomska 206-208, Wrocław",
     "dirLink" : "https://www.google.pl/maps/dir//Hala+Strzegomska.+PHU.+ZPChr.+Korczak+E.,+Ulica+Strzegomska+206,+Wrocław/@51.111581,16.959334,{{zoom}}",
     "fb" : "sklepnazdrowie",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
-    "type" : 6,    
     "id" : 26,
     "image" : {
       "size" : {
@@ -924,12 +929,12 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
+    "type" : 6,
     "web" : "http://sklepnazdrowie.pl"
   }, {
     "address" : "Krucza 112, Wrocław",
     "fb" : "107265929300925",
     "filters" : [ "vegeFood" ],
-    "type" : 2,    
     "id" : 27,
     "image" : {
       "size" : {
@@ -952,12 +957,12 @@
       "en" : "herbal drugstore, healthy food store",
       "pl" : "sklep zielarsko-medyczny, ze zdrową żywnością"
     },
+    "type" : 2,
     "web" : "http://herbavit.com.pl"
   }, {
     "address" : "Grabiszyńska 55, Wrocław",
     "dirPosition" : true,
     "filters" : [ "vegeFood", "vegeCosmetics" ],
-    "type" : 2,    
     "id" : 28,
     "name" : "Źródło Zdrowego Życia",
     "open" : {
@@ -972,7 +977,8 @@
     "profile" : {
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
-    }
+    },
+    "type" : 2
   }, {
     "address" : "Hala Kupców Perła, Widna 6, Wrocław",
     "desc" : {
@@ -983,7 +989,6 @@
     "email" : "jola-pon@wp.pl",
     "fb" : "ekokraina.132",
     "filters" : [ "vegeFood" ],
-    "type" : 2,    
     "id" : 29,
     "image" : {
       "size" : {
@@ -1006,12 +1011,13 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
+    "type" : 2,
     "web" : "https://facebook.com/ekokraina.132"
   }, {
     "address" : "Poznańska 20A, Wrocław",
+    "dirLink" : "https://www.google.pl/maps/dir//Z-EKO+%C5%BBywno%C5%9B%C4%87+ekologiczna,+zdrowa+%C5%BCywno%C5%9B%C4%87,+Pozna%C5%84ska,+52-443+Wroc%C5%82aw/@51.115059,17.00626,{{zoom}}",
     "email" : "sklep@z-eko.pl",
     "filters" : [ "vegeFood" ],
-    "type" : 6,    
     "id" : 30,
     "image" : {
       "size" : {
@@ -1030,18 +1036,18 @@
       "lat" : 51.115059,
       "lng" : 17.00626
     },
-    "dirLink" : "https://www.google.pl/maps/dir//Z-EKO+%C5%BBywno%C5%9B%C4%87+ekologiczna,+zdrowa+%C5%BCywno%C5%9B%C4%87,+Pozna%C5%84ska,+52-443+Wroc%C5%82aw/@51.115059,17.00626,{{zoom}}",
     "profile" : {
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
+    "type" : 6,
     "web" : "http://z-eko.pl"
   }, {
     "address" : "Kasprowicza 9a, Wrocław",
+    "dirPosition" : true,
     "email" : "biuro@kraina-zdrowia.com",
-    "phone" : "534 098 400",
+    "fb" : "485955304851090",
     "filters" : [ "vegeFood" ],
-    "type" : 6,    
     "id" : 31,
     "image" : {
       "size" : {
@@ -1055,22 +1061,23 @@
       "en" : "Mon-Fri: 08:00-18:00, Sat: 10:00-14:00",
       "pl" : "pon.-piąt.: 08:00-18:00, sob.: 10:00-14:00"
     },
+    "phone" : "534 098 400",
     "position" : {
       "lat" : 51.135779,
       "lng" : 17.03811
     },
-    "dirPosition" : true,
     "profile" : {
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "web" : "http://kraina-zdrowia.com",
-    "fb" : "485955304851090"
+    "type" : 6,
+    "web" : "http://kraina-zdrowia.com"
   }, {
     "address" : "Wojszyce, Wrocław",
+    "dirLink" : "https://www.google.pl/maps/dir//51.087748,17.023498/@51.087748,17.023498,{{zoom}}",
     "email" : "sklep@naturalnaspizarnia.pl",
+    "fb" : "172593546215769",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
-    "type" : 4,    
     "id" : 32,
     "image" : {
       "size" : {
@@ -1084,19 +1091,17 @@
       "lat" : 51.087748,
       "lng" : 17.023498
     },
-    "dirLink" : "https://www.google.pl/maps/dir//51.087748,17.023498/@51.087748,17.023498,{{zoom}}",
     "profile" : {
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "web" : "http://naturalnaspizarnia.pl",
-    "fb" : "172593546215769"
+    "type" : 4,
+    "web" : "http://naturalnaspizarnia.pl"
   }, {
     "address" : "Długa 66d, Wrocław",
     "email" : "sklep@straganzdrowia.pl",
-    "phone" : "509 708 296, 796 838 005",
+    "fb" : "StraganZdrowia",
     "filters" : [ "vegeFood", "vegeCosmetics" ],
-    "type" : 6,    
     "id" : 33,
     "image" : {
       "size" : {
@@ -1106,6 +1111,11 @@
       "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/c14.14.181.181/970081_159890567528131_1902626588_n.jpg?oh=45cdf99785ffe10b0869714d1db60e5d&oe=5487EF5E&__gda__=1421379695_3a6cd8942dd61dcbaa612748f3a218b0"
     },
     "name" : "Stragan Zdrowia",
+    "open" : {
+      "en" : "Mon-Fri: 09:00-17:00, Sat: 09:00-13:00",
+      "pl" : "pon.-piąt.: 09:00-17:00, sob.: 09:00-13:00"
+    },
+    "phone" : "509 708 296, 796 838 005",
     "position" : {
       "lat" : 51.120344,
       "lng" : 17.013108
@@ -1114,20 +1124,17 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "web" : "http://straganzdrowia.pl",
-    "fb" : "StraganZdrowia",
-    "open" : {
-      "en" : "Mon-Fri: 09:00-17:00, Sat: 09:00-13:00",
-      "pl" : "pon.-piąt.: 09:00-17:00, sob.: 09:00-13:00"
-    }
+    "type" : 6,
+    "web" : "http://straganzdrowia.pl"
   }, {
     "address" : "Magnolia Park, Legnicka 58, Wrocław",
     "desc" : {
       "en" : "First floor",
       "pl" : "I piętro"
     },
+    "dirLink" : "https://www.google.pl/maps/dir//Magnolia+Park,+Legnicka+58,+50-051+Wrocław/@51.119106,16.989032,{{zoom}}",
     "email" : "vegelife@vegelife.pl",
-    "phone" : "71 390 65 87",
+    "fb" : "385188948231973",
     "filters" : [ "vegeBar" ],
     "id" : 34,
     "image" : {
@@ -1138,6 +1145,11 @@
       "src" : "http://www.vegelife.pl/images/logo.png"
     },
     "name" : "Vege Life",
+    "open" : {
+      "en" : "Mon-Sun: 08:30-21:00",
+      "pl" : "pon.-niedz.: 08:30-21:00"
+    },
+    "phone" : "71 390 65 87",
     "position" : {
       "lat" : 51.119106,
       "lng" : 16.989032
@@ -1146,19 +1158,13 @@
       "en" : "food and gastronomy",
       "pl" : "jedzenie i gastronomia"
     },
-    "dirLink" : "https://www.google.pl/maps/dir//Magnolia+Park,+Legnicka+58,+50-051+Wrocław/@51.119106,16.989032,{{zoom}}",
-    "web" : "http://vegelife.pl",
-    "fb" : "385188948231973",
-    "open" : {
-      "en" : "Mon-Sun: 08:30-21:00",
-      "pl" : "pon.-niedz.: 08:30-21:00"
-    }
+    "web" : "http://vegelife.pl"
   }, {
     "address" : "Żwirki i Wigury 5/3B, Wrocław",
+    "dirLink" : "https://www.google.pl/maps/dir//Sklep+'Jesz+Zdrowo',+Franciszka+Żwirki+i+Stanisława+Wigury,+Wrocław/@51.098049,16.935679,{{zoom}}",
     "email" : "sklep@jesz-zdrowo.pl",
-    "phone" : "796 144 884",
+    "fb" : "JeszZdrowo",
     "filters" : [ "vegeFood" ],
-    "type" : 2,
     "id" : 35,
     "image" : {
       "size" : {
@@ -1168,6 +1174,11 @@
       "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/c32.90.526.526/s200x200/530821_259947440803162_659507866_n.png?oh=93c8d7d3cc7b918c290df3d2c0338361&oe=54B6AB97&__gda__=1421136214_c448cd88c444a91a8149d26607da9463"
     },
     "name" : "Jesz Zdrowo",
+    "open" : {
+      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-14:00",
+      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-14:00"
+    },
+    "phone" : "796 144 884",
     "position" : {
       "lat" : 51.098049,
       "lng" : 16.935679
@@ -1176,18 +1187,12 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "dirLink" : "https://www.google.pl/maps/dir//Sklep+'Jesz+Zdrowo',+Franciszka+Żwirki+i+Stanisława+Wigury,+Wrocław/@51.098049,16.935679,{{zoom}}",
-    "web" : "http://jesz-zdrowo.pl",
-    "fb" : "JeszZdrowo",
-    "open" : {
-      "en" : "Mon-Fri: 10:00-18:00, Sat: 10:00-14:00",
-      "pl" : "pon.-piąt.: 10:00-18:00, sob.: 10:00-14:00"
-    }
+    "type" : 6,
+    "web" : "http://jesz-zdrowo.pl"
   }, {
     "address" : "Poranna 46 B, Wrocław",
-    "phone" : "780 044 916",
+    "dirPosition" : true,
     "filters" : [ "vegeFood" ],
-    "type" : 6,
     "id" : 36,
     "image" : {
       "size" : {
@@ -1197,6 +1202,11 @@
       "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/10616000_525852007547451_7361141789112383294_n.png?oh=059c36e3708aa17e38536d15a5b5d879&oe=54C8E856&__gda__=1422864540_b995a495dbdb26bc2f09941b8b93c8f8"
     },
     "name" : "Eko-Farma",
+    "open" : {
+      "en" : "Mon-Fri: 11:00-19:00, Sat: 09:00-14:00",
+      "pl" : "pon.-piąt.: 11:00-19:00, sob.: 09:00-14:00"
+    },
+    "phone" : "780 044 916",
     "position" : {
       "lat" : 51.0719522,
       "lng" : 16.9921406
@@ -1205,18 +1215,14 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "dirPosition" : true,
-    "web" : "http://ekofarmawroclaw.pl",
-    "open" : {
-      "en" : "Mon-Fri: 11:00-19:00, Sat: 09:00-14:00",
-      "pl" : "pon.-piąt.: 11:00-19:00, sob.: 09:00-14:00"
-    }
+    "type" : 6,
+    "web" : "http://ekofarmawroclaw.pl"
   }, {
     "address" : "Pomorska 32, Wrocław",
+    "dirPosition" : true,
     "email" : "sklep@wrytmieziemi.pl",
-    "phone" : "605 578 893",
+    "fb" : "WRytmieZiemi",
     "filters" : [ "vegeFood" ],
-    "type" : 2,
     "id" : 37,
     "image" : {
       "size" : {
@@ -1226,6 +1232,11 @@
       "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/p160x160/10313466_633401433417249_5749636331967982846_n.jpg?oh=6ac85be987bc9d12202d02d549792b95&oe=54C91DD3&__gda__=1422545518_006f8fb5ae1cd23dfd1dffcfa3306bc7"
     },
     "name" : "W Rytmie Ziemi",
+    "open" : {
+      "en" : "Mon,Tue,Thu: 10:00-18:00, Wed,Fri: 10-17, Sat: 11:00-14:00",
+      "pl" : "pon.,wt.,czw.: 10:00-18:00, śr.,piąt.: 10-17, sob.: 11:00-14:00"
+    },
+    "phone" : "605 578 893",
     "position" : {
       "lat" : 51.1201691,
       "lng" : 17.03024
@@ -1234,19 +1245,12 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "dirPosition" : true,
-    "web" : "http://wrytmieziemi.pl",
-    "open" : {
-      "en" : "Mon,Tue,Thu: 10:00-18:00, Wed,Fri: 10-17, Sat: 11:00-14:00",
-      "pl" : "pon.,wt.,czw.: 10:00-18:00, śr.,piąt.: 10-17, sob.: 11:00-14:00"
-    },
-    "fb" : "WRytmieZiemi"
+    "type" : 2,
+    "web" : "http://wrytmieziemi.pl"
   }, {
     "address" : "Trawowa 55A, Wrocław",
     "email" : "zamowienia@jemcodobre.pl",
-    "phone" : "666 608 805",
     "filters" : [ "vegeFood" ],
-    "type" : 6,
     "id" : 38,
     "image" : {
       "size" : {
@@ -1256,6 +1260,11 @@
       "src" : "http://jemcodobre.pl/logo-eko-sklepu-jemcodobre.png"
     },
     "name" : "Jem Co Dobre",
+    "open" : {
+      "en" : "Mon-Sat: 08:00-20:00, Sun: 08:00-16:00",
+      "pl" : "pon.-sob.: 08:00-20:00, niedz.: 08:00-16:00"
+    },
+    "phone" : "666 608 805",
     "position" : {
       "lat" : 51.099809,
       "lng" : 16.950717
@@ -1264,15 +1273,35 @@
       "en" : "healthy food store",
       "pl" : "sklep ze zdrową żywnością"
     },
-    "web" : "http://jemcodobre.pl",
+    "type" : 6,
+    "web" : "http://jemcodobre.pl"
+  }, {
+    "address" : "Żelazna 52, Wrocław",
+    "email" : "maratonczyk.sklep@gmail.com",
+    "phone" : "501 339 484, 501 608 450",
+    "filters" : [ "vegeFood" ],
+    "type" : 6,
+    "id" : 39,
+    "image" : {
+      "size" : {
+        "height" : 32,
+        "width" : 60
+      },
+      "src" : "http://static.istore.pl/istore/32232/photos/original/38857629.jpg"
+    },
+    "name" : "Maratończyk",
+    "position" : {
+      "lat" : 51.098683,
+      "lng" : 17.006012
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://maratonczyksklep.pl",
     "open" : {
-      "en" : "Mon-Sat: 08:00-20:00, Sun: 08:00-16:00",
-      "pl" : "pon.-sob.: 08:00-20:00, niedz.: 08:00-16:00"
+      "en" : "Mon-Fri: 10:00-19:00, Sat: 09:00-15:00",
+      "pl" : "pon.-piąt.: 10:00-19:00, sob.: 09:00-15:00"
     }
-  }     ],
-  "news" : {
-    "fbFeeds" : {
-      "timestamp": 1
-    }
-  }
+  }  ]
 }

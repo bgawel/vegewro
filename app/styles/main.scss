@@ -1,7 +1,8 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
-$grid-float-breakpoint: 992px;
+$grid-float-breakpoint: 1201px;
 @import 'sass-bootstrap/lib/bootstrap';
+@import 'guide';
 
 @font-face {
   font-family: 'Roboto';
@@ -59,6 +60,10 @@ body {
   }
   
   .action-news {
+    padding-left: 3px;
+  }
+  
+  .action-guide {
     padding-left: 3px;
   }
   
@@ -482,7 +487,25 @@ a.anchor {
   }
 }
  
+@media screen and (max-width: 1200px) {
+  .navbar { 
+    .nav.navbar-nav li {
+      padding-top: 0;
+    }
+    
+    .action-map, .action-filters, .action-addresses, .action-news, .action-guide, .action-contactUs {
+      padding-left: 5px;
+    }
+  }
+      
+  .search-input {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+
 @media screen and (max-width: 991px) {
+
   body {
     padding-top: 60px;
   }
@@ -499,14 +522,6 @@ a.anchor {
       z-index: 1030;
       top: 0;
       border-width: 0 0 1px;
-    }
-    
-    .nav.navbar-nav li {
-      padding-top: 0;
-    }
-    
-    .action-map, .action-filters, .action-addresses, .action-news, .action-contactUs {
-      padding-left: 5px;
     }
   }
   
@@ -532,11 +547,6 @@ a.anchor {
     .navbar.navbar-specific {
       border-radius: 0;
     }
-  }
-  
-  .search-input {
-    margin-left: 0;
-    margin-right: 15px;
   }
   
   #map {

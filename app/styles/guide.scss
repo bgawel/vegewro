@@ -1,0 +1,56 @@
+.guide-section {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 0.9em;
+  
+  .vegan {
+    color: green;
+  }
+  
+  .warning {
+    color: red;
+  }
+  
+  .is-small {
+    font-size: 1.2em;
+  }
+  
+  .caption {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .cosmetics {
+    padding-top: 15px;
+    border-top: 1px solid #e5e5e5;
+    
+    .cosmetics-image {
+      margin-top: -14px;
+    }
+
+    .logo-caption {
+      padding-left: 5px;
+    }
+    
+    .comment {
+      margin-left: -15px;
+    }
+    
+    .search-key {
+      font-size: 1.1em;
+      color: green;
+    } 
+    
+    ul {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  .breadcrumb-section {
+    margin-top: -60px;
+  }
+}

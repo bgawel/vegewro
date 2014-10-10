@@ -14,6 +14,10 @@ angular.module('vegewroApp', [
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
     $routeProvider
+      .when('/guide', {
+        templateUrl: 'views/guide.html',
+        controller: 'GuideCtrl'
+      })
       .when('/:lang?', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
@@ -31,7 +35,9 @@ angular.module('vegewroApp', [
         if (reload === false) {
           var lastRoute = $route.current;
           var un = $rootScope.$on('$locationChangeSuccess', function () {
-              $route.current = lastRoute;
+              if ($route.current.originalPath !== '/guide') {
+                $route.current = lastRoute;
+              }
               un();
             });
         }

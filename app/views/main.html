@@ -41,7 +41,12 @@
           <a class="action" href ng-click="scrollTo('newsAnchor')">
             <span class="glyphicon glyphicon-info-sign"></span><span class="action-news">{{i18n.news}}</span>
           </a>
-        </li>        
+        </li>
+        <li>
+          <a class="action" href="#/guide">
+            <span class="glyphicon glyphicon-book"></span><span class="action-guide">{{i18n.guide}}</span>
+          </a>
+        </li>             
         <li>
           <a class="action" href data-toggle="collapse" data-target="#contactUs">
             <span class="glyphicon glyphicon-bullhorn"></span><span class="action-contactUs">{{i18n.newPlace}}</span>
@@ -125,7 +130,7 @@
     <a class="anchor" id="addressesAnchor"></a>
     <h4 class="section-title caption anchor" id="addresses">{{i18n.bAddresses}}</h4>
     <accordion close-others="'true'">
-      <accordion-group ng-repeat="filter in filters | orderBy:'order'" is-open="filter.open">
+      <accordion-group ng-repeat="filter in filters.$asArray | orderBy:'order'" is-open="filter.open">
         <accordion-heading>
           <div>
             <span ng-bind-html="filter.htmlTitle"></span> <span class="badge"> {{addresses[filter.id].length}}</span>

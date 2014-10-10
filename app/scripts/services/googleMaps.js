@@ -57,6 +57,10 @@ angular.module('vegewroApp')
         return new google.maps.Marker(markerOptions);
       },
       
+      newLatLng: function(lat, lng) {
+        return new google.maps.LatLng(lat, lng);
+      },
+      
       makeDirectionsLink: function(directionsHints, position, zoom, lang) {
         if (directionsHints.dirLink) {
           return directionsHints.dirLink.replace('{{zoom}}', zoom + 'z') + '?hl=' + lang;
@@ -78,8 +82,16 @@ angular.module('vegewroApp')
         return new InfoBox(infoBoxOptions);
       },
       
-      addMarkerClickedListener: function(marker, infoBoxClicked) {
-        google.maps.event.addListener(marker, 'click', infoBoxClicked);
+      putOnMap: function(where, what) {
+        map.controls[where].push(what);
+      },
+      
+      addListener: function(object, event, callback) {
+        google.maps.event.addListener(object, event, callback);
+      },
+      
+      triggerEvent: function(object, event) {
+        google.maps.event.trigger(object, event);
       }
     };
   }]);

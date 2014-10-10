@@ -35,7 +35,8 @@ angular.module('vegewroApp')
         searching: 'Wyszukiwanie...',
         noResult: 'Brak wyników wyszukiwania',
         youHere: 'Jesteś tutaj!',
-        geoerror: 'Błąd geolokalizacji'
+        geoerror: 'Błąd geolokalizacji',
+        guide: 'przewodnik'
       },
       
       en : {
@@ -69,7 +70,8 @@ angular.module('vegewroApp')
         searching: 'Searching...',
         noResult: 'No results found',
         youHere: 'You are here!',
-        geoerror: 'Geolocalization error'
+        geoerror: 'Geolocation error',
+        guide: 'guide'
       }
     };
   }]);

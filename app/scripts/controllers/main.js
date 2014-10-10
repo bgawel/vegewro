@@ -2,9 +2,10 @@
 
 angular.module('vegewroApp')
   .controller('MainCtrl', ['$scope', '$window', 'backend', 'locale', 'formatter', '$q', 'fb', 'googleMaps', 'news',
-                           function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps, news) {
+                           'geoloc',
+                           function ($scope, $window, backend, locale, formatter, $q, fb, googleMaps, news, geoloc) {
 
-  var map, config, markers = [], lastInfoBoxClicked, mapCenter;
+  var map, config, markers = [], lastInfoBoxClicked;
   var fbFeeds = [];
   $scope.filters = {$asArray:[]};
   $scope.addresses = {};
@@ -34,41 +35,16 @@ angular.module('vegewroApp')
     var scrollTo = '$(\'html,body\').animate({scrollTop:$(\'#filtersAnchor\').offset().top},50);';
     mapFiltersDiv.innerHTML = '<div class="map-filters action-mobile"><a class="action" href="" onclick="' + scrollTo +
       '">' + $scope.i18n.filters + '</span></a></div>';
-    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(mapFiltersDiv);
-  }
-  
-  function createGeolocOnGoogleMap() {
-    if (navigator.geolocation) {
-      var mapLocDiv = document.createElement('div');
-      window.locUser = function() {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var userCoords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-          googleMaps.setMapZoomIfSmallerThan(config.zoomWhenMarkerClicked);
-          new google.maps.Marker({
-            position: userCoords,
-            map: map,
-            title: $scope.i18n.youHere,
-            icon: 'images/rabbit.png'
-          });
-          map.panTo(userCoords);
-        }, function(error) {
-          console.log('Geolocation error occurred: ' + error);
-          alert($scope.i18n.geoerror + ': ' + error.message);
-        },
-        {maximumAge: 100, timeout: 30000, enableHighAccuracy: true});
-      };
-      mapLocDiv.innerHTML = '<div class="map-loc"><a class="action" href="" ' +
-        'onclick="window.locUser()"><img src="images/target.png"/></a></div>';
-      map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(mapLocDiv);
-    } else {
-      console.log('Geolocation is not supported');
-    }
+    googleMaps.putOnMap(google.maps.ControlPosition.RIGHT_TOP, mapFiltersDiv);
   }
   
   function createGoogleMap() {
     $scope.map = map = googleMaps.newMap(document.getElementById('map'), config.mapOptions);
     createFiltersOnGoogleMap();
-    createGeolocOnGoogleMap();
+    geoloc.onGoogleMap(map, config, $scope.i18n);
+    googleMaps.addListener(map, 'click', function() {
+      $('input.search-query').blur();
+    });
   }
 
   var exclusiveMode = function() {
@@ -206,7 +182,7 @@ angular.module('vegewroApp')
   function closeInfoBox(infoBox) {
     if (infoBox) {
       infoBox.close();
-      google.maps.event.trigger(infoBox, 'closeclick');
+      googleMaps.triggerEvent(infoBox, 'closeclick');
     }
   }
   
@@ -221,7 +197,6 @@ angular.module('vegewroApp')
       marker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
       googleMaps.setMapZoomIfSmallerThan(config.zoomWhenMarkerClicked);
       map.panTo(marker.getPosition());
-      mapCenter = map.getCenter();
       lastInfoBoxClicked = infoBox;
     };
     var infoBoxClosed = function() {
@@ -234,8 +209,8 @@ angular.module('vegewroApp')
       }
     };
     marker.infoBoxClicked = infoBoxClicked;
-    googleMaps.addMarkerClickedListener(marker, infoBoxClicked);
-    google.maps.event.addListener(infoBox, 'closeclick', infoBoxClosed);
+    googleMaps.addListener(marker, 'click', infoBoxClicked);
+    googleMaps.addListener(infoBox, 'closeclick', infoBoxClosed);
   }
   
   function addToSearchable(place) {
