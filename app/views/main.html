@@ -93,7 +93,7 @@
      --><span class="caption">):</span>
       </p>
       <p class="sub-filter">
-        <a href ng-click="enableFilters('vegan')" class="action action-link filter-helper">{{i18n.veganOnly}}</a>
+        <a href ng-click="enableFilters('vegan')" class="action action-link filter-helper">{{i18n.vegan}}</a>
       </p>
       <p ng-repeat="filter in filters.$asArray | filter:{type: 'vegan'} | orderBy:'order'">
         <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
@@ -130,34 +130,37 @@
     <a class="anchor" id="addressesAnchor"></a>
     <h4 class="section-title caption anchor" id="addresses">{{i18n.bAddresses}}</h4>
     <accordion close-others="'true'">
-      <accordion-group ng-repeat="filter in filters.$asArray | orderBy:'order'" is-open="filter.open">
-        <accordion-heading>
-          <div>
-            <span ng-bind-html="filter.htmlTitle"></span> <span class="badge"> {{addresses[filter.id].length}}</span>
-            <span class="pull-right glyphicon" 
-              ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}">
-            </span>
-          </div>
-        </accordion-heading>
-        <div class="row">
-          <div class="options" ng-show="filter.type === 'products'">
-            <input type="checkbox" ng-init="stationary=true" ng-model="stationary"><!--
-            --><span class="caption" ng-click="stationary = !stationary">{{i18n.stationary}}</span>          
-            <input class="second" type="checkbox" ng-init="online=true" ng-model="online"><!--
-            --><span class="caption" ng-click="online = !online"> {{i18n.online}}</span>
-          </div>
-          <div ng-repeat="address in addresses[filter.id] | shopFilter:{online: online, stationary: stationary} | orderBy:'title'">
-            <div class="{{$last && $even ? 'col-md-12' : 'col-md-6'}}">
-              <a href ng-click="address.showOnMap()" class="action action-link" tooltip-placement="right" 
-                  tooltip="{{i18n.showOnMap}}">
-                <span class="glyphicon glyphicon-hand-up show-on-map"></span>
-              </a>
-              <div class="address-box" ng-bind-html="address.boxText"></div>
+      <span ng-repeat="type in ['vegan', 'vege', 'products']">
+        <h5 class="sub-address-title caption">{{i18n[type]}}:</h5>
+        <accordion-group ng-repeat="filter in filters.$asArray | filter:{type: type} | orderBy:'order'" is-open="filter.open">
+          <accordion-heading>
+            <div>
+              <span ng-bind-html="filter.htmlTitle"></span> <span class="badge"> {{addresses[filter.id].length}}</span>
+              <span class="pull-right glyphicon" 
+                ng-class="{'glyphicon-chevron-down': filter.open, 'glyphicon-chevron-right': !filter.open}">
+              </span>
             </div>
-            <div ng-if="$odd" class="clearfix"></div>
+          </accordion-heading>
+          <div class="row">
+            <div class="options" ng-show="filter.type === 'products'">
+              <input type="checkbox" ng-init="stationary=true" ng-model="stationary"><!--
+              --><span class="caption" ng-click="stationary = !stationary">{{i18n.stationary}}</span>          
+              <input class="second" type="checkbox" ng-init="online=true" ng-model="online"><!--
+              --><span class="caption" ng-click="online = !online"> {{i18n.online}}</span>
+            </div>
+            <div ng-repeat="address in addresses[filter.id] | shopFilter:{online: online, stationary: stationary} | orderBy:'title'">
+              <div class="{{$last && $even ? 'col-md-12' : 'col-md-6'}}">
+                <a href ng-click="address.showOnMap()" class="action action-link" tooltip-placement="right" 
+                    tooltip="{{i18n.showOnMap}}">
+                  <span class="glyphicon glyphicon-hand-up show-on-map"></span>
+                </a>
+                <div class="address-box" ng-bind-html="address.boxText"></div>
+              </div>
+              <div ng-if="$odd" class="clearfix"></div>
+            </div>
           </div>
-        </div>
-      </accordion-group>
+        </accordion-group>
+      </span>
     </accordion>
   </div>
   <div class="row news-section">

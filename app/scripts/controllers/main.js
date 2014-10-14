@@ -33,8 +33,8 @@ angular.module('vegewroApp')
   function createFiltersOnGoogleMap() {
     var mapFiltersDiv = document.createElement('div');
     var scrollTo = '$(\'html,body\').animate({scrollTop:$(\'#filtersAnchor\').offset().top},50);';
-    mapFiltersDiv.innerHTML = '<div class="map-filters action-mobile"><a class="action" href="" onclick="' + scrollTo +
-      '">' + $scope.i18n.filters + '</span></a></div>';
+    mapFiltersDiv.innerHTML = '<div class="map-filters action-mobile"><span class="action" onclick="' + scrollTo +
+      '">' + $scope.i18n.filters + '</span></div>';
     googleMaps.putOnMap(google.maps.ControlPosition.RIGHT_TOP, mapFiltersDiv);
   }
   

@@ -1,8 +1,35 @@
+.breadcrumb-section {
+  
+  background-color: #303233;
+  color: #999999;
+  
+  .breadcrumb {
+    margin-left: -15px;
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    
+    a {
+      color: #999999;
+      &:hover, &:focus {
+        color: white;
+      }
+    }
+    
+    .brand-name {
+      margin-left: -10px;
+    }
+  }
+}
+
 .guide-section {
+
+  background-color: whitesmoke;
+  padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   font-size: 0.9em;
-  
+
   .vegan {
     color: green;
   }
@@ -39,12 +66,24 @@
     .search-key {
       font-size: 1.1em;
       color: green;
-    } 
+    }
     
     ul {
       padding-left: 30px;
       padding-right: 30px;
     }
+    
+    .more-info {
+      padding-top: 5px;
+    }
+    
+    .more-details {
+      padding-left: 15px;
+    }
+  }
+  
+  .general {
+    padding-top: 15px;
   }
 }
 

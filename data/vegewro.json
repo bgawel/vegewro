@@ -1,15 +1,15 @@
 {
   "config" : {
-    "fbAppId" : "",
     "fbToken" : "",
+    "fbAppId" : "",
     "googleMapsToken" : "",
     "cacheFeedsFor" : 660000,
     "fbPostsNoOlderThan" : 2592000000,
     "filters" : {
       "veganBar" : {
         "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan bars, restaurants, coffee houses",
-          "pl" : "<span class=\"green\">W</span>egańskie bary, restauracje, kawiarnie"
+          "en" : "Vegan bars, restaurants, coffee houses",
+          "pl" : "Wegańskie bary, restauracje, kawiarnie"
         },
         "icon" : {
           "anchor" : {
@@ -32,8 +32,8 @@
       },
       "veganCatering" : {
         "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan catering",
-          "pl" : "<span class=\"green\">W</span>egański katering"
+          "en" : "Vegan catering",
+          "pl" : "Wegański katering"
         },
         "icon" : {
           "anchor" : {
@@ -56,8 +56,8 @@
       },
       "veganDelivery" : {
         "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan food delivery",
-          "pl" : "<span class=\"green\">W</span>egańskie dowozy na telefon"
+          "en" : "Vegan food delivery",
+          "pl" : "Wegańskie dowozy na telefon"
         },
         "icon" : {
           "size" : {
@@ -76,8 +76,8 @@
       },
       "vegeBar" : {
         "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian bars, restaurants, coffee houses",
-          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariańskie bary, restauracje, kawiarnie"
+          "en" : "Vegan-vegetarian bars, restaurants, coffee houses",
+          "pl" : "Wegańsko-wegetariańskie bary, restauracje, kawiarnie"
         },
         "icon" : {
           "anchor" : {
@@ -100,8 +100,8 @@
       },
       "vegeCatering" : {
         "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian catering",
-          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariański katering"
+          "en" : "Vegan-vegetarian catering",
+          "pl" : "Wegańsko-wegetariański katering"
         },
         "icon" : {
           "anchor" : {
@@ -124,8 +124,8 @@
       },
       "vegeDelivery" : {
         "htmlTitle" : {
-          "en" : "<span class=\"green\">V</span>egan-<span class=\"green\">v</span>egetarian food delivery",
-          "pl" : "<span class=\"green\">W</span>egańsko-<span class=\"green\">w</span>egetariańskie dowozy na telefon"
+          "en" : "Vegan-vegetarian food delivery",
+          "pl" : "Wegańsko-wegetariańskie dowozy na telefon"
         },
         "icon" : {
           "size" : {
@@ -144,8 +144,8 @@
       },
       "vegeFood" : {
         "htmlTitle" : {
-          "en" : "Stores with <span class=\"green\">v</span>ege and <span class=\"green\">e</span>co food",
-          "pl" : "Sklepy z <span class=\"green\">w</span>ege i <span class=\"green\">e</span>ko żywnością"
+          "en" : "Stores with vege and eco food",
+          "pl" : "Sklepy z wege i eko żywnością"
         },
         "icon" : {
           "size" : {
@@ -164,8 +164,8 @@
       },
       "vegeShoes" : {
         "htmlTitle" : {
-          "en" : "Stores with <span class=\"green\">v</span>ege shoes",
-          "pl" : "Sklepy z <span class=\"green\">w</span>ege butami"
+          "en" : "Stores with vege shoes",
+          "pl" : "Sklepy z wege butami"
         },
         "icon" : {
           "size" : {
@@ -184,8 +184,8 @@
       },
       "vegeCosmetics" : {
         "htmlTitle" : {
-          "en" : "Stores with <span class=\"green\">e</span>co cosmetics and detergents",
-          "pl" : "Sklepy z <span class=\"green\">e</span>ko kosmetykami i detergentami"
+          "en" : "Stores with eco cosmetics and detergents",
+          "pl" : "Sklepy z eko kosmetykami i detergentami"
         },
         "icon" : {
           "anchor" : {

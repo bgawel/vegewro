@@ -52,6 +52,12 @@ body {
 }
 
 .navbar {
+  background-color: #303233;
+  
+  &:focus, &:hover {
+    color: #000;
+  }
+  
   border-radius: 0;
   margin-bottom: 0;
   
@@ -92,10 +98,10 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 0;
-  
-  .brand-name {
-    margin-left: -15px;
-  }
+}
+
+.brand-name {
+  margin-left: -15px;
 }
 
 .search {
@@ -115,7 +121,7 @@ body {
     cursor: pointer;
     z-index: 9999;
     position: absolute;
-    background-color: #222222;
+    background-color: #303233;
     color:  #E6E6E6;
     font-size: 0.9em;
     font-weight: 300;
@@ -234,6 +240,40 @@ body {
     overflow: hidden;
     padding: 1px 3px;
     position: relative;
+    cursor: pointer;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-user-select: none;
+    background-clip: padding-box;
+    background-color: #fff;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15);
+    border-image: none;
+    border-style: solid solid solid solid;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-width: 1px 1px 1px 1px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    right: 5px;
+    color: #565656;
+    
+    &:focus, &:hover {
+      background-color: #ebebeb;
+    }
+    
+    img {
+      opacity: 0.8;
+      filter: alpha(opacity=80); /* For IE8 and earlier */
+    
+      &:hover, &:focus {
+        opacity: 1;
+        filter: alpha(opacity=100);
+      }
+    }
   } 
 }
 
@@ -414,6 +454,11 @@ body {
     font-size: 1.0em;
   }
   
+  .sub-address-title {
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+  
   .address-box {
     padding-left: 0;
     padding-bottom: 20px;
@@ -567,16 +612,22 @@ a.anchor {
       border-top-left-radius: 2px;
       border-width: 1px 1px 1px 1px;
       box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
-      color: #565656;
       direction: ltr;
       font-family: Roboto,Arial,sans-serif;
       font-size: 11px;
       min-width: 40px;
       overflow: hidden;
-      padding: 1px 6px;
       position: relative;
       text-align: center;
       right: 5px;
+      padding: 1px 6px;
+      color: #565656;
+      cursor: pointer;
+        
+      &:focus, &:hover {
+        color: #000;
+        background-color: #ebebeb;
+      }
     } 
   }
 }

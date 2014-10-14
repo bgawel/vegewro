@@ -17,7 +17,7 @@ angular.module('vegewroApp')
         from: 'od',
         contact: 'kontakt',
         directions: 'wskazówki dojazdu',
-        veganOnly: 'Kuchnia wegańska',
+        vegan: 'Kuchnia wegańska',
         vege: 'Kuchnia wegańsko-wegetariańska',
         products: 'Sklepy przyjazne wegetarianom',
         showOnMap: 'Pokaż miejsce na mapie',
@@ -36,7 +36,11 @@ angular.module('vegewroApp')
         noResult: 'Brak wyników wyszukiwania',
         youHere: 'Jesteś tutaj!',
         geoerror: 'Błąd geolokalizacji',
-        guide: 'przewodnik'
+        guide: 'przewodnik',
+        gePermissionDenied: 'Włącz GPS i spróbuj ponownie',
+        gePositionUnavailable: 'Informacja o Twojej lokalizacji jest niedostępna',
+        geTimeout: 'Upłynął limit czasu określania Twojej lokalizacji',
+        geUnknownError: 'Wystąpił niespodziewany błąd'
       },
       
       en : {
@@ -52,7 +56,7 @@ angular.module('vegewroApp')
         from: 'from',
         contact: 'contact',
         directions: 'directions',
-        veganOnly: 'Vegan cuisine',
+        vegan: 'Vegan cuisine',
         vege: 'Vegan-vegetarian cuisine',
         products: 'Vege-friendly stores',
         showOnMap: 'Show place on map',
@@ -71,7 +75,11 @@ angular.module('vegewroApp')
         noResult: 'No results found',
         youHere: 'You are here!',
         geoerror: 'Geolocation error',
-        guide: 'guide'
+        guide: 'guide',
+        gePermissionDenied: 'Enable GPS and try again',
+        gePositionUnavailable: 'Location information is unavailable',
+        geTimeout: 'The request to get your location timed out',
+        geUnknownError: 'An unknown error occurred'
       }
     };
   }]);

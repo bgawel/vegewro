@@ -1,19 +1,22 @@
-<div class="container">
-  <div class="row breadcrumb-section">
+<div class="breadcrumb-section">
+  <div class="container">
     <ol class="breadcrumb">
-      <li><a href="#">home</a></li>
+      <li>
+        <a href="#">
+          <img src="images/logo.png" width="43" height="37"/>
+          <span class="brand-name">rocław <span class="green">vege</span> map</span>
+        </a>
+      </li>
       <li class="active">{{i18n.guide}}</li>
     </ol>
   </div>
+</div>
+<div class="container">
   <div class="row guide-section">
     <p class="intro"><b>VegeWro.pl</b> udostępnia listę miejsc przyjaznych wegetarianom.
       Nie mamy jednak możliwości zweryfikowania, czy wszystkie produkty, oferowane przez promowane na naszej stronie sklepy,
       są przyjazne dla środowiska, a zwłaszcza, czy nie powstają kosztem cierpienia i życia zwierząt.
       Dlatego w niniejszej sekcji publikować będziemy przewodniki po produktach wege-przyjaznych.
-    </p>
-    <p>
-      Zakres eksploatacji zwierząt przez człowieka: 
-      <a href="http://www.peta.org/living/beauty/animal-ingredients-list/">lista składników pochodzenia zwierzęcego</a>
     </p>
     <div class="cosmetics">
       <h4 class="caption">
@@ -21,22 +24,23 @@
       </h4>
       <div class="lead-text">
         <p>Źródłem informacji na temat wege-przyjaznych produktów kosmetycznych i środków czystości są wykazy firm 
-          <b>cruelty-free</b>, udostępnianie przez organizacje non-profit, zajmujące się walką o prawa zwierząt oraz ich ochroną.
+          <b>cruelty-free</b>, udostępnianie przez organizacje non-profit, zajmujące się walką o prawa zwierząt oraz ich ochroną
+          <a class="action more" href data-toggle="collapse" data-target="#moreCosmetics" 
+              ng-init="moreCosmetics=false" ng-click="moreCosmetics=!moreCosmetics">
+            <span class="glyphicon" 
+              ng-class="{'glyphicon-chevron-down': moreCosmetics, 'glyphicon-chevron-right': !moreCosmetics}">
+            </span>
+          </a>
         </p>
+      </div>
+      <div id="moreCosmetics" class="more-info collapse">
         <p>
           Występowanie firmy na liście firm <b>cruelty-free nie gwarantuje</b> jednak, że produkuje ona kosmetyki / środki czystości
           przyjazne wegetarianom; firma może nie testować swoich produktów na zwierzętach, ale wykorzystywać składniki
           pozyskiwane z martwych zwierząt, na przykład placentę, dodawaną do kremów, a uzyskiwaną z łożysk.
-          Dlatego użyteczne są tylko te listy cruelty-free, na których zaznaczono firmy odpowiednie dla wegan i wegetarian.
+          Dlatego użyteczne są tylko te wyszukiwarki / listy cruelty-free, na których zaznaczono firmy odpowiednie dla wegan i wegetarian.
         <p>
-        <a class="action more" href data-toggle="collapse" data-target="#moreAboutCosmetics" 
-            ng-init="more=false" ng-click="more=!more">
-          <span ng-show="!more">[więcej]</span>
-          <span ng-show="more">[mniej]</span>
-        </a>
-      </div>
-      <div id="moreAboutCosmetics" class="collapse">
-        <ul>
+        <ul class="more-details">
           <li>
             <b>Zakaz testowania kosmetyków na zwierzętach w UE</b>
             <p>
@@ -77,7 +81,7 @@
         <p>[<i>na podstawie:</i> <a href="http://www.gocrueltyfree.org/consumer/faqs">gocrueltyfree.org</a>]</p>
       </div>
       <div>
-        <h5 class="caption">Wyszukiwarki (w kolejności rekomendacji)</h5>
+        <h5 class="caption">Wyszukiwarki cruelty-free (w kolejności rekomendacji)</h5>
         <ul>
           <li>
             <p class="search-key">
@@ -86,35 +90,43 @@
              --><span class="logo-caption">Wyszukiwarka</span><!--
            --></a>
               <b>Cruelty Free International</b>
+              <a class="action" href data-toggle="collapse" data-target="#moreCrueltyfreeint" 
+                  ng-init="moreCrueltyfreeint=false" ng-click="moreCrueltyfreeint=!moreCrueltyfreeint">
+                <span class="glyphicon" 
+                  ng-class="{'glyphicon-chevron-down': moreCrueltyfreeint, 'glyphicon-chevron-right': !moreCrueltyfreeint}">
+                </span> 
+              </a>
             </p>
-            <p>
-              Dostępne kryteria wyszukiwania: kosmetyki, detergenty, produkty <b>wegetariańskie</b>, <b>wegańskie</b>,
-              nazwa producenta, dostępność online, kraj. Dodatkowo można wyświetlić profil firmy.
-            </p>
-            <p>
-              <a href="http://www.crueltyfreeinternational.org">Cruelty Free International</a>
-              (założona przez <a href="http://www.buav.org/">BUAV</a>) zajmuje się certyfikowaniem firm, 
-              kandydujących do otrzymania znaku <a href="http://www.leapingbunny.org">Leaping Bunny</a>.<br>
-              Firma aspirująca do otrzymania certyfikatu, musi zgodzić się na przeprowadzenie niezależnego audytu produkcji i 
-              dostaw składników.
-            </p>
-            <p>
-              Organizacje współtworzące program <a href="http://www.leapingbunny.org">Leaping Bunny</a>,
-              a składające się na Coalition for Consumer Information on Cosmetics (CCIC):<br>
-              <a href="http://www.aavs.org">American Anti-Vivisection Society</a><br>
-              <a href="http://www.animalalliance.ca">Animal Alliance of Canada</a><br>
-              <a href="http://www.beautywithoutcruelty.com">Beauty Without Cruelty</a><br>
-              <a href="http://www.ddal.org">Doris Day Animal League</a><br>
-              <a href="http://www.humanesociety.com/">The Humane Society of Canada</a><br>
-              <a href="http://www.hsus.org/">The Humane Society of the United States</a><br>
-              <a href="http://www.mspca.org">MSPCA Center for Laboratory Animal Welfare</a><br>
-              <a href="http://www.navs.org">National Anti-Vivisection Society</a><br>
-              <a href="http://www.neavs.org/">New England Anti-Vivisection Society</a>
-            </p>
-            <p>
-              Wyszukiwarka uwzględnia również włoskich producentów z listy
-              <a href="http://www.lav.it/cosa-facciamo/vivisezione/le-aziende-cruelty-free">LAV</a>
-            </p>
+            <div id="moreCrueltyfreeint" class="more-info collapse">
+              <p>
+                Dostępne kryteria wyszukiwania: kosmetyki, detergenty, produkty <b>wegetariańskie</b>, <b>wegańskie</b>,
+                nazwa producenta, dostępność online, kraj. Dodatkowo można wyświetlić profil firmy.
+              </p>
+              <p>
+                <a href="http://www.crueltyfreeinternational.org">Cruelty Free International</a>
+                (założona przez <a href="http://www.buav.org/">BUAV</a>) zajmuje się certyfikowaniem firm, 
+                kandydujących do otrzymania znaku <a href="http://www.leapingbunny.org">Leaping Bunny</a>.<br>
+                Firma aspirująca do otrzymania certyfikatu, musi zgodzić się na przeprowadzenie niezależnego audytu produkcji i 
+                dostaw składników.
+              </p>
+              <p>
+                Organizacje współtworzące program <a href="http://www.leapingbunny.org">Leaping Bunny</a>,
+                a składające się na Coalition for Consumer Information on Cosmetics (CCIC):<br>
+                <a href="http://www.aavs.org">American Anti-Vivisection Society</a><br>
+                <a href="http://www.animalalliance.ca">Animal Alliance of Canada</a><br>
+                <a href="http://www.beautywithoutcruelty.com">Beauty Without Cruelty</a><br>
+                <a href="http://www.ddal.org">Doris Day Animal League</a><br>
+                <a href="http://www.humanesociety.com/">The Humane Society of Canada</a><br>
+                <a href="http://www.hsus.org/">The Humane Society of the United States</a><br>
+                <a href="http://www.mspca.org">MSPCA Center for Laboratory Animal Welfare</a><br>
+                <a href="http://www.navs.org">National Anti-Vivisection Society</a><br>
+                <a href="http://www.neavs.org/">New England Anti-Vivisection Society</a>
+              </p>
+              <p>
+                Wyszukiwarka uwzględnia również włoskich producentów z listy
+                <a href="http://www.lav.it/cosa-facciamo/vivisezione/le-aziende-cruelty-free">LAV</a>
+              </p>
+            </div>
           </li>
           <li>
             <p class="search-key">
@@ -123,6 +135,12 @@
              --><span class="logo-caption">Wyszukiwarki</span><!--
            --></a>
               <b>PETA</b>
+              <a class="action" href data-toggle="collapse" data-target="#morePeta" 
+                  ng-init="morePeta=false" ng-click="morePeta=!morePeta">
+                <span class="glyphicon" 
+                  ng-class="{'glyphicon-chevron-down': morePeta, 'glyphicon-chevron-right': !morePeta}">
+                </span>
+              </a>
             </p>
             <p>
               Na skróty:
@@ -131,29 +149,31 @@
               </a>
               (<b>V</b> - firmy sprzedające jedynie produkty <b>wegańskie</b>)
             </p>
-            <p>
-              Dostępne wyszukiwarki: producenci cruelty-free (dostępny filtr wyświetlający firmy <b>wegańskie</b>),
-              typ produktu (dostępny filtr wyświetlający firmy wegańskie),
-              kraj (dostępny filtr wyświetlający firmy wegańskie), firmy testujące na zwierzętach,
-              firmy testujące na zwierzętach pod wpływem prawa. 
-            </p>
-            <p>
-              <a href="http://www.peta.org">PETA</a> dzieli firmy na dwie grupy: <b>wegańskie i pozostałe cruelty-free</b>;
-              nie wyszczególnia specjalnej kategorii dla firm wegetariańskich.
-            </p>
-            <p>
-              Firma aspirująca do znalezienia się na liście PETA cruelty-free, musi podpisać stosowne oświadczenie 
-              o nie testowaniu produktów na zwierzętach.
-            </p>
-            <p class="comment">
-              Różnica między <a href="http://www.leapingbunny.org">Leaping Bunny</a> a <a href="http://www.peta.org">PETA</a>:
-              <a href="http://www.hotashi.com/jetaime/?p=7596">tutaj</a>
-            </p>
+            <div id="morePeta" class="more-info collapse">
+              <p>
+                Dostępne wyszukiwarki: producenci cruelty-free (dostępny filtr wyświetlający firmy <b>wegańskie</b>),
+                typ produktu (dostępny filtr wyświetlający firmy wegańskie),
+                kraj (dostępny filtr wyświetlający firmy wegańskie), firmy testujące na zwierzętach,
+                firmy testujące na zwierzętach pod wpływem prawa. 
+              </p>
+              <p>
+                <a href="http://www.peta.org">PETA</a> dzieli firmy na dwie grupy: <b>wegańskie i pozostałe cruelty-free</b>;
+                nie wyszczególnia specjalnej kategorii dla firm wegetariańskich.
+              </p>
+              <p>
+                Firma aspirująca do znalezienia się na liście PETA cruelty-free, musi podpisać stosowne oświadczenie 
+                o nie testowaniu produktów na zwierzętach.
+              </p>
+              <p class="comment">
+                Różnica między <a href="http://www.leapingbunny.org">Leaping Bunny</a> a <a href="http://www.peta.org">PETA</a>:
+                <a href="http://www.hotashi.com/jetaime/?p=7596">tutaj</a>
+              </p>
+            </div>
           </li>
         </ul>
       </div>
       <div>
-        <h5 class="caption">Listy</h5>
+        <h5 class="caption">Listy cruelty-free</h5>
         <ul>
           <li>
             <p class="search-key">
@@ -165,19 +185,27 @@
                 sklepów i firm dystrybucyjnych<!--
            --></a>
               <b>Deutscher Tierschutzbund</b>
+              <a class="action" href data-toggle="collapse" data-target="#moreDeutsche" 
+                  ng-init="moreDeutsche=false" ng-click="moreDeutsche=!moreDeutsche">
+                <span class="glyphicon" 
+                  ng-class="{'glyphicon-chevron-down': moreDeutsche, 'glyphicon-chevron-right': !moreDeutsche}">
+                </span>
+              </a>
             </p>
-            <p>
-              Oznaczenia:<br>
-              emblemat głaskanego króliczka - firmy promujące nietestowanie kosmetyków na zwierzętach<br>
-              <b class="is-small">°</b> - kosmetyki przeznaczone dla <b>wegan</b><br>
-              <b class="is-small">*</b> - kosmetyki ze składnikami pozyskanymi z <span class="warning">martwych</span> zwierząt<br>
-              pozostałe - <b>przeznaczone dla wegetarian</b>
-            </p>
-            <p>
-              Firma aspirująca do znalezienia się na liście <a href="http://www.tierschutzbund.de">Deutscher Tierschutzbund</a>,
-              musi złożyć stosowne <a href="http://www.tierschutzbund.de/kosmetik-positivliste.html">oświadczenie</a>
-              o nie testowaniu produktów na zwierzętach.
-            </p>
+            <div id="moreDeutsche" class="more-info collapse">
+              <p>
+                Oznaczenia:<br>
+                emblemat głaskanego króliczka - firmy promujące nietestowanie kosmetyków na zwierzętach<br>
+                <b class="is-small">°</b> - kosmetyki przeznaczone dla <b>wegan</b><br>
+                <b class="is-small">*</b> - kosmetyki ze składnikami pozyskanymi z <span class="warning">martwych</span> zwierząt<br>
+                pozostałe - <b>przeznaczone dla wegetarian</b>
+              </p>
+              <p>
+                Firma aspirująca do znalezienia się na liście <a href="http://www.tierschutzbund.de">Deutscher Tierschutzbund</a>,
+                musi złożyć stosowne <a href="http://www.tierschutzbund.de/kosmetik-positivliste.html">oświadczenie</a>
+                o nie testowaniu produktów na zwierzętach.
+              </p>
+            </div>
           </li>
           <li>
             <p class="search-key">
@@ -185,28 +213,39 @@
                 Lista firm widzianych na rynku polskim<!--
            --></a>
               <b>Klubu OK!</b>
+              <a class="action" href data-toggle="collapse" data-target="#moreOK" 
+                  ng-init="moreOK=false" ng-click="moreOK=!moreOK">
+                <span class="glyphicon" 
+                  ng-class="{'glyphicon-chevron-down': moreOK, 'glyphicon-chevron-right': !moreOK}">
+                </span>
+              </a>
             </p>
-            <p>
-              Wszystkie firmy z listy produkują kosmetyki / detergenty przeznaczone dla <b>wegetarian</b>.
-              Firmy <b>wegańskie</b> oznaczone zostały na zielono.
-            </p>
-            <p>
-              Lista zawiera krótkie opisy asortymentu danej firmy wraz ze wskazówkami, gdzie produkty można nabyć. 
-            </p>
-            <p>
-              <a href="http://ok.3bird.net">Klub OK!</a> publikuje również listę firm przyjaznych zwierzętom na świecie,
-              przy układaniu której korzysta ze źródeł rekomendowanych powyżej;
-              niektórej firmy zostały jednak pominięte z niewiadomych przyczyn.
-            </p>
+            <div id="moreOK" class="more-info collapse">
+              <p>
+                Wszystkie firmy z listy produkują kosmetyki / detergenty przeznaczone dla <b>wegetarian</b>.
+                Firmy <b>wegańskie</b> oznaczone zostały na zielono.
+              </p>
+              <p>
+                Lista zawiera krótkie opisy asortymentu danej firmy wraz ze wskazówkami, gdzie produkty można nabyć. 
+              </p>
+              <p>
+                <a href="http://ok.3bird.net">Klub OK!</a> publikuje również listę firm przyjaznych zwierzętom na świecie,
+                przy układaniu której korzysta ze źródeł rekomendowanych powyżej;
+                niektórej firmy zostały jednak pominięte z niewiadomych przyczyn.
+              </p>
+            </div>
           </li>          
         </ul>
       </div>      
-   </div> 
+    </div>
+    <p class="general">
+      Zakres eksploatacji zwierząt przez człowieka: 
+      <a href="http://www.peta.org/living/beauty/animal-ingredients-list/">lista składników pochodzenia zwierzęcego</a>
+    </p>
   </div>
   <div class="row">
     <div class="footer">
       <div class="text-center"><a href="#">home</a></div>
-      <div id="like" class="fb-like" data-href="http://www.vegewro.pl" data-width="1px" data-layout="button" data-action="recommend" data-show-faces="true" data-share="false"></div>
       <p class="contact">♥ {{i18n.from}} DaDa Soft Lab &copy; | {{i18n.contact}}: <a href="vegewro@gmail.com">vegewro@gmail.com</a></p>
     </div>
   </div>
