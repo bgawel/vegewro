@@ -3,7 +3,7 @@
 angular.module('vegewroApp')
   .filter('shopFilter', ['backend', function(backend) {
     return function(shops, arg) {
-      if (arg.online && arg.stationary) {
+      if (arg.online === arg.stationary) {
         return shops;
       }
       var out = [];

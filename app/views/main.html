@@ -88,8 +88,7 @@
       </a>
       <p class="filters-caption">
         <span class="caption anchor" id="filters">{{i18n.filters}} (</span><!--
-     --><a href ng-click="enableAllFilters(false)" class="action filter-helper action-link">{{i18n.clearAll}}</a>, 
-        <a href ng-click="enableAllFilters(true)" class="action filter-helper action-link">{{i18n.setAll}}</a><!--
+     --><a href ng-click="enableAllFilters(false)" class="action filter-helper action-link">{{i18n.clearAll}}</a><!--
      --><span class="caption">):</span>
       </p>
       <p class="sub-filter">
@@ -143,9 +142,9 @@
           </accordion-heading>
           <div class="row">
             <div class="options" ng-show="filter.type === 'products'">
-              <input type="checkbox" ng-init="stationary=true" ng-model="stationary"><!--
+              <input type="checkbox" ng-init="stationary=false" ng-model="stationary"><!--
               --><span class="caption" ng-click="stationary = !stationary">{{i18n.stationary}}</span>          
-              <input class="second" type="checkbox" ng-init="online=true" ng-model="online"><!--
+              <input class="second" type="checkbox" ng-init="online=false" ng-model="online"><!--
               --><span class="caption" ng-click="online = !online"> {{i18n.online}}</span>
             </div>
             <div ng-repeat="address in addresses[filter.id] | shopFilter:{online: online, stationary: stationary} | orderBy:'title'">

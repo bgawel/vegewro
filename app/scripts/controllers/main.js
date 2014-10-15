@@ -47,25 +47,35 @@ angular.module('vegewroApp')
     });
   }
 
-  var exclusiveMode = function() {
+  var setAllMarkers = function(onMap) {
     angular.forEach(markers, function(marker) {
-      marker.setMap(null);
+      marker.setMap(onMap);
     });
   };
+  
+  var exclusiveMode = setAllMarkers;
   
   function createMapLegend() {
     var toggle = function(toggledByUser) {
       if (exclusiveMode && toggledByUser) {
-        exclusiveMode();
+        exclusiveMode(null);
       }
       exclusiveMode = undefined;
       var filterId = this.id;
       var markerMap = this.enabled ? map : null;
+      var numberOfEnabled = 0;
       angular.forEach(markers, function(marker) {
         if (marker.filterId === filterId) {
           marker.setMap(markerMap);
         }
+        if (marker.getMap() !== null) {
+          ++numberOfEnabled;
+        }
       });
+      if (toggledByUser && !numberOfEnabled) {
+        setAllMarkers(map);
+        exclusiveMode = setAllMarkers;
+      }
     };
     angular.forEach(config.filters, function(filter, filterName) {
       $scope.addresses[filterName] = [];
@@ -136,12 +146,13 @@ angular.module('vegewroApp')
     }
     var web = '';
     if (place.web) {
-      web = '<p class="web" title="This is my tooltip"><a href="' + place.web + '" target="_blank">' +
+      web = '<p class="web" title="' + place.web + '"><a href="' + place.web + '" target="_blank">' +
         formatter.web(place.web) + '</a></p>';
     }
     var email = '';
     if (place.email) {
-      email = '<p class="email"><a href="mailto:' + place.email + '">' + place.email + '</a></p>';
+      email = '<p class="email" title="' + place.email + '"><a href="mailto:' + place.email + '">' + place.email +
+        '</a></p>';
     }
     var phone = '';
     if (place.phone) {
@@ -267,6 +278,10 @@ angular.module('vegewroApp')
       filter.enabled = enable;
       filter.toggle();
     });
+    if (!enable) {
+      setAllMarkers(map);
+      exclusiveMode = setAllMarkers;
+    }
   };
   
   $scope.$watch('selected.place', function(newVal, oldVal) {
