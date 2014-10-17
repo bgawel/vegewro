@@ -26,10 +26,8 @@ angular.module('vegewroApp')
     }
     
     function readFixedFeeds(fixedFeeds) {
-      var now = new Date();
       return FbUtils.deserializeFeeds(fixedFeeds, function(feed) {
-        feed.fixed = true;
-        feed.time = now;
+        feed.type = 'fixed';
       });
     }
     

@@ -174,7 +174,7 @@ angular.module('angucomplete', [])
                 (event.which === 13 && ($scope.currentIndex === undefined || $scope.currentIndex < 0))) {
               lastSearchTerm = $scope.searchStr;
               $scope.showDropdown = true;
-              $scope.currentIndex = -1;
+              $scope.currentIndex = 0;
               $scope.results = [];
               if (searchTimer) {
                 $timeout.cancel(searchTimer);

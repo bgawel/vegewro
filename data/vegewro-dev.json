@@ -249,7 +249,13 @@
   "news" : {
     "fbFeeds" : {
       "timestamp" : 1
-    }
+    },
+    "fixedFbFeeds" : [
+      {
+        "by" : "VegeWro.pl",
+        "fb" : "vegewro"
+      }
+   ]
   },
   "places" : [ {
     "address" : "Nożownicza 40, Wrocław",

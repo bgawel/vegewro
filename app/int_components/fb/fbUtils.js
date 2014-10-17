@@ -26,7 +26,7 @@
     return new Date(dateString.replace(/\+0000/g, 'Z')); // IE support
   }
 
-  function findAllPostsWithMessage(fbName, data) {
+  function findAllPostsWithMessage(data) {
     var posts = [];
     if (data) {
       var post;

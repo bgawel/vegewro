@@ -231,7 +231,8 @@ angular.module('vegewroApp')
   
   function addFbFeed(place) {
     if (place.fb) {
-      fbFeeds.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id, fb: place.fb});
+      fbFeeds.push({by: place.name, fbHref: fb.makeAccountLink(place.fb), placeId: place.id, fb: place.fb,
+        type: 'map'});
     }
   }
   
@@ -255,8 +256,13 @@ angular.module('vegewroApp')
     });
   }
   
-  function readNews(newsSnapshot) {
-    news.read(newsSnapshot, fbFeeds, config).then(function(feeds) {
+  function readNews(newsItems) {
+    angular.forEach(newsItems.fixedFbFeeds, function(fixedFbFeed) {
+      fixedFbFeed.fbHref = fb.makeAccountLink(fixedFbFeed.fb);
+      fixedFbFeed.type = 'statFb';
+      fbFeeds.push(fixedFbFeed);
+    });
+    news.read(newsItems, fbFeeds, config).then(function(feeds) {
       $scope.feeds = feeds;
       $scope.feedsLoading = false;
     });

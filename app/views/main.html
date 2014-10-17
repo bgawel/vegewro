@@ -129,7 +129,7 @@
     <a class="anchor" id="addressesAnchor"></a>
     <h4 class="section-title caption anchor" id="addresses">{{i18n.bAddresses}}</h4>
     <accordion close-others="'true'">
-      <span ng-repeat="type in ['vegan', 'vege', 'products']">
+      <div ng-repeat="type in ['vegan', 'vege', 'products']">
         <h5 class="sub-address-title caption">{{i18n[type]}}:</h5>
         <accordion-group ng-repeat="filter in filters.$asArray | filter:{type: type} | orderBy:'order'" is-open="filter.open">
           <accordion-heading>
@@ -159,33 +159,36 @@
             </div>
           </div>
         </accordion-group>
-      </span>
+      </div>
     </accordion>
   </div>
   <div class="row news-section">
     <a class="anchor" id="newsAnchor"></a>
     <h4 class="section-title caption anchor" id="news">{{i18n.bNews}}</h4>
     <span class="loading" ng-show="feedsLoading">{{i18n.loading}}</span>
-    <div class="row col-xs-12 news" ng-repeat="feed in feeds | orderBy:'time':true">
-      <p class="content">
-        <b>[{{feed.time | date: 'dd/MM'}}</b>,
-        <span ng-if="feed.fbHref">
-          <a ng-href="{{feed.fbHref}}" target="_blank">
-            <img class="fb-icon" width="12" height="12" src="images/facebook.png"><span class="feed-by">{{feed.by}}</span><!--
-       --></a>
-          <a href ng-click="places[feed.placeId].showOnMap()" class="action action-link" tooltip-placement="right" 
-              tooltip="{{i18n.showOnMap}}">
-            <span class="glyphicon glyphicon-hand-up show-on-map"></span><!--
-       --></a><!--
-     --></span><!--
-     --><span ng-if="feed.fixed" class="fixed-by">
-          {{feed.by}}<!--
-     --></span>]:
-      </p>
-      <p class="content" ng-repeat="post in feed.posts">
-        <span ng-bind-html="((feed.posts.length > 1 ? '[' + (post.created | date:'HH:mm') + '] ' + post.message : post.message) | characters:500) + ' ' + post.link | linky:'_blank'">
-        </span>
-      </p>
+    <div ng-repeat="type in ['fixed', 'statFb', 'map']">
+      <div class="row col-xs-12 news {{type}}" ng-repeat="feed in feeds | filter:{type: type} | orderBy:'-time'">
+        <p class="content">
+          <b>[{{feed.time | date: 'dd/MM'}}</b>,
+          <span ng-if="feed.fbHref">
+            <span ng-if="feed.type === 'statFb'" class="glyphicon glyphicon-star fixed-by"></span>
+            <a ng-href="{{feed.fbHref}}" target="_blank">
+              <img class="fb-icon" width="12" height="12" src="images/facebook.png"><span class="feed-by">{{feed.by}}</span><!--
+         --></a><!--
+         --><a ng-if="feed.type === 'map'" href ng-click="places[feed.placeId].showOnMap()" class="action action-link" tooltip-placement="right" 
+                tooltip="{{i18n.showOnMap}}">
+              <span class="glyphicon glyphicon-hand-up show-on-map"></span><!--
+         --></a><!--
+       --></span><!--
+       --><span ng-if="feed.type === 'fixed'">
+            <span class="glyphicon glyphicon-star fixed-by"></span> {{feed.by}}<!--
+       --></span>]:
+        </p>
+        <p class="content" ng-repeat="post in feed.posts">
+          <span ng-bind-html="((feed.posts.length > 1 ? '[' + (post.created | date:'HH:mm') + '] ' + post.message : post.message) | characters:500) + ' ' + post.link | linky:'_blank'">
+          </span>
+        </p>
+      </div>
     </div>
   </div>
   <div class="row">
