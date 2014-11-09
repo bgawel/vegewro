@@ -205,6 +205,26 @@
         },
         "type" : "products",
         "zIndex" : 50
+      },
+      "vegeHealthcare" : {
+        "htmlTitle" : {
+          "en" : "Healthcare and dietetics",
+          "pl" : "Opieka medyczna i dietetyka"
+        },
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/doctor.png"
+        },
+        "order" : 30,
+        "title" : {
+          "en" : "healthcare and dietetics",
+          "pl" : "opieka medyczna i dietetyka"
+        },
+        "type" : "services",
+        "zIndex" : 160
       }
     },
     "googleMapsVersion" : "3",
@@ -1309,5 +1329,138 @@
       "en" : "Mon-Fri: 10:00-19:00, Sat: 09:00-15:00",
       "pl" : "pon.-piąt.: 10:00-19:00, sob.: 09:00-15:00"
     }
-  }  ]
+  }, {
+    "address" : "CH Arena, Komandorska 66, Wrocław",
+    "email" : "sklep@zdrowysklep.com",
+    "phone" : "731 741 960",
+    "filters" : [ "vegeFood" ],
+    "type" : 2,
+    "id" : 40,
+    "image" : {
+      "size" : {
+        "height" : 25,
+        "width" : 153
+      },
+      "src" : "http://www.zdrowysklep.com/images/logo.jpg"
+    },
+    "name" : "Zdrowy Sklep",
+    "position" : {
+      "lat" : 51.094918,
+      "lng" : 17.028253
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//Arena.+Centrum+handlowe,+Komandorska+66,+Wrocław/@51.094918,17.028253,{{zoom}}",
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://zdrowysklep.com",
+    "open" : {
+      "en" : "Mon-Fri: 09:00-19:00, Sat: 09:00-16:00",
+      "pl" : "pon.-piąt.: 09:00-19:00, sob.: 09:00-16:00"
+    },
+    "fb" : "zdrowysklepcom"
+  }, {
+    "address" : "CH Gaj, Świeradowska 70, Wrocław",
+    "filters" : [ "vegeCosmetics", "vegeFood" ],
+    "type" : 2,
+    "id" : 41,
+    "name" : "Eco Świat",
+    "desc" : {
+      "pl" : "Stoisko nr 14",
+      "en" : "Stall no 14"
+    },
+    "position" : {
+      "lat" : 51.076959,
+      "lng" : 17.047621
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://chgaj.pl/shop/14",
+    "open" : {
+      "en" : "CH Gaj - Mon-Fri: 07:00-20:00, Sat: 07:00-17:00, Sun: 10:00-15:00",
+      "pl" : "CH Gaj - pon.-piąt.: 07:00-20:00, sob.: 07:00-17:00, niedz.: 10:00-15:00"
+    }
+  }, {
+    "address" : "Stefana Drzewieckiego 24/7a, Wrocław",
+    "email" : "sklep@bioekonatura.pl",
+    "phone" : "783 804 538",
+    "filters" : [ "vegeCosmetics", "vegeFood" ],
+    "type" : 4,
+    "id" : 42,
+    "name" : "BioEkoNatura",
+    "position" : {
+      "lat" : 51.1258276,
+      "lng" : 16.9693286
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://bioekonatura.pl",
+    "fb" : "1535196363378740"
+  }, {
+    "address" : "CH Borek, Hallera 52, Wrocław",
+    "email" : "sklep@eko-pychotka.pl",
+    "phone" : "602 181 185",
+    "filters" : [ "vegeFood" ],
+    "type" : 6,
+    "id" : 43,
+    "image" : {
+      "size" : {
+        "height" : 27,
+        "width" : 163
+      },
+      "src" : "http://www.eko-pychotka.pl/skins/user/home_basic_1/images/logo.png"
+    },
+    "name" : "Eko-Pychotka",
+    "position" : {
+      "lat" : 51.088342,
+      "lng" : 16.999094
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://eko-pychotka.pl",
+    "open" : {
+      "en" : "Mon-Sat: 09:00-21:00, Sun: 10:00-20:00",
+      "pl" : "pon.-sob.: 09:00-21:00, niedz.: 10:00-20:00"
+    },
+    "fb" : "Ekopychotka"
+  }, {
+    "address" : "Włodkowica 21, Wrocław",
+    "email" : "kontakt@lucynamichalak.pl",
+    "phone" : "605 181 508",
+    "filters" : [ "vegeHealthcare" ],
+    "id" : 44,
+    "image" : {
+      "size" : {
+        "height" : 23,
+        "width" : 133
+      },
+      "src" : "http://www.lucynamichalak.pl/images/stories/logo.png"
+    },
+    "name" : "Lucyna Michalak",
+    "position" : {
+      "lat" : 51.108998,
+      "lng" : 17.023207
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//DORADZTWO+ŻYWIENIOWE+Lucyna+Michalak-Klimczak,+Pawła+Włodkowica+21,+50-072+Wrocław/@51.108998,17.023207,{{zoom}}",
+    "profile" : {
+      "en" : "nutritional counseling",
+      "pl" : "doradztwo żywieniowe"
+    },
+    "desc" : {
+      "en" : "The dietitian will help you to change a meat diet to a vegetarian one, from the vegetarian one to a vegan diet",
+      "pl" : "Dietetyczka pomaga w zbilansowany i rozsądny sposób zmienić dietę z mięsnej na wegetariańską, z wegetariańskiej na wegańską"
+    },
+    "web" : "http://lucynamichalak.pl",
+    "open" : {
+      "en" : "Mon-Fri: 10:00-21:00",
+      "pl" : "pon.-piąt.: 10:00-21:00"
+    },
+    "fb" : "107214909362354"
+  } ]
 }

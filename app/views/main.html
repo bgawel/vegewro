@@ -91,45 +91,27 @@
      --><a href ng-click="enableAllFilters(false)" class="action filter-helper action-link">{{i18n.clearAll}}</a><!--
      --><span class="caption">):</span>
       </p>
-      <p class="sub-filter">
-        <a href ng-click="enableFilters('vegan')" class="action action-link filter-helper">{{i18n.vegan}}</a>
-      </p>
-      <p ng-repeat="filter in filters.$asArray | filter:{type: 'vegan'} | orderBy:'order'">
-        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
-            ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
-          <img ng-src="{{filter.iconUrl}}"/>
-          <span class="glyphicon glyphicon-ok" ng-show="filter.enabled"></span> {{filter.title}}
-        </a>
-      </p>
-      <p class="sub-filter">
-        <a href ng-click="enableFilters('vege')" class="action action-link filter-helper">{{i18n.vege}}</a>
-      </p>
-      <p ng-repeat="filter in filters.$asArray | filter:{type: 'vege'} | orderBy:'order'">
-        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
-            ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
-          <img ng-src="{{filter.iconUrl}}"/>
-          <span class="glyphicon glyphicon-ok" ng-show="filter.enabled"></span> {{filter.title}}
-        </a>
-      </p> 
-      <p class="sub-filter">
-        <a href ng-click="enableFilters('products')" class="action action-link filter-helper">{{i18n.products}}
-        </a>
-        <span class="action-link" tooltip-placement="bottom" tooltip="{{i18n.storesWarning}}">*</span>
-      </p>
-      <p ng-repeat="filter in filters.$asArray | filter:{type: 'products'} | orderBy:'order'">
-        <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
-            ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
-          <img ng-src="{{filter.iconUrl}}"/>
-          <span class="glyphicon glyphicon-ok" ng-show="filter.enabled"></span> {{filter.title}}
-        </a>
-      </p>            
+      <div ng-repeat="type in ['vegan', 'vege', 'products', 'services']">
+        <p class="sub-filter">
+          <a href ng-click="enableFilters(type)" class="action action-link filter-helper">{{i18n[type]}}
+          </a>
+          <span ng-if="type === 'products'" class="action-link" tooltip-placement="bottom" tooltip="{{i18n.storesWarning}}">*</span>
+        </p>
+        <p ng-repeat="filter in filters.$asArray | filter:{type: type} | orderBy:'order'">
+          <a href class="legend-item action action-link" ng-class="{active: filter.enabled}" 
+              ng-click="filter.enabled = !filter.enabled; filter.toggle(true)">
+            <img ng-src="{{filter.iconUrl}}"/>
+            <span class="glyphicon glyphicon-ok" ng-show="filter.enabled"></span> {{filter.title}}
+          </a>
+        </p>  
+      </div>          
     </div>
   </div>
   <div class="row addresses-section">
     <a class="anchor" id="addressesAnchor"></a>
     <h4 class="section-title caption anchor" id="addresses">{{i18n.bAddresses}}</h4>
     <accordion close-others="'true'">
-      <div ng-repeat="type in ['vegan', 'vege', 'products']">
+      <div ng-repeat="type in ['vegan', 'vege', 'products', 'services']">
         <h5 class="sub-address-title caption">{{i18n[type]}}:</h5>
         <accordion-group ng-repeat="filter in filters.$asArray | filter:{type: type} | orderBy:'order'" is-open="filter.open">
           <accordion-heading>
@@ -174,14 +156,14 @@
             <span ng-if="feed.type === 'statFb'" class="glyphicon glyphicon-star fixed-by"></span>
             <a ng-href="{{feed.fbHref}}" target="_blank">
               <img class="fb-icon" width="12" height="12" src="images/facebook.png"><span class="feed-by">{{feed.by}}</span><!--
-         --></a><!--
-         --><a ng-if="feed.type === 'map'" href ng-click="places[feed.placeId].showOnMap()" class="action action-link" tooltip-placement="right" 
+         --></a>
+            <a ng-if="feed.type === 'map'" href ng-click="places[feed.placeId].showOnMap()" class="action action-link" tooltip-placement="right" 
                 tooltip="{{i18n.showOnMap}}">
               <span class="glyphicon glyphicon-hand-up show-on-map"></span><!--
          --></a><!--
        --></span><!--
        --><span ng-if="feed.type === 'fixed'">
-            <span class="glyphicon glyphicon-star fixed-by"></span> {{feed.by}}<!--
+            <span class="glyphicon glyphicon-star fixed-by"></span>{{feed.by}}<!--
        --></span>]:
         </p>
         <p class="content" ng-repeat="post in feed.posts">
