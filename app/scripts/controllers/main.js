@@ -226,7 +226,8 @@ angular.module('vegewroApp')
   
   function addToSearchable(place) {
     var profile = place.profile ? locale.valueFor(place.profile) : '';
-    $scope.searchable.push({name: place.name, profile: profile, address: place.address, id: place.id});
+    var desc = place.desc ? locale.valueFor(place.desc) : '';
+    $scope.searchable.push({name: place.name, profile: profile, address: place.address, id: place.id, desc: desc});
   }
   
   function addFbFeed(place) {

@@ -205,6 +205,26 @@
         },
         "type" : "products",
         "zIndex" : 50
+      },
+      "vegeHealthcare" : {
+        "htmlTitle" : {
+          "en" : "Healthcare and dietetics",
+          "pl" : "Opieka medyczna i dietetyka"
+        },
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/doctor.png"
+        },
+        "order" : 30,
+        "title" : {
+          "en" : "healthcare and dietetics",
+          "pl" : "opieka medyczna i dietetyka"
+        },
+        "type" : "services",
+        "zIndex" : 160
       }
     },
     "googleMapsVersion" : "3",
@@ -385,7 +405,7 @@
         "height" : 40,
         "width" : 40
       },
-      "src" : "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn2/v/t1.0-9/64312_582440741834934_1025223798_n.jpg?oh=94b177a478fb8d9bf38a8f020dcf6260&oe=5478B32B&__gda__=1415312741_2c6e527fb3d7a2585a34c05829f2d354"
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/v/t1.0-1/p160x160/64312_582440741834934_1025223798_n.jpg?oh=f59e3f450ca8776c3d126a33aa53b288&oe=54DC870D&__gda__=1424451759_59e2b77f08fef5d293958f13c7d04fae"
     },
     "name" : "Złe mięso",
     "open" : {
@@ -1409,5 +1429,107 @@
       "pl" : "pon.-sob.: 09:00-21:00, niedz.: 10:00-20:00"
     },
     "fb" : "Ekopychotka"
+  }, {
+    "address" : "Włodkowica 21, Wrocław",
+    "email" : "kontakt@lucynamichalak.pl",
+    "phone" : "605 181 508",
+    "filters" : [ "vegeHealthcare" ],
+    "id" : 44,
+    "image" : {
+      "size" : {
+        "height" : 23,
+        "width" : 133
+      },
+      "src" : "http://www.lucynamichalak.pl/images/stories/logo.png"
+    },
+    "name" : "Lucyna Michalak",
+    "position" : {
+      "lat" : 51.108998,
+      "lng" : 17.023207
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//DORADZTWO+ŻYWIENIOWE+Lucyna+Michalak-Klimczak,+Pawła+Włodkowica+21,+50-072+Wrocław/@51.108998,17.023207,{{zoom}}",
+    "profile" : {
+      "en" : "nutritional counseling",
+      "pl" : "doradztwo żywieniowe"
+    },
+    "desc" : {
+      "en" : "The dietitian will help you to change a meat diet to a vegetarian one, from the vegetarian one to a vegan diet",
+      "pl" : "Dietetyczka pomaga w zbilansowany i rozsądny sposób zmienić dietę z mięsnej na wegetariańską, z wegetariańskiej na wegańską"
+    },
+    "web" : "http://lucynamichalak.pl",
+    "open" : {
+      "en" : "Mon-Fri: 10:00-21:00",
+      "pl" : "pon.-piąt.: 10:00-21:00"
+    },
+    "fb" : "107214909362354"
+  }, {
+    "address" : "CORFAMED, Kluczborska 37, Wrocław",
+    "email" : "centrum@corfamed.pl",
+    "phone" : "71 321 73 15",
+    "filters" : [ "vegeHealthcare" ],
+    "id" : 45,
+    "name" : "Marek Maślak",
+    "position" : {
+      "lat" : 51.12132,
+      "lng" : 17.049286
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//Corfamed+Sp.+z+o.o.,+Kluczborska+37,+Wrocław/@51.12132,17.049286,{{zoom}}",
+    "profile" : {
+      "en" : "obstetrician-gynecologist",
+      "pl" : "ginekolog-położnik"
+    },
+    "web" : "http://corfamed.pl/page.php?gID=01a_marek_maslak",
+    "open" : {
+      "en" : "Mon-Fri: 08:00-20:00, Sat: 08:00-14:00",
+      "pl" : "pon.-piąt.: 08:00-20:00, sob.: 08:00-14:00"
+    }
+  }, {
+    "address" : "Borowska 242, Wrocław",
+    "email" : "kontakt@imc.wroc.pl",
+    "phone" : "71 330 65 29",
+    "filters" : [ "vegeHealthcare" ],
+    "id" : 46,
+    "image" : {
+      "size" : {
+        "height" : 41,
+        "width" : 168
+      },
+      "src" : "http://www.imc.wroc.pl/szablony/podstawowy/img/logo_336x82.png"
+    },
+    "name" : "Integrative Medical Center",
+    "position" : {
+      "lat" : 51.074407,
+      "lng" : 17.033016
+    },
+    "desc" : {
+      "en" : "combines achievments of conventional medicine with oficially accepted complementary medicine",
+      "pl" : "łączy osiągnięcia konwencjonalnej medycyny z oficjalnie uznanymi terapiami komplementarnymi"
+    },
+    "web" : "http://imc.wroc.pl",
+    "open" : {
+      "en" : "Mon-Fri: 08:00-20:00, Sat: 09:00-17:00",
+      "pl" : "pon.-piąt.: 08:00-20:00, sob.: 09:00-17:00"
+    }
+  }, {
+    "address" : "Kamienna 107 (\"GANT\"), Wrocław",
+    "email" : "gabinet@preetigin.pl",
+    "phone" : "609 539 201",
+    "filters" : [ "vegeHealthcare" ],
+    "id" : 47,
+    "name" : "Preeti Agrawal",
+    "position" : {
+      "lat" : 51.087512,
+      "lng" : 17.039849
+    },
+    "dirLink" : "https://www.google.pl/maps/dir//Gabinet+ginekologiczny+,+ginekolog+,dr+Preeti+Agrawal,+Kamienna+107,+50-547+Wrocław/@51.087512,17.039849,{{zoom}}",
+    "profile" : {
+      "en" : "gynecologist",
+      "pl" : "ginekolog"
+    },
+    "web" : "http://preetigin.pl",
+    "open" : {
+          "en" : "Tue: 12:00-20:00, Fri: 07:00-14:00",
+          "pl" : "wt.: 12:00-20:00, piąt.: 07:00-14:00"
+        }
   } ]
 }

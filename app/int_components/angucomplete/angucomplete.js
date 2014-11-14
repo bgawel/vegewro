@@ -114,7 +114,9 @@ angular.module('angucomplete', [])
                 description = item[$scope.descriptionField];
                 if (!match) {
                   match = description.match(re);
-                  description = replaceMatchInValue(description, re, match);
+                  if (match) {
+                    description = replaceMatchInValue(description, re, match);
+                  }
                 }
               }
               titles[0] = '<span class="name">' + titles[0] + '</span>';
