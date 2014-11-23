@@ -225,6 +225,26 @@
         },
         "type" : "services",
         "zIndex" : 160
+      },
+      "vegeBazaar" : {
+        "htmlTitle" : {
+          "en" : "Eco food bazaars",
+          "pl" : "Bazary z eko żywnością"
+        },
+        "icon" : {
+          "size" : {
+            "height" : 32,
+            "width" : 32
+          },
+          "url" : "images/bazaar.png"
+        },
+        "order" : 70,
+        "title" : {
+          "en" : "eco food bazaar",
+          "pl" : "bazar z eko żywnością"
+        },
+        "type" : "products",
+        "zIndex" : 60
       }
     },
     "googleMapsVersion" : "3",
@@ -305,36 +325,6 @@
       "pl" : "restauracja i katering wegański"
     },
     "web" : "http://najadacze.pl"
-  }, {
-    "address" : "Jedności Narodowej 93A, Wrocław",
-    "dirPosition" : true,
-    "email" : "ewa.rudakita@gmail.com",
-    "fb" : "rudakitawroclaw",
-    "filters" : [ "vegeFood", "veganBar" ],
-    "id" : 3,
-    "image" : {
-      "size" : {
-        "height" : 40,
-        "width" : 40
-      },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/t1.0-1/c1.0.200.200/p200x200/970038_556962674356107_47648516_n.jpg"
-    },
-    "name" : "Ruda Kita",
-    "open" : {
-      "en" : "Mon-Fri: 10:00-19:00, Sat: 10:00-15:00",
-      "pl" : "pon.-piąt.: 10:00-19:00, sob.: 10:00-15:00"
-    },
-    "phone" : "605 470 937",
-    "position" : {
-      "lat" : 51.1220129,
-      "lng" : 17.044137
-    },
-    "profile" : {
-      "en" : "coffee house, health food store, toy store",
-      "pl" : "kawiarnia, sklep ze zdrową żywnością, sklep z zabawkami"
-    },
-    "type" : 2,
-    "web" : "https://facebook.com/rudakitawroclaw"
   }, {
     "address" : "Ruska 19, Wrocław",
     "email" : "machina.info@gmail.com",
@@ -1531,5 +1521,62 @@
           "en" : "Tue: 12:00-20:00, Fri: 07:00-14:00",
           "pl" : "wt.: 12:00-20:00, piąt.: 07:00-14:00"
         }
+  }, {
+    "address" : "Białoskórnicza 26, Wrocław",
+    "filters" : [ "vegeBazaar" ],
+    "id" : 48,
+    "type" : 2,
+    "name" : "Krótka Droga",
+    "image" : {
+      "size" : {
+        "height" : 50,
+        "width" : 50
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p200x200/1006363_431246026993995_1331638694_n.jpg?oh=9a28e26bc549cb27edde9a20181f6b10&oe=54D6755C&__gda__=1423633014_9d692967ba1db4b6afaaf96bc1bf92fd"
+    },    
+    "position" : {
+      "lat" : 51.1114526,
+      "lng" : 17.0272899
+    },
+    "dirPosition" : true,
+    "profile" : {
+      "en" : "ecological bazaar",
+      "pl" : "bazar ekologiczny"
+    },
+    "web" : "https://facebook.com/157220861063181",
+    "open" : {
+          "en" : "Sat: 10:00-13:00",
+          "pl" : "sob.: 10:00-13:00"
+        },
+    "fb": "157220861063181"
+  }, {
+    "address" : "Browar Mieszczański, Hubska 44, Wroclaw",
+    "email" : "delikatesy@bonvivant.net.pl",
+    "phone" : "609 574 982, 606 718 825",
+    "filters" : [ "vegeBazaar" ],
+    "id" : 49,
+    "type" : 2,
+    "name" : "Wrocławski Bazar Smakoszy",
+    "image" : {
+      "size" : {
+        "height" : 50,
+        "width" : 50
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p200x200/969453_431929753580861_957251138_n.jpg?oh=2fb0225c1d83d3aa82b0ca902fca3358&oe=5518D653&__gda__=1427916675_a08cc1128075b0dcd3fc948e6ad47f02"
+    },
+    "position" : {
+      "lat" : 51.091775,
+      "lng" : 17.04391
+    },
+    "profile" : {
+      "en" : "ecological bazaar",
+      "pl" : "bazar ekologiczny"
+    },
+    "web" : "https://facebook.com/WroclawskiBazarSmakoszy",
+    "open" : {
+          "en" : "Sun: 10:00-16:00",
+          "pl" : "niedz.: 10:00-16:00"
+        },
+    "fb": "WroclawskiBazarSmakoszy"
   } ]
 }
