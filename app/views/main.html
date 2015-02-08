@@ -48,7 +48,7 @@
           </a>
         </li>             
         <li>
-          <a class="action" href data-toggle="collapse" data-target="#contactUs">
+          <a id="openContactUs" class="action" href data-toggle="collapse" data-target="#contactUs">
             <span class="glyphicon glyphicon-bullhorn"></span><span class="action-contactUs">{{i18n.newPlace}}</span>
           </a>
         </li>
@@ -67,7 +67,9 @@
         <a href="mailto:vegewro@gmail.com">vegewro@gmail.com</a>
       </div>
       <div class="right col-md-3">
-        <button class="btn btn-success pull-right" data-toggle="collapse" data-target="#contactUs">{{i18n.close}}</button>
+        <button class="btn btn-success pull-right" data-toggle="collapse" data-target="#contactUs">
+          {{i18n.close}}
+        </button>
       </div>
     </div>
   </div><!-- /.container -->

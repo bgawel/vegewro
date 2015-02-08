@@ -295,7 +295,7 @@
         "by" : "VegeWro.pl",
         "fb" : "vegewro"
       }
-   ]
+    ]
   },
   "places" : [ {
     "address" : "Nożownicza 40, Wrocław",
@@ -336,7 +336,7 @@
         "height" : 40,
         "width" : 40
       },
-      "src" : "https://scontent-b-ams.xx.fbcdn.net/hprofile-xpa1/l/t1.0-1/p160x160/1465291_579250645488880_25128854_n.jpg"
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/c26.0.160.160/p160x160/10929207_786476084766334_232968547667269769_n.jpg?oh=091455403f744bead97fbe7597d31f8c&oe=555CF69A&__gda__=1432884552_40d53a3d76bd3c3433ff1d46c4cdc1a9"
     },
     "name" : "Machina Organica",
     "open" : {
@@ -360,10 +360,10 @@
     "id" : 5,
     "image" : {
       "size" : {
-        "height" : 40,
-        "width" : 40
+        "height" : 34,
+        "width" : 104
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/c45.45.559.559/s200x200/1013001_494408287298216_54237566_n.jpg?oh=d00e62d8ade7df071943992a9a56a00f&oe=546E07D6&__gda__=1417625669_ccc610c2c849b57ecf5bddbd8c7a94e7"
+      "src" : "http://barvega.wroclaw.pl/themes/bartik/logo.png"
     },
     "name" : "VEGA",
     "open" : {
@@ -683,7 +683,7 @@
         "height" : 40,
         "width" : 40
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/c5.0.200.200/p200x200/10403402_1453398348250768_6602896798332134849_n.jpg?oh=4982a7d986248aac39bb7b1217dcc6ab&oe=54A4D8AD&__gda__=1417917112_5ebf46b37901a427323ba9812ae8276e"
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/p160x160/10672331_1491722861084983_6993093670030576116_n.png?oh=37bffb0bed6a045960d6b37534e0b884&oe=55460CF5&__gda__=1429873399_307616813b801f760dbe78b9aa5d166a"
     },
     "name" : "Baszta",
     "open" : {
@@ -711,7 +711,7 @@
         "height" : 40,
         "width" : 40
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p200x200/10570271_278994482307577_253469586036897452_n.jpg?oh=d6b7bccbf5738e18740c386479085665&oe=5492AB7D&__gda__=1419385575_42f28f1f38e5a4af4b42f2bbae9f3ad8"
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/v/t1.0-1/p160x160/10868288_318378255035866_6350094685442955434_n.jpg?oh=53532962b461bad6993e4594fbebbab7&oe=554D0CCE&__gda__=1435595405_c64a1ffc2587b9a440c8c8d5cf5e7212"
     },
     "name" : "Naturobranie",
     "open" : {
@@ -900,7 +900,7 @@
         "height" : 40,
         "width" : 40
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p160x160/10557430_256293041227913_1711699132404282419_n.jpg?oh=c01b08955f5af46dd4b4988ca0e51f17&oe=548A8B17&__gda__=1422881950_820e0bd745662b104c8b2b4030195de3"
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/10557430_256293041227913_1711699132404282419_n.jpg?oh=51c177628e8584c3ce200c2d98711120&oe=55504C17&__gda__=1435559921_99b4d799d7b1fa95af504ae8ad599bf9"
     },
     "name" : "Zdrowa Krowa",
     "open" : {
@@ -929,7 +929,7 @@
         "height" : 40,
         "width" : 40
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/v/t1.0-1/p160x160/1185435_1508699352689526_329673603_n.jpg?oh=8346fa598221ef252954c9aec29bb8e2&oe=54922474&__gda__=1422233118_be70ede367b23765065e7584aebdddd8"
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/v/t1.0-1/p160x160/1185435_1508699352689526_329673603_n.jpg?oh=ee7b76a9b20cb1dc5a7861051bda0b3c&oe=5557E574&__gda__=1432601118_7b859ba282dd47fbf39f59acc8f8f12f"
     },
     "name" : "Sklep na zdrowie",
     "open" : {
@@ -954,10 +954,10 @@
     "id" : 27,
     "image" : {
       "size" : {
-        "height" : 40,
-        "width" : 40
+        "height" : 32,
+        "width" : 129
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p160x160/1797345_780356361991875_745350250_n.jpg?oh=40229a53c994f7032935691ac7ea918d&oe=54C50644&__gda__=1419027675_d385874503b015fdee8ddb940ee5e936"
+      "src" : "http://www.herbavit.com.pl/images/frontend/theme/zara_herbavit/_editor/prod/ada05af1d30c53399dfebb3173c8b026.png"
     },
     "name" : "Herbavit",
     "open" : {
@@ -1011,7 +1011,7 @@
         "height" : 40,
         "width" : 40
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c8.0.200.200/p200x200/1395399_218582714976209_2107422989_n.jpg?oh=4ef1295368b8ccd059405d5cadb78d30&oe=54CF69D4&__gda__=1422043366_7e82e6a35a6f95d2d93fda1713053af6"
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c6.0.160.160/p160x160/1395399_218582714976209_2107422989_n.jpg?oh=9554159e3f23eaabb72f8eba73e11020&oe=55513E19&__gda__=1431352619_e832437adcfeeef2557fa42345e56f34"
     },
     "name" : "Eko Kraina",
     "open" : {
@@ -1121,10 +1121,10 @@
     "id" : 33,
     "image" : {
       "size" : {
-        "height" : 40,
-        "width" : 40
+        "height" : 55,
+        "width" : 139
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/c14.14.181.181/970081_159890567528131_1902626588_n.jpg?oh=45cdf99785ffe10b0869714d1db60e5d&oe=5487EF5E&__gda__=1421379695_3a6cd8942dd61dcbaa612748f3a218b0"
+      "src" : "http://www.straganzdrowia.pl/skins/store_user/store_d641689ce04857e7133b4380f3e11833_1/images/logo.png"
     },
     "name" : "Stragan Zdrowia",
     "open" : {
@@ -1184,10 +1184,10 @@
     "id" : 35,
     "image" : {
       "size" : {
-        "height" : 40,
-        "width" : 40
+        "height" : 54,
+        "width" : 142
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/c32.90.526.526/s200x200/530821_259947440803162_659507866_n.png?oh=93c8d7d3cc7b918c290df3d2c0338361&oe=54B6AB97&__gda__=1421136214_c448cd88c444a91a8149d26607da9463"
+      "src" : "http://www.jesz-zdrowo.pl/skins/user/rwd_shoper_1/images/logo.png"
     },
     "name" : "Jesz Zdrowo",
     "open" : {
@@ -1212,10 +1212,10 @@
     "id" : 36,
     "image" : {
       "size" : {
-        "height" : 36,
-        "width" : 36
+        "height" : 53,
+        "width" : 77
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/10616000_525852007547451_7361141789112383294_n.png?oh=059c36e3708aa17e38536d15a5b5d879&oe=54C8E856&__gda__=1422864540_b995a495dbdb26bc2f09941b8b93c8f8"
+      "src" : "http://www.ekofarmawroclaw.pl/skins/user/rwd_shoper_1/images/logo.png"
     },
     "name" : "Eko-Farma",
     "open" : {
@@ -1245,7 +1245,7 @@
         "height" : 40,
         "width" : 40
       },
-      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpa1/v/t1.0-1/p160x160/10313466_633401433417249_5749636331967982846_n.jpg?oh=6ac85be987bc9d12202d02d549792b95&oe=54C91DD3&__gda__=1422545518_006f8fb5ae1cd23dfd1dffcfa3306bc7"
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/c12.0.160.160/p160x160/1653420_699515576805834_4014348133103263570_n.jpg?oh=569d3025ae92d74ba6a75b2edf6bab24&oe=5550FB37&__gda__=1432379687_18059bf6a1f015a167cd52752853aa68"
     },
     "name" : "W Rytmie Ziemi",
     "open" : {
@@ -1518,9 +1518,9 @@
     },
     "web" : "http://preetigin.pl",
     "open" : {
-          "en" : "Tue: 12:00-20:00, Fri: 07:00-14:00",
-          "pl" : "wt.: 12:00-20:00, piąt.: 07:00-14:00"
-        }
+      "en" : "Tue: 12:00-20:00, Fri: 07:00-14:00",
+      "pl" : "wt.: 12:00-20:00, piąt.: 07:00-14:00"
+    }
   }, {
     "address" : "Białoskórnicza 26, Wrocław",
     "filters" : [ "vegeBazaar" ],
@@ -1533,7 +1533,7 @@
         "width" : 50
       },
       "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p200x200/1006363_431246026993995_1331638694_n.jpg?oh=9a28e26bc549cb27edde9a20181f6b10&oe=54D6755C&__gda__=1423633014_9d692967ba1db4b6afaaf96bc1bf92fd"
-    },    
+    },
     "position" : {
       "lat" : 51.1114526,
       "lng" : 17.0272899
@@ -1545,12 +1545,12 @@
     },
     "web" : "https://facebook.com/157220861063181",
     "open" : {
-          "en" : "Sat: 10:00-13:00",
-          "pl" : "sob.: 10:00-13:00"
-        },
+      "en" : "Sat: 10:00-13:00",
+      "pl" : "sob.: 10:00-13:00"
+    },
     "fb": "157220861063181"
   }, {
-    "address" : "Browar Mieszczański, Hubska 44, Wroclaw",
+    "address" : "Browar Mieszczański, Hubska 44, Wrocław",
     "email" : "delikatesy@bonvivant.net.pl",
     "phone" : "609 574 982, 606 718 825",
     "filters" : [ "vegeBazaar" ],
@@ -1574,9 +1574,215 @@
     },
     "web" : "https://facebook.com/WroclawskiBazarSmakoszy",
     "open" : {
-          "en" : "Sun: 10:00-16:00",
-          "pl" : "niedz.: 10:00-16:00"
-        },
+      "en" : "Sun: 10:00-16:00",
+      "pl" : "niedz.: 10:00-16:00"
+    },
     "fb": "WroclawskiBazarSmakoszy"
+  }, {
+    "address" : "Białowieska 30a, Wrocław",
+    "email" : "wroclaw@visvitalis.com.pl",
+    "phone" : "796 052 553",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "id" : 50,
+    "type" : 6,
+    "name" : "Visvitalis",
+    "image" : {
+      "size" : {
+        "height" : 44,
+        "width" : 67
+      },
+      "src" : "http://visvitalis.com.pl/skins/user/shoper_red_1/images/logo.png"
+    },
+    "position" : {
+      "lat" : 51.1242595,
+      "lng" : 16.9891841
+    },
+    "dirPosition" : true,
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://visvitalis.com.pl",
+    "open" : {
+      "en" : "Mon-Fri: 10.00-18.00, Sat: 10.00-14.00",
+      "pl" : "pon.-piąt.: 10.00-18.00, sob.: 10.00-14.00"
+    },
+    "fb": "213754221992246"
+  }, {
+    "address" : "Krupnicza 3, Wrocław",
+    "email" : "krupnicza.sklep@naturalny-market.pl",
+    "phone" : "601 442 449",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "id" : 51,
+    "type" : 2,
+    "name" : "Naturalny Market",
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c13.0.160.160/p160x160/10641250_1532238793655711_2086844818880633111_n.jpg?oh=92b93803a0770f067883557f6115c18e&oe=5511E2E0&__gda__=1426396766_9460c70e840948acbf168b9af827af77"
+    },
+    "position" : {
+      "lat" : 51.108435,
+      "lng" : 17.0268799
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "dirPosition" : true,
+    "web" : "http://naturalny-market.pl",
+    "open" : {
+      "en" : "Mon-Fri: 09.00-18.30, Sat: 10.00-14.00",
+      "pl" : "pon.-piąt.: 09.00-18.30, sob.: 10.00-14.00"
+    },
+    "fb": "naturalnymarket"
+  }, {
+    "address" : "Dubois 2/1B, Wrocław",
+    "email" : "dubois.sklep@naturalny-market.pl",
+    "phone" : "601 442 558",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "id" : 52,
+    "type" : 2,
+    "name" : "Naturalny Market",
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c13.0.160.160/p160x160/10641250_1532238793655711_2086844818880633111_n.jpg?oh=92b93803a0770f067883557f6115c18e&oe=5511E2E0&__gda__=1426396766_9460c70e840948acbf168b9af827af77"
+    },
+    "position" : {
+      "lat" : 51.1167474,
+      "lng" : 17.0330531
+    },
+    "dirPosition" : true,
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://naturalny-market.pl",
+    "open" : {
+      "en" : "Mon-Fri: 09.00-18.30, Sat: 10.00-14.00",
+      "pl" : "pon.-piąt.: 09.00-18.30, sob.: 10.00-14.00"
+    }
+  }, {
+    "address" : "plac Jana Pawła II, Wrocław",
+    "desc" : {
+      "pl" : "sklep w przejściu podziemnym",
+      "en" : "underpass shop"
+    },
+    "email" : "jp.sklep@naturalny-market.pl",
+    "phone" : "661 446 218",
+    "filters" : [ "vegeFood", "vegeCosmetics" ],
+    "id" : 53,
+    "type" : 2,
+    "name" : "Naturalny Market",
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/c13.0.160.160/p160x160/10641250_1532238793655711_2086844818880633111_n.jpg?oh=92b93803a0770f067883557f6115c18e&oe=5511E2E0&__gda__=1426396766_9460c70e840948acbf168b9af827af77"
+    },
+    "position" : {
+      "lat" : 51.1116933,
+      "lng" : 17.0220113
+    },
+    "dirPosition" : true,
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://naturalny-market.pl",
+    "open" : {
+      "en" : "Mon-Fri: 09.00-18.00, Sat: 10.00-15.00",
+      "pl" : "pon.-piąt.: 09.00-18.00, sob.: 10.00-15.00"
+    }
+  }, {
+    "address" : "Św. Antoniego 26, Wrocław",
+    "phone" : "669 682 702",
+    "filters" : [ "vegeFood" ],
+    "id" : 54,
+    "type" : 2,
+    "name" : "Eko Pestka",
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p160x160/10553517_1444980245770095_8881670622198453366_n.jpg?oh=76ef9576e5a025a04f446945512b80c9&oe=550E1C4E&__gda__=1426392834_5411c698495271db26062736148b8ee6"
+    },
+    "position" : {
+      "lat" : 51.1092612,
+      "lng" : 17.0247064
+    },
+    "dirPosition" : true,
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://facebook.com/ekopestka",
+    "fb" : "ekopestka",
+    "open" : {
+      "en" : "Mon-Fri: 10.30-19.00, Sat: 13.00-15.00",
+      "pl" : "pon.-piąt.: 10.30-19.00, sob.: 13.00-15.00"
+    }
+  }, {
+    "address" : "Łokietka 3, Wrocław",
+    "email" : "kontakt@ekodzioopla.pl",
+    "filters" : [ "vegeFood" ],
+    "id" : 55,
+    "type" : 6,
+    "name" : "Eko Dzioopla",
+    "image" : {
+      "size" : {
+        "height" : 41,
+        "width" : 53
+      },
+      "src" : "http://ekodzioopla.pl/img/ekodzioopla-1416138965.jpg"
+    },
+    "position" : {
+      "lat" : 51.118078,
+      "lng" : 17.035257
+    },
+    "profile" : {
+      "en" : "healthy food store",
+      "pl" : "sklep ze zdrową żywnością"
+    },
+    "web" : "http://ekodzioopla.pl",
+    "fb" : "EkoDzioopla",
+    "open" : {
+      "en" : "Mon-Fri: 11.00-17.00",
+      "pl" : "pon.-piąt.: 11.00-17.00"
+    }
+  }, {
+    "address" : "Przejście podziemne pod placem Jana Pawła II, Wrocław",
+    "phone" : "796 626 862",
+    "filters" : [ "vegeBar" ],
+    "id" : 56,
+    "name" : "Batat Bar",
+    "image" : {
+      "size" : {
+        "height" : 40,
+        "width" : 40
+      },
+      "src" : "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/p160x160/10734233_396219330529593_2602623500715529211_n.jpg?oh=1f58e2c82af8f5a7d3757fb0a110c89d&oe=54FABB59&__gda__=1426180069_2691f13024330beb8566eef7f26838b6"
+    },
+    "position" : {
+      "lat" : 51.11927,
+      "lng" : 17.038391
+    },
+    "profile" : {
+      "en" : "snack bar",
+      "pl" : "bar szybkiej obsługi"
+    },
+    "web" : "http://facebook.com/batatbar",
+    "fb" : "batatbar",
+    "open" : {
+      "en" : "Mon-Sat: 12.00-21.00, Sun: 12:00-19:00",
+      "pl" : "pon.-sob.: 12.00-21.00, niedz.: 12:00-19:00"
+    }
   } ]
 }

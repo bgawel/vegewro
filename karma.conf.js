@@ -13,16 +13,17 @@ module.exports = function(config) {
     files: [
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
-      'app/bower_components/angular-resource/angular-resource.js',
-      'app/bower_components/angular-cookies/angular-cookies.js',
       'app/bower_components/angular-sanitize/angular-sanitize.js',
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/firebase/firebase.js',
-      'app/bower_components/angularfire/angularfire.js',
+      'app/bower_components/angularfire/dist/angularfire.js',
       'app/bower_components/firebase-simple-login/firebase-simple-login.js',
+      'app/ext_components/bootstrap-custom/ui-bootstrap-custom-tpls-0.10.0.js',
+      'app/ext_components/angular-truncate/truncate.js',
+      'app/int_components/angucomplete/angucomplete.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
+      //'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
 
@@ -49,7 +50,7 @@ module.exports = function(config) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'Firefox'],
 
 
     // Continuous Integration mode
